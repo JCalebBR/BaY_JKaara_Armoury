@@ -13,11 +13,9 @@ Item list:
     * Pulse Carbine (En'Vas Pattern)
     * Pulse Rifle (En'Vas Pattern)
     * Gue'vesa Pulse Rifle
-
 * Handguns
     * Tau Pulse Pistol
     * Tau Pulse Pistol (Water Caste)
-    
 * Headgear
     * Tau Fire Warrior Breacher Helmet
     * Tau Fire Warrior Strike Helmet
@@ -31,20 +29,17 @@ Item list:
     * Gue'vesa Helmet (Modified, Commander, Alternate 2)
     * Gue'vesa Kasrkin Helmet
     * Gue'vesa Kasrkin Helmet (Alternate)
-    
 * Uniforms
     * Tau Fire Warrior Uniform
     * Gue'vesa Uniform
     * Gue'vesa Kasrkin Uniform
     * Gue'vesa Kasrkin Uniform (Alternate)
     * Gue'vesa Kasrkin Uniform (No Camo)
-    
 * Vests
     * Tau Fire Warrior Pauldrons
     * Tau Fire Warrior Shas'Ui Pauldrons
     * Tau Fire Warrior Medical Pauldrons
     * Gue'vesa Armour
-    
 * Backpacks
     * Tau Fire Warrior Backpack
     * Tau Fire Warrior Medical Backpack
@@ -53,7 +48,6 @@ Item list:
     * Gue'vesa Kasrkin Backpack (Cables, Alternate)
     * Gue'vesa Backpack
     * Gue'vesa Backpack (Medical)
-    
 * Facewear
     * Gue'vesa Rebreather
     
