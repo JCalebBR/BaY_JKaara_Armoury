@@ -1940,7 +1940,7 @@ class CfgWeapons {
         opticsZoomInit = 0.75;
         mass = 30;
         recoil = "recoil_BJK_pulse_pistol";
-        magazines[] = {"BJK_pulse_pistol_mag"};
+        magazines[] = {"BJK_pulse_pistol_mag", "TIOW_pulse_pistol_mag"};
         ACE_barrelLength = 605;
         dispersion = 0.0049999999;
         class WeaponSlotsInfo {
@@ -2025,7 +2025,7 @@ class CfgWeapons {
         dispersion = 0.00060000003;
         aiDispersionCoefY = 2;
         aiDispersionCoefX = 2;
-        magazines[] = {"BJK_DMCLS_pulse_mag_25", "BJK_DMCLS_pulse_mag_36", "BJK_DMCLS_pulse_mag_54"};
+        magazines[] = {"BJK_DMCLS_pulse_mag_25", "BJK_DMCLS_pulse_mag_36", "BJK_DMCLS_pulse_mag_54", "VNG_pulse_rifle_mag"};
         handanim[] = {"OFP2_ManSkeleton", "\DMCLS\dmcls_tau_weapons\pulse_rifle\anims\pulse_rifle_handanim.rtm"};
         reloadAction = "DMCLS_pulse_rifle_reload";
         drySound[] = {"\DMCLS\dmcls_tau_sounds\misc\empty.wss", "db-5", 1, 20};
@@ -2092,7 +2092,7 @@ class CfgWeapons {
         dispersion = 0.00019999999;
         aiDispersionCoefY = 2;
         aiDispersionCoefX = 2;
-        magazines[] = {"BJK_DMCLS_pulse_blaster_mag_10", "BJK_DMCLS_pulse_blaster_mag_15", "BJK_DMCLS_pulse_blaster_mag_25", "BJK_DMCLS_pulse_blaster_airburst_mag_8", "BJK_DMCLS_pulse_blaster_airburst_mag_12", "BJK_DMCLS_pulse_blaster_airburst_mag_18", "BJK_DMCLS_pulse_blaster_slug_mag_10", "BJK_DMCLS_pulse_blaster_slug_mag_15", "BJK_DMCLS_pulse_blaster_slug_mag_25"};
+        magazines[] = {"BJK_DMCLS_pulse_blaster_mag_10", "BJK_DMCLS_pulse_blaster_mag_15", "BJK_DMCLS_pulse_blaster_mag_25", "BJK_DMCLS_pulse_blaster_airburst_mag_8", "BJK_DMCLS_pulse_blaster_airburst_mag_12", "BJK_DMCLS_pulse_blaster_airburst_mag_18", "BJK_DMCLS_pulse_blaster_slug_mag_10", "BJK_DMCLS_pulse_blaster_slug_mag_15", "BJK_DMCLS_pulse_blaster_slug_mag_25", "TIOW_pulse_blaster_mag"};
         handanim[] = {"OFP2_ManSkeleton", "\DMCLS\dmcls_tau_weapons\pulse_rifle\anims\pulse_rifle_handanim.rtm"};
         reloadAction = "DMCLS_pulse_rifle_reload";
         drySound[] = {"\DMCLS\dmcls_tau_sounds\misc\empty.wss", "db-5", 1, 20};
@@ -2162,7 +2162,7 @@ class CfgWeapons {
         dispersion = 0.0080000004;
         aiDispersionCoefY = 2;
         aiDispersionCoefX = 2;
-        magazines[] = {"BJK_DMCLS_pulse_mag_25", "BJK_DMCLS_pulse_mag_36", "BJK_DMCLS_pulse_mag_54"};
+        magazines[] = {"BJK_DMCLS_pulse_mag_25", "BJK_DMCLS_pulse_mag_36", "BJK_DMCLS_pulse_mag_54", "TIOW_pulse_mag"};
         handanim[] = {"OFP2_ManSkeleton", "\DMCLS\dmcls_tau_weapons\pulse_burster\anims\pulse_burster_handanim.rtm"};
         reloadAction = "DMCLS_pulse_rifle_reload";
         drySound[] = {"\DMCLS\dmcls_tau_sounds\misc\empty.wss", "db-5", 1, 20};
@@ -2274,7 +2274,7 @@ class CfgWeapons {
         dispersion = 0.0080000004;
         aiDispersionCoefY = 2;
         aiDispersionCoefX = 2;
-        magazines[] = {"BJK_DMCLS_pulse_mag_25", "BJK_DMCLS_pulse_mag_36", "BJK_DMCLS_pulse_mag_54"};
+        magazines[] = {"BJK_DMCLS_pulse_mag_25", "BJK_DMCLS_pulse_mag_36", "BJK_DMCLS_pulse_mag_54", "TIOW_pulse_mag"};
         handanim[] = {"OFP2_ManSkeleton", "\DMCLS\dmcls_tau_weapons\pulse_carbine\anims\pulse_carbine_handanim.rtm"};
         reloadAction = "DMCLS_pulse_rifle_reload";
         drySound[] = {"\DMCLS\dmcls_tau_sounds\misc\empty.wss", "db-5", 1, 20};
@@ -2401,7 +2401,7 @@ class CfgWeapons {
         dispersion = 0.00060000003;
         aiDispersionCoefY = 2;
         aiDispersionCoefX = 2;
-        magazines[] = {"BJK_DMCLS_rail_rifle_mag"};
+        magazines[] = {"BJK_DMCLS_rail_rifle_mag", "TIOW_railrifle_mag"};
         handanim[] = {"OFP2_ManSkeleton", "\DMCLS\dmcls_tau_weapons\rail_rifle\anims\rail_rifle_handanim.rtm"};
         reloadAction = "DMCLS_rail_rifle_reload";
         drySound[] = {"\DMCLS\dmcls_tau_sounds\misc\empty.wss", "db-5", 1, 20};
@@ -2452,7 +2452,7 @@ class CfgWeapons {
         scope = 2;
         scopeCurator = 2;
         scopeArsenal = 2;
-        magazines[] = {"BJK_DMCLS_pulse_mag_25", "BJK_DMCLS_pulse_mag_36", "BJK_DMCLS_pulse_mag_54"};
+        magazines[] = {"BJK_DMCLS_pulse_mag_25", "BJK_DMCLS_pulse_mag_36", "BJK_DMCLS_pulse_mag_54", "VNG_pulse_rifle_mag"};
         hiddenSelections[] = {"camo"};
         hiddenSelectionsTextures[] = {"BaY_JKaara_Armoury\Data\Textures\Rifle\BJK_PulseRifle_Guevesa_CA.paa"};
     };
@@ -2678,7 +2678,7 @@ class CfgWeapons {
         class ItemInfo : UniformItem {
             uniformModel = "\A3\Characters_F\Common\Suitpacks\suitpack_original_F.p3d";
             uniformClass = "BJK_FireWarrior";
-            containerClass = "Supply150";
+            containerClass = "Supply500";
             mass = 40;
         };
     };
@@ -2695,7 +2695,7 @@ class CfgWeapons {
         hiddenSelectionsTextures[] = {"BaY_JKaara_Armoury\Data\Textures\Uniform\BJK_Guevesa_Uniform_CO.paa", "BaY_JKaara_Armoury\Data\Textures\Vest\BJK_Guevesa_Kasrkin_Uniform_NoCamo.paa"};
         class ItemInfo : UniformItem {
             uniformClass = "BJK_Guevesa_Kasrkin_Base";
-            containerClass = "Supply150";
+            containerClass = "Supply500";
             mass = 40;
         };
     };
@@ -2705,7 +2705,7 @@ class CfgWeapons {
         hiddenSelectionsTextures[] = {"BaY_JKaara_Armoury\Data\Textures\Uniform\BJK_Guevesa_Kasrkin_Uniform_CO.paa", "BaY_JKaara_Armoury\Data\Textures\Vest\BJK_Guevesa_Kasrkin_Armor_CO2.paa"};
         class ItemInfo : UniformItem {
             uniformClass = "BJK_Guevesa_Kasrkin";
-            containerClass = "Supply250";
+            containerClass = "Supply500";
             mass = 60;
         };
     };
@@ -2715,7 +2715,7 @@ class CfgWeapons {
         hiddenSelectionsTextures[] = {"BaY_JKaara_Armoury\Data\Textures\Uniform\BJK_Guevesa_Kasrkin_Uniform_CO2.paa", "BaY_JKaara_Armoury\Data\Textures\Vest\BJK_Guevesa_Kasrkin_Armor_CO4.paa"};
         class ItemInfo : UniformItem {
             uniformClass = "BJK_Guevesa_Kasrkin_Alt";
-            containerClass = "Supply250";
+            containerClass = "Supply500";
             mass = 60;
         };
     };
@@ -2731,7 +2731,7 @@ class CfgWeapons {
         class ItemInfo : UniformItem {
             uniformModel = "-";
             uniformClass = "BJK_Guevesa_Base";
-            containerClass = "Supply150";
+            containerClass = "Supply500";
             mass = 80;
         };
     };
@@ -2751,7 +2751,7 @@ class CfgWeapons {
         hiddenSelectionsTextures[] = {"BaY_JKaara_Armoury\Data\Textures\Vest\BJK_FireWarrior_Pauldrons_CO.paa"};
         class ItemInfo : VestItem {
             uniformModel = "\40k_tau\Gear\Belt.p3d";
-            containerClass = "Supply140";
+            containerClass = "Supply500";
             hiddenSelections[] = {"camo"};
             mass = 80;
             class HitpointsProtectionInfo {
@@ -2815,7 +2815,7 @@ class CfgWeapons {
         hiddenSelections[] = {"camo", "camoB", "RegimentCamo"};
         hiddenSelectionsTextures[] = {"BaY_JKaara_Armoury\Data\Textures\Vest\BJK_Guevesa_Kasrkin_Armor_CO.paa", "BaY_JKaara_Armoury\Data\Textures\Vest\BJK_Guevesa_Kasrkin_Armor_CO2.paa", "BaY_JKaara_Armoury\Data\Textures\Vest\BJK_Guevesa_Kasrkin_Armor_Icons_CO.paa"};
         class ItemInfo : ItemInfo {
-            containerClass = "Supply150";
+            containerClass = "Supply500";
             overlaySelectionsInfo[] = {"ghillie_hide"};
             class HitpointsProtectionInfo {
                 class Neck {
@@ -2874,7 +2874,7 @@ class CfgWeapons {
         hiddenSelectionsTextures[] = {"BaY_JKaara_Armoury\Data\Textures\Vest\BJK_Guevesa_Armor_CO1.paa", "BaY_JKaara_Armoury\Data\Textures\Vest\BJK_Guevesa_Armor_CO2.paa", "BaY_JKaara_Armoury\Data\Textures\Vest\BJK_Guevesa_Armor_CO3.paa"};
         class ItemInfo : ItemInfo {
             uniformModel = "\IC_Departmento_Munitorum\IC_Guevesa\ic_GuevesaArmour.p3d";
-            containerClass = "Supply120";
+            containerClass = "Supply500";
             mass = 25;
             overlaySelectionsInfo[] = {};
             hiddenSelections[] = {"camo", "camo1", "camo3"};
@@ -3038,7 +3038,7 @@ class CfgVehicles {
         scope = 2;
         picture = "\40k_tau\Weapons\Definitions\UI\Backpack.paa";
         model = "40k_tau\Backpack\Strike_backpack.p3d";
-        maximumLoad = 260;
+        maximumLoad = 750;
         mass = 50;
         hiddenSelections[] = {"Camo"};
         hiddenSelectionsTextures[] = {"BaY_JKaara_Armoury\Data\Textures\Backpack\BJK_FireWarrior_Backpack_CO.paa"};
@@ -3061,7 +3061,7 @@ class CfgVehicles {
         scope = 2;
         picture = "\40k_tau\Weapons\Definitions\UI\Backpack.paa";
         model = "40k_tau\Backpack\Strike_backpack.p3d";
-        maximumLoad = 260;
+        maximumLoad = 750;
         mass = 50;
         hiddenSelections[] = {"Camo"};
         hiddenSelectionsTextures[] = {"BaY_JKaara_Armoury\Data\Textures\Backpack\BJK_FireWarrior_Backpack_Medical_CO.paa"};
@@ -3086,7 +3086,7 @@ class CfgVehicles {
         model = "\CadFoot\Model\CadianKasrkinBackpack.p3d";
         hiddenSelections[] = {"camo"};
         hiddenSelectionsTextures[] = {"BaY_JKaara_Armoury\Data\Textures\Backpack\BJK_Guevesa_Kasrkin_Backpack_CO.paa"};
-        maximumLoad = 260;
+        maximumLoad = 750;
         _generalMacro = "BJK_Guevesa_Kasrkin_Backpack";
         tf_dialog = "rt1523g_radio_dialog";
         // clang-format off
@@ -3108,7 +3108,7 @@ class CfgVehicles {
         model = "\IC_CAD_inf\Backpacks\ic_cad_kasr_pack";
         hiddenSelections[] = {"camo"};
         hiddenSelectionsTextures[] = {"BaY_JKaara_Armoury\Data\Textures\Backpack\BJK_Guevesa_Kasrkin_Backpack_Cables_CO.paa"};
-        maximumLoad = 260;
+        maximumLoad = 750;
         _generalMacro = "BJK_Guevesa_Kasrkin_Cables_Backpack";
         tf_dialog = "rt1523g_radio_dialog";
         // clang-format off
@@ -3130,7 +3130,7 @@ class CfgVehicles {
         model = "\IC_CAD_inf\Backpacks\ic_cad_kasr_pack";
         hiddenSelections[] = {"camo"};
         hiddenSelectionsTextures[] = {"BaY_JKaara_Armoury\Data\Textures\Backpack\BJK_Guevesa_Kasrkin_Backpack_Cables_CO2.paa"};
-        maximumLoad = 260;
+        maximumLoad = 750;
         _generalMacro = "BJK_Guevesa_Kasrkin_Cables_Backpack";
         tf_dialog = "rt1523g_radio_dialog";
         // clang-format off
@@ -3149,12 +3149,13 @@ class CfgVehicles {
         scopeCurator = 2;
         scopeArsenal = 2;
         isbackpack = 1;
+        maximumLoad = 750;
         displayName = "[Ba'Y JK] Gue'vesa Backpack";
         model = "\IC_CAD_inf\Backpacks\Assault_pack_03";
         hiddenSelectionsTextures[] = {"BaY_JKaara_Armoury\Data\Textures\Backpack\BJK_Guevesa_Backpack_CO.paa"};
     };
     class BJK_Guevesa_Backpack_Medical : IC_CAD_assaultpack_beige_03 {
-        maximumLoad = 360;
+        maximumLoad = 750;
         displayName = "[Ba'Y JK] Gue'vesa Backpack (Medical)";
         model = "\IC_CAD_inf\Backpacks\Assault_pack_03";
         hiddenSelectionsTextures[] = {"BaY_JKaara_Armoury\Data\Textures\Backpack\BJK_Guevesa_Backpack_Medical_CO.paa"};
