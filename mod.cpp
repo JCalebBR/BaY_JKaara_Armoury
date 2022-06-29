@@ -1,4 +1,3 @@
-// Mod Name
 name = "Ba'Y J'Kaara Armoury";
 actionName = "Workshop";
 author = "JCaleb2014";
@@ -9,4 +8,3 @@ logo = "BaY_JKaara_Armoury\logo.paa";
 logoSmall = "BaY_JKaara_Armoury\logosmall.paa";
 logoOver = "BaY_JKaara_Armoury\logo.paa";
 picture = "BaY_JKaara_Armoury\picture.paa";
-
