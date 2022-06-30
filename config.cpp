@@ -3160,7 +3160,7 @@ class CfgVehicles {
         tf_encryptionCode = "tf_west_radio_code";
         tf_hasLRradio = 1;
         tf_range = 40000;
-        tf_subtype = "airborne";
+        tf_subtype = "digital_lr";
     };
     class BJK_Guevesa_Kasrkin_Cables_Backpack : Bag_Base {
         author = "JCaleb2014";
@@ -3182,7 +3182,7 @@ class CfgVehicles {
         tf_encryptionCode = "tf_west_radio_code";
         tf_hasLRradio = 1;
         tf_range = 40000;
-        tf_subtype = "airborne";
+        tf_subtype = "digital_lr";
     };
     class BJK_Guevesa_Kasrkin_Cables_Backpack_Alt : Bag_Base {
         author = "JCaleb2014";
@@ -3204,7 +3204,7 @@ class CfgVehicles {
         tf_encryptionCode = "tf_west_radio_code";
         tf_hasLRradio = 1;
         tf_range = 40000;
-        tf_subtype = "airborne";
+        tf_subtype = "digital_lr";
     };
 
     // Admech Backpack
