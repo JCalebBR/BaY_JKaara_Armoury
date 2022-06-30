@@ -5,8 +5,8 @@ class CfgPatches {
         name = "Ba'Y J'Kaara Armory";
         author = "JCaleb2014";
         requiredVersion = 1.6;
-        requiredAddons[] = {"A3_Weapons_F", "A3_Weapons_F_Mark", "A3_Characters_F", "A3_Data_F", "A3_Sounds_F", "A3_Sounds_F_Mark", "TIOW_Tau_Gear", "DMCLS_weapons", "TIOW_40k_Tau", "IC_Cadia", "IC_Guevesa", "IC_weapons_base", "CadFoot", "WHtracked_TIOW_LR_Battlecannon", "TIOW_Admech"};
-        weapons[] = {"BJK_ion_rifle", "BJK_pulse_pistol", "BJK_pulse_pistol_WC", "BJK_DMCLS_pulse_rifle", "BJK_DMCLS_pulse_blaster", "BJK_DMCLS_pulse_burster", "BJK_DMCLS_pulse_carbine", "BJK_DMCLS_rail_rifle", "BJK_Guevesa_PulseRifle", "BJK_Guevesa_PulseRifle_Alt", "BJK_optics_ColiS", "BJK_optics_ColiB", "BJK_optics_ColiB_zoom", "KC_optics_Mk_zoom", "BJK_FireWarrior_Strike_Helmet", "BJK_FireWarrior_Strike_Helmet_Commander", "BJK_FireWarrior_Breacher_Helmet", "BJK_Guevesa_Helmet", "BJK_Guevesa_Helmet_Modified", "BJK_Guevesa_Helmet_Modified_Alt1", "BJK_Guevesa_Helmet_Modified_Alt2", "BJK_Guevesa_Helmet_Modified_Commander", "BJK_Guevesa_Helmet_Modified_Commander_Alt1", "BJK_Guevesa_Helmet_Modified_Commander_Alt2", "BJK_Guevesa_Kasrkin_Helmet", "BJK_Guevesa_Kasrkin_Helmet_Alt", "BJK_SpaceMarine_Mk7_Pauldrons", "BJK_SpaceMarine_Mk7_PowerArmor", "BJK_Admech_Alpha_Hood"};
+        requiredAddons[] = {"A3_Weapons_F", "A3_Weapons_F_Mark", "A3_Characters_F", "A3_Data_F", "A3_Sounds_F", "A3_Sounds_F_Mark", "TIOW_Tau_Gear", "DMCLS_weapons", "TIOW_40k_Tau", "IC_Cadia", "IC_Guevesa", "IC_weapons_base", "CadFoot", "WHtracked_TIOW_LR_Battlecannon", "TIOW_Admech", "TIOW_Comissar"};
+        weapons[] = {"BJK_ion_rifle", "BJK_pulse_pistol", "BJK_pulse_pistol_WC", "BJK_DMCLS_pulse_rifle", "BJK_DMCLS_pulse_blaster", "BJK_DMCLS_pulse_burster", "BJK_DMCLS_pulse_carbine", "BJK_DMCLS_rail_rifle", "BJK_Guevesa_PulseRifle", "BJK_Guevesa_PulseRifle_Alt", "BJK_optics_ColiS", "BJK_optics_ColiB", "BJK_optics_ColiB_zoom", "KC_optics_Mk_zoom", "BJK_FireWarrior_Strike_Helmet", "BJK_FireWarrior_Strike_Helmet_Commander", "BJK_FireWarrior_Breacher_Helmet", "BJK_Guevesa_Helmet", "BJK_Guevesa_Helmet_Modified", "BJK_Guevesa_Helmet_Modified_Alt1", "BJK_Guevesa_Helmet_Modified_Alt2", "BJK_Guevesa_Helmet_Modified_Commander", "BJK_Guevesa_Helmet_Modified_Commander_Alt1", "BJK_Guevesa_Helmet_Modified_Commander_Alt2", "BJK_Guevesa_Kasrkin_Helmet", "BJK_Guevesa_Kasrkin_Helmet_Alt", "BJK_Guevesa_Commissar_Cap", "BJK_Admech_Alpha_Hood", "BJK_SpaceMarine_Mk7_Pauldrons", "BJK_SpaceMarine_Mk7_PowerArmor"};
         magazines[] = {"BJK_ionrifle_shot_mag", "BJK_ionrifle_overcharge_mag", "BJK_ExpSmall_Remote_Mag", "BJK_ExpBig_Remote_Mag", "BJK_DMCLS_pulse_mag_25", "BJK_DMCLS_pulse_mag_36", "BJK_DMCLS_pulse_mag_54", "BJK_DMCLS_pulse_blaster_mag_10", "BJK_DMCLS_pulse_blaster_mag_15", "BJK_DMCLS_pulse_blaster_mag_25", "BJK_DMCLS_pulse_blaster_airburst_mag_8", "BJK_DMCLS_pulse_blaster_airburst_mag_12", "BJK_DMCLS_pulse_blaster_airburst_mag_18", "BJK_DMCLS_pulse_blaster_slug_mag_10", "BJK_DMCLS_pulse_blaster_slug_mag_15", "BJK_DMCLS_pulse_blaster_slug_mag_25", "BJK_DMCLS_rail_rifle_mag", "BJK_photon_grenade_mag"};
         ammo[] = {"BJK_ionrifle_shot", "BJK_ionrifle_overcharge", "BJK_ExpSmall_Remote_Ammo", "BJK_ExpSmall_Remote_Ammo_Scripted", "BJK_ExpBig_Remote_Ammo", "BJK_DMCLS_pulse_shot", "BJK_pulse_pistol_shot", "BJK_DMCLS_pulse_blaster_shot", "BJK_DMCLS_pulse_blaster_airburst", "BJK_DMCLS_pulse_blaster_slug", "BJK_DMCLS_pulse_airburst_pellets", "BJK_DMCLS_rail_rifle_shot", "BJK_photon_grenade_ammo"};
         units[] = {"BJK_FireWarrior_Backpack", "BJK_FireWarrior_Medical", "BJK_Guevesa_Kasrkin_Backpack", "BJK_Guevesa_Kasrkin_Cables_Backpack", "BJK_Guevesa_Kasrkin_Cables_Backpack_Alt", "BJK_FireWarrior", "BJK_Guevesa_Kasrkin_Base", "BJK_Guevesa_Kasrkin", "BJK_Guevesa_Kasrkin_Alt", "BJK_Guevesa_Base", "BJK_SpaceMarine_Mk7_Tactical", "BJK_LR_Vanquisher_Modified", "BJK_Admech_Tek_Backpack", "BJK_Techpriest"};
@@ -2661,7 +2661,18 @@ class CfgWeapons {
         };
         subItems[] = {"Integrated_NVG_TI_1_F"};
     };
-
+    class TIOW_Comissar_Cap;
+    class BJK_Guevesa_Commissar_Cap : TIOW_Comissar_Cap {
+        author = "JCaleb2014";
+        displayName = "[Ba'Y JK] Gue'vesa Commissar Cap";
+        hiddenSelections[] = {"camo"};
+        hiddenSelectionsTextures[] = {"BaY_JKaara_Armoury\Data\Textures\Headgear\BJK_Guevesa_Commissar_Cap_CO.paa"};
+        class ItemInfo : ItemInfo {
+            hiddenSelections[] = {"camo"};
+            hiddenSelectionsTextures[] = {"BaY_JKaara_Armoury\Data\Textures\Headgear\BJK_Guevesa_Commissar_Cap_CO.paa"};
+        };
+    };
+    
     // Admech Headgear
     class TIOW_AM_HOOD_ALPHA;
     class BJK_Admech_Alpha_Hood : TIOW_AM_HOOD_ALPHA {
@@ -2669,7 +2680,7 @@ class CfgWeapons {
         scope = 2;
         scopeCurator = 2;
         scopeArsenal = 2;
-        displayName = "[Ba'Y J'Kaara] Alpha Hood ";
+        displayName = "[Ba'Y JK] Alpha Hood ";
         hiddenSelections[] = {"camo"};
         hiddenSelectionsTextures[] = {"BaY_JKaara_Armoury\Data\Textures\Headgear\BJK_Admech_Alpha_Hood_CO.paa"};
         class ItemInfo : ItemInfo {
@@ -2749,6 +2760,25 @@ class CfgWeapons {
             uniformClass = "BJK_Guevesa_Base";
             containerClass = "Supply500";
             mass = 80;
+        };
+    };
+    class U_TIOW_Comissar;
+    class BJK_Guevesa_Commissar_Uniform : U_TIOW_Comissar {
+        author = "JCaleb2014";
+        scope = 2;
+        scopeArsenal = 2;
+        scopeCurator = 2;
+        model = "\TIOW_IG_HQ\Comissar\Krieg_Comissar.p3d";
+        displayName = "[Ba'Y JK] Gue'vesa Commissar Uniform";
+        hiddenSelections[] = {"camo", "camo1"};
+        hiddenSelectionsTextures[] = {"BaY_JKaara_Armoury\Data\Textures\Uniform\BJK_Guevesa_Commissar_Uniform_CO.paa", "BaY_JKaara_Armoury\Data\Textures\Uniform\BJK_Guevesa_Commissar_Coat_CO.paa"};
+        class ItemInfo : ItemInfo {
+            hiddenSelections[] = {"camo", "camo1"};
+            hiddenSelectionsTextures[] = {"BaY_JKaara_Armoury\Data\Textures\Uniform\BJK_Guevesa_Commissar_Uniform_CO.paa", "BaY_JKaara_Armoury\Data\Textures\Uniform\BJK_Guevesa_Commissar_Coat_CO.paa"};
+            uniformClass = "BJK_Guevesa_Commissar";
+            uniformModel = "\TIOW_IG_HQ\Comissar\Krieg_Comissar.p3d";
+            containerClass = "Supply500";
+            mass = 50;
         };
     };
 
@@ -3429,6 +3459,27 @@ class CfgVehicles {
         uniformClass = "BJK_Guevesa_Uniform";
         hiddenSelections[] = {"camo1", "camo"};
         hiddenSelectionsTextures[] = {"BaY_JKaara_Armoury\Data\Textures\Uniform\BJK_Guevesa_Uniform_Pants_CO.paa", "BaY_JKaara_Armoury\Data\Textures\Uniform\BJK_Guevesa_Uniform_Top_CO.paa"};
+    };
+    class TIOW_Comissar;
+    class BJK_Guevesa_Commissar : TIOW_Comissar {
+        displayName = "Gue'vesa Commissar";
+        scope = 2;
+        scopeCurator = 2;
+        scopeArsenal = 2;
+        uniformClass = "BJK_Guevesa_Commissar_Uniform";
+        faction = "BJK_F";
+        editorSubcategory = "BJK_M";
+        model = "\TIOW_IG_HQ\Comissar\Krieg_Comissar.p3d";
+        weapons[] = {"Throw", "Put", "TIOW_bolt_pistol"};
+        respawnWeapons[] = {"Throw", "Put", "TIOW_bolt_pistol"};
+        Items[] = {"FirstAidKit"};
+        RespawnItems[] = {"FirstAidKit"};
+        magazines[] = {"TIOW_IGBoltPistol_Mag", "TIOW_IGBoltPistol_Mag", "TIOW_IGBoltPistol_Mag", "TIOW_IGBoltPistol_Mag"};
+        respawnMagazines[] = {"TIOW_IGBoltPistol_Mag", "TIOW_IGBoltPistol_Mag", "TIOW_IGBoltPistol_Mag", "TIOW_IGBoltPistol_Mag"};
+        linkedItems[] = {"TIOW_Bionic_Eye", "TIOW_Comissar_Cap"};
+        respawnLinkedItems[] = {"TIOW_Bionic_Eye", "TIOW_Comissar_Cap"};
+        hiddenSelections[] = {"camo", "camo1"};
+        hiddenSelectionsTextures[] = {"BaY_JKaara_Armoury\Data\Textures\Uniform\BJK_Guevesa_Commissar_Uniform_CO.paa", "BaY_JKaara_Armoury\Data\Textures\Uniform\BJK_Guevesa_Commissar_Coat_CO.paa"};
     };
 
     // Admech Uniforms
