@@ -5,7 +5,7 @@ class CfgPatches {
         name = "Ba'Y J'Kaara Armory";
         author = "JCaleb2014";
         requiredVersion = 1.6;
-        requiredAddons[] = {"A3_Weapons_F", "A3_Weapons_F_Mark", "A3_Characters_F", "A3_Data_F", "A3_Sounds_F", "A3_Sounds_F_Mark", "TIOW_Tau_Gear", "DMCLS_weapons", "TIOW_40k_Tau", "IC_Cadia", "IC_Guevesa", "IC_weapons_base", "CadFoot", "WHtracked_TIOW_LR_Battlecannon", "TIOW_Admech", "TIOW_Comissar"};
+        requiredAddons[] = {"A3_Weapons_F", "A3_Weapons_F_Mark", "A3_Characters_F", "A3_Data_F", "A3_Sounds_F", "A3_Sounds_F_Mark", "TIOW_Tau_Gear", "DMCLS_weapons", "TIOW_40k_Tau", "IC_Cadia", "IC_Guevesa", "IC_weapons_base", "CadFoot", "WHtracked_TIOW_LR_Battlecannon", "TIOW_Admech", "TIOW_Comissar", "Dos_Cosmetics", "IC_StormTrooper"};
         weapons[] = {"BJK_ion_rifle", "BJK_pulse_pistol", "BJK_pulse_pistol_WC", "BJK_DMCLS_pulse_rifle", "BJK_DMCLS_pulse_blaster", "BJK_DMCLS_pulse_burster", "BJK_DMCLS_pulse_carbine", "BJK_DMCLS_rail_rifle", "BJK_Guevesa_PulseRifle", "BJK_Guevesa_PulseRifle_Alt", "BJK_optics_ColiS", "BJK_optics_ColiB", "BJK_optics_ColiB_zoom", "KC_optics_Mk_zoom", "BJK_FireWarrior_Strike_Helmet", "BJK_FireWarrior_Strike_Helmet_Commander", "BJK_FireWarrior_Breacher_Helmet", "BJK_Guevesa_Helmet", "BJK_Guevesa_Helmet_Modified", "BJK_Guevesa_Helmet_Modified_Alt1", "BJK_Guevesa_Helmet_Modified_Alt2", "BJK_Guevesa_Helmet_Modified_Commander", "BJK_Guevesa_Helmet_Modified_Commander_Alt1", "BJK_Guevesa_Helmet_Modified_Commander_Alt2", "BJK_Guevesa_Kasrkin_Helmet", "BJK_Guevesa_Kasrkin_Helmet_Alt", "BJK_Guevesa_Commissar_Cap", "BJK_Admech_Alpha_Hood", "BJK_SpaceMarine_Mk7_Pauldrons", "BJK_SpaceMarine_Mk7_PowerArmor"};
         magazines[] = {"BJK_ionrifle_shot_mag", "BJK_ionrifle_overcharge_mag", "BJK_ExpSmall_Remote_Mag", "BJK_ExpBig_Remote_Mag", "BJK_DMCLS_pulse_mag_25", "BJK_DMCLS_pulse_mag_36", "BJK_DMCLS_pulse_mag_54", "BJK_DMCLS_pulse_blaster_mag_10", "BJK_DMCLS_pulse_blaster_mag_15", "BJK_DMCLS_pulse_blaster_mag_25", "BJK_DMCLS_pulse_blaster_airburst_mag_8", "BJK_DMCLS_pulse_blaster_airburst_mag_12", "BJK_DMCLS_pulse_blaster_airburst_mag_18", "BJK_DMCLS_pulse_blaster_slug_mag_10", "BJK_DMCLS_pulse_blaster_slug_mag_15", "BJK_DMCLS_pulse_blaster_slug_mag_25", "BJK_DMCLS_rail_rifle_mag", "BJK_photon_grenade_mag"};
         ammo[] = {"BJK_ionrifle_shot", "BJK_ionrifle_overcharge", "BJK_ExpSmall_Remote_Ammo", "BJK_ExpSmall_Remote_Ammo_Scripted", "BJK_ExpBig_Remote_Ammo", "BJK_DMCLS_pulse_shot", "BJK_pulse_pistol_shot", "BJK_DMCLS_pulse_blaster_shot", "BJK_DMCLS_pulse_blaster_airburst", "BJK_DMCLS_pulse_blaster_slug", "BJK_DMCLS_pulse_airburst_pellets", "BJK_DMCLS_rail_rifle_shot", "BJK_photon_grenade_ammo"};
@@ -2475,70 +2475,34 @@ class CfgWeapons {
         model = "\40k_tau\Headgear\HelmetS.p3d";
         hiddenSelections[] = {"Camo", "Camo1"};
         hiddenSelectionsTextures[] = {"BaY_JKaara_Armoury\Data\Textures\Headgear\BJK_FireWarrior_Strike_Helmet_CO.paa", "BaY_JKaara_Armoury\Data\Textures\Headgear\BJK_FireWarrior_Helmet_Headset_CO.paa"};
-        subItems[] = {};
+        subItems[] = {"BJK_InvisibleNVG"};
         class ItemInfo : HeadgearItem {
             mass = 10;
             uniformModel = "\40k_tau\Headgear\HelmetS.p3d";
             hiddenSelections[] = {"camo", "camo1"};
-            subItems[] = {"Integrated_NVG_F"};
+            subItems[] = {"BJK_InvisibleNVG"};
             class HitpointsProtectionInfo {
                 class Head {
                     hitpointName = "HitHead";
-                    armor = 80;
+                    armor = 50;
                     passThrough = 0.1;
                 };
             };
         };
     };
-    class BJK_FireWarrior_Strike_Helmet_Commander : H_HelmetO_ViperSP_hex_F {
-        author = "JCaleb2014";
+    class BJK_FireWarrior_Strike_Helmet_Commander : BJK_FireWarrior_Strike_Helmet {
         displayName = "[Ba'Y JK] Fire Warrior Helmet (Strike, Shas'Ui)";
-        scope = 2;
-        scopeArsenal = 2;
-        scopeCurator = 2;
-        picture = "\40k_tau\Weapons\Definitions\UI\Helmet.paa";
-        model = "\40k_tau\Headgear\HelmetS.p3d";
         hiddenSelections[] = {"Camo", "Camo1"};
         hiddenSelectionsTextures[] = {"BaY_JKaara_Armoury\Data\Textures\Headgear\BJK_FireWarrior_Strike_Helmet_Commander_CO.paa", "BaY_JKaara_Armoury\Data\Textures\Headgear\BJK_FireWarrior_Helmet_Headset_CO.paa"};
-        subItems[] = {};
-        class ItemInfo : HeadgearItem {
-            mass = 10;
-            uniformModel = "\40k_tau\Headgear\HelmetS.p3d";
-            hiddenSelections[] = {"camo", "camo1"};
-            subItems[] = {"Integrated_NVG_F"};
-            class HitpointsProtectionInfo {
-                class Head {
-                    hitpointName = "HitHead";
-                    armor = 80;
-                    passThrough = 0.1;
-                };
-            };
-        };
     };
 
-    class BJK_FireWarrior_Breacher_Helmet : H_HelmetO_ViperSP_hex_F {
-        author = "JCaleb2014";
+    class BJK_FireWarrior_Breacher_Helmet : BJK_FireWarrior_Strike_Helmet {
         displayName = "[Ba'Y JK] Fire Warrior Helmet (Breacher)";
-        scope = 2;
-        scopeArsenal = 2;
-        scopeCurator = 2;
-        picture = "\40k_tau\Weapons\Definitions\UI\Helmet.paa";
         model = "\40k_tau\Headgear\HelmetB2.p3d";
         hiddenSelections[] = {"Camo", "Camo1"};
         hiddenSelectionsTextures[] = {"BaY_JKaara_Armoury\Data\Textures\Headgear\BJK_FireWarrior_Breacher_Helmet_CO.paa", "BaY_JKaara_Armoury\Data\Textures\Headgear\BJK_FireWarrior_Helmet_Headset_CO.paa"};
-        subItems[] = {};
         class ItemInfo : HeadgearItem {
-            mass = 10;
             uniformModel = "\40k_tau\Headgear\HelmetB2.p3d";
-            hiddenSelections[] = {"camo", "camo1"};
-            subItems[] = {"Integrated_NVG_F"};
-            class HitpointsProtectionInfo {
-                class Head {
-                    hitpointName = "HitHead";
-                    armor = 80;
-                    passThrough = 0.1;
-                };
-            };
         };
     };
 
@@ -2672,7 +2636,7 @@ class CfgWeapons {
             hiddenSelectionsTextures[] = {"BaY_JKaara_Armoury\Data\Textures\Headgear\BJK_Guevesa_Commissar_Cap_CO.paa"};
         };
     };
-    
+
     // Admech Headgear
     class TIOW_AM_HOOD_ALPHA;
     class BJK_Admech_Alpha_Hood : TIOW_AM_HOOD_ALPHA {
@@ -2707,6 +2671,13 @@ class CfgWeapons {
             uniformClass = "BJK_FireWarrior";
             containerClass = "Supply500";
             mass = 40;
+            class HitpointsProtectionInfo {
+                class Body {
+                    hitpointName = "HitBody";
+                    armor = 5;
+                    passThrough = 0.75;
+                };
+            };
         };
     };
 
@@ -2781,7 +2752,23 @@ class CfgWeapons {
             mass = 50;
         };
     };
-
+    class IC_CadUExtraTan_U_B;
+    class BJK_Guevesa_Stormtrooper_Uniform : IC_CadUExtraTan_U_B {
+        author = "JCaleb2014";
+        scope = 2;
+        scopeArsenal = 2;
+        scopeCurator = 2;
+        displayName = "[Ba'Y JK] Gue'vesa Stormtrooper Fatigues";
+        hiddenSelections[] = {"camo1", "camo", "camo2"};
+        hiddenSelectionsTextures[] = {"BaY_JKaara_Armoury\Data\Textures\Uniform\BJK_Guevesa_Stormtrooper_Uniform_Pants_CO.paa", "BaY_JKaara_Armoury\Data\Textures\Uniform\BJK_Guevesa_Stormtrooper_Uniform_Top_CO.paa", "BaY_JKaara_Armoury\Data\Textures\Uniform\BJK_Guevesa_Stormtrooper_Uniform_Extra_CO.paa"};
+        class ItemInfo : UniformItem {
+            uniformModel = "-";
+            uniformClass = "BJK_Guevesa_Stormtrooper";
+            containerClass = "Supply500";
+            hiddenSelections[] = {"camo1", "camo", "camo2"};
+            hiddenSelectionsTextures[] = {"BaY_JKaara_Armoury\Data\Textures\Uniform\BJK_Guevesa_Stormtrooper_Uniform_Pants_CO.paa", "BaY_JKaara_Armoury\Data\Textures\Uniform\BJK_Guevesa_Stormtrooper_Uniform_Top_CO.paa", "BaY_JKaara_Armoury\Data\Textures\Uniform\BJK_Guevesa_Stormtrooper_Uniform_Extra_CO.paa"};
+        };
+    };
     // Admech Uniforms
     class TIOW_AM_Alpha_UNI;
     class BJK_Admech_Alpha_Robes : TIOW_AM_Alpha_UNI {
@@ -2796,6 +2783,7 @@ class CfgWeapons {
             uniformClass = "BJK_Techpriest";
             hiddenSelections[] = {"camo"};
             hiddenSelectionsTextures[] = {"BaY_JKaara_Armoury\Data\Textures\Uniform\BJK_Admech_Alpha_Robes_CO.paa"};
+            containerClass = "Supply500";
         };
     };
 
@@ -2821,38 +2809,37 @@ class CfgWeapons {
             class HitpointsProtectionInfo {
                 class Neck {
                     hitpointName = "HitNeck";
-                    armor = 70;
-                    passThrough = 0.25;
+                    armor = 78;
+                    passThrough = 0.5;
                 };
                 class Arms {
                     hitpointName = "HitArms";
-                    armor = 70;
-                    passThrough = 0.25;
+                    armor = 78;
+                    passThrough = 0.5;
                 };
                 class Chest {
                     hitpointName = "HitChest";
-                    armor = 70;
-                    passThrough = 0.25;
+                    armor = 78;
+                    passThrough = 0.7;
                 };
                 class Diaphragm {
                     hitpointName = "HitDiaphragm";
-                    armor = 70;
-                    passThrough = 0.25;
+                    armor = 78;
+                    passThrough = 0.7;
                 };
                 class Abdomen {
                     hitpointName = "HitAbdomen";
-                    armor = 70;
-                    passThrough = 0.25;
+                    armor = 10;
+                    passThrough = 0.5;
                 };
                 class Pelvis {
                     hitpointName = "HitPelvis";
-                    armor = 70;
-                    passThrough = 0.25;
+                    armor = 10;
+                    passThrough = 0.5;
                 };
                 class Body {
                     hitpointName = "HitBody";
-                    armor = 70;
-                    passThrough = 0.25;
+                    passThrough = 0.6;
                 };
             };
         };
@@ -3002,6 +2989,113 @@ class CfgWeapons {
         class ItemInfo : ItemInfo {
             hiddenSelections[] = {"camo", "camo1", "camo3"};
             hiddenSelectionsTextures[] = {"BaY_JKaara_Armoury\Data\Textures\Vest\BJK_Guevesa_Armor_CO1.paa", "BaY_JKaara_Armoury\Data\Textures\Vest\BJK_Guevesa_Armor_CO2.paa", "BaY_JKaara_Armoury\Data\Textures\Vest\BJK_Guevesa_Armor_Commander_CO3.paa"};
+        };
+    };
+    class ic_stormtrooper_Vest2;
+    class BJK_Guevesa_Stormtrooper_Armor : ic_stormtrooper_Vest2 {
+        author = "JCaleb2014";
+        scope = 2;
+        scopeCurator = 2;
+        scopeArsenal = 2;
+        displayName = "[Ba'Y JK] Gue'vesa Stormtrooper Armor";
+        descriptionShort = "Stormtrooper Armour";
+        hiddenSelections[] = {"camo", "camo1", "camo2"};
+        hiddenSelectionsTextures[] = {"BaY_JKaara_Armoury\Data\Textures\Vest\BJK_Guevesa_Stormtrooper_Armor_CO.paa", "BaY_JKaara_Armoury\Data\Textures\Vest\BJK_Guevesa_Stormtrooper_Armor_CO2.paa", "BaY_JKaara_Armoury\Data\Textures\Vest\BJK_Guevesa_Stormtrooper_Braces_CO.paa"};
+        class ItemInfo : VestItem {
+            uniformModel = "\IC_Departmento_Munitorum\ICP_StormTrooper\ic_StormtrooperV2.p3d";
+            containerClass = "Supply500";
+            hiddenSelections[] = {"camo", "camo1", "camo2"};
+            hiddenSelectionsTextures[] = {"\IC_Departmento_Munitorum\ICP_StormTrooper\data\ic_Stormtrooper1_co.paa", "\IC_Departmento_Munitorum\ICP_StormTrooper\data\ic_Stormtrooper2_co.paa", "\IC_Departmento_Munitorum\ICP_StormTrooper\data\ic_StormtrooperBraces_co.paa"};
+            class HitpointsProtectionInfo {
+                class Neck {
+                    hitpointName = "HitNeck";
+                    armor = 25;
+                    passThrough = 0.5;
+                };
+                class Arms {
+                    hitpointName = "HitArms";
+                    armor = 30;
+                    passThrough = 0.5;
+                };
+                class Chest {
+                    hitpointName = "HitChest";
+                    armor = 50;
+                    passThrough = 0.6;
+                };
+                class Diaphragm {
+                    hitpointName = "HitDiaphragm";
+                    armor = 20;
+                    passThrough = 0.6;
+                };
+                class Abdomen {
+                    hitpointName = "HitAbdomen";
+                    armor = 20;
+                    passThrough = 0.3;
+                };
+                class Pelvis {
+                    hitpointName = "HitPelvis";
+                    armor = 10;
+                    passThrough = 0.3;
+                };
+                class Body {
+                    hitpointName = "HitBody";
+                    passThrough = 0.6;
+                };
+                class Legs {
+                    hitpointName = "HitLegs";
+                    armor = 30;
+                    passThrough = 0.3;
+                };
+            };
+        };
+    };
+
+    // NVGs
+    class Binocular;
+    class NVGoggles : Binocular {
+        class ItemInfo;
+    };
+    class BJK_ServoSkull : NVGoggles {
+        author = "JCaleb2014";
+        scope = 2;
+        scopeCurator = 2;
+        scopeArsenal = 2;
+        nameSound = "nvgoggles";
+        simulation = "NVGoggles";
+        showEmpty = 0;
+        value = 5;
+        opticsZoomMin = 1;
+        opticsZoomMax = 1;
+        muzzlePos = "usti hlavne";
+        muzzleEnd = "konec hlavne";
+        modelOptics = "\A3\weapons_f\empty.p3d";
+        model = "Dos_Cosmetics\models\Mr_Servo_Human.p3d";
+        picture = "\CadFoot\Icon\Goggles_ca.paa";
+        displayName = "[Ba'Y JK] Mr. Servo (Human)";
+        visionMode[] = {"Normal", "NVG", "TI"};
+        hiddenSelections[] = {"camo"};
+        descriptionUse = "<t color='#9cf953'>Use: </t>Toggle Night Vision";
+        hiddenSelectionsTextures[] = {"BaY_JKaara_Armoury\Data\Textures\NVGs\BJK_ServoSkull_CO.paa"};
+        class ItemInfo : ItemInfo {
+            type = 616;
+            hmdType = 0;
+            uniformModel = "Dos_Cosmetics\models\Mr_Servo_Human.p3d";
+            modelOff = "Dos_Cosmetics\models\Mr_Servo_Human.p3d";
+            hiddenSelections[] = {"camo"};
+            hiddenSelectionsTextures[] = {"BaY_JKaara_Armoury\Data\Textures\NVGs\BJK_ServoSkull_CO.paa"};
+            mass = 10;
+        };
+    };
+    class BJK_InvisibleNVG : BJK_ServoSkull {
+        displayName = "[Ba'Y JK] Invisible NVG";
+        model = "IC_cad_inf\Headgear\empty.p3d";
+        hiddenSelections[] = {""};
+        hiddenSelectionsTextures[] = {""};
+        class ItemInfo : ItemInfo {
+            uniformModel = "IC_cad_inf\Headgear\empty.p3d";
+            modelOff = "IC_cad_inf\Headgear\empty.p3d";
+            hiddenSelections[] = {""};
+            hiddenSelectionsTextures[] = {""};
         };
     };
 
@@ -3480,6 +3574,22 @@ class CfgVehicles {
         respawnLinkedItems[] = {"TIOW_Bionic_Eye", "TIOW_Comissar_Cap"};
         hiddenSelections[] = {"camo", "camo1"};
         hiddenSelectionsTextures[] = {"BaY_JKaara_Armoury\Data\Textures\Uniform\BJK_Guevesa_Commissar_Uniform_CO.paa", "BaY_JKaara_Armoury\Data\Textures\Uniform\BJK_Guevesa_Commissar_Coat_CO.paa"};
+    };
+    class IC_CadUExtraTan_B;
+    class BJK_Guevesa_Stormtrooper : IC_CadUExtraTan_B {
+        author = "JCaleb2014";
+        scope = 2;
+        scopecurator = 2;
+        scopearsenal = 2;
+        linkedItems[] = {"IC_Stormtrooper_helmet", "ic_stormtrooper_Vest1", "ic_StormtrooperMask", "ItemMap", "ItemCompass", "ItemWatch", "ItemRadio"};
+        side = 1;
+        faction = "BJK_F";
+        editorSubcategory = "BJK_M";
+        displayName = "Gue'vesa Stormtrooper";
+        uniformClass = "BJK_Guevesa_Stormtrooper_Uniform";
+        backpack = "IC_Stormtrooper_Powerpack_01";
+        hiddenSelections[] = {"camo1", "camo", "camo2"};
+        hiddenSelectionsTextures[] = {"BaY_JKaara_Armoury\Data\Textures\Uniform\BJK_Guevesa_Stormtrooper_Uniform_Pants_CO.paa", "BaY_JKaara_Armoury\Data\Textures\Uniform\BJK_Guevesa_Stormtrooper_Uniform_Top_CO.paa", "BaY_JKaara_Armoury\Data\Textures\Uniform\BJK_Guevesa_Stormtrooper_Uniform_Extra_CO.paa"};
     };
 
     // Admech Uniforms
