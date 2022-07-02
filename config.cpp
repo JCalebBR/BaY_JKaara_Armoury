@@ -2680,6 +2680,20 @@ class CfgWeapons {
             };
         };
     };
+    class U_TIOW_Air_Caste_Pilot;
+    class BJK_EarthCaste_Crew : U_TIOW_Air_Caste_Pilot {
+        author = "JCaleb2014";
+        scope = 2;
+        scopeArsenal = 2;
+        scopeCurator = 2;
+        displayName = "[Ba'Y JK] Earth Caste Crew Uniform";
+        hiddenSelections[] = {"camo", "camo1"};
+        hiddenSelectionsTextures[] = {"BaY_JKaara_Armoury\Data\Textures\Uniform\BJK_EarthCaste_Crew_Uniform_Bottom_CO.paa", "BaY_JKaara_Armoury\Data\Textures\Uniform\BJK_EarthCaste_Crew_Uniform_Top_CO.paa"};
+        class ItemInfo : ItemInfo {
+            uniformClass = "BJK_EarthCaste_Crewman";
+            containerClass = "Supply500";
+        };
+    };
 
     // Gue'vesa Uniforms
     class TIOW_CadKasrUni_836;
@@ -2769,6 +2783,7 @@ class CfgWeapons {
             hiddenSelectionsTextures[] = {"BaY_JKaara_Armoury\Data\Textures\Uniform\BJK_Guevesa_Stormtrooper_Uniform_Pants_CO.paa", "BaY_JKaara_Armoury\Data\Textures\Uniform\BJK_Guevesa_Stormtrooper_Uniform_Top_CO.paa", "BaY_JKaara_Armoury\Data\Textures\Uniform\BJK_Guevesa_Stormtrooper_Uniform_Extra_CO.paa"};
         };
     };
+    
     // Admech Uniforms
     class TIOW_AM_Alpha_UNI;
     class BJK_Admech_Alpha_Robes : TIOW_AM_Alpha_UNI {
@@ -2854,7 +2869,52 @@ class CfgWeapons {
         hiddenSelections[] = {"camo"};
         hiddenSelectionsTextures[] = {"BaY_JKaara_Armoury\Data\Textures\Vest\BJK_FireWarrior_Pauldrons_Medical_CO.paa"};
     };
-
+    class TIOW_Tau_BeltP;
+    class BJK_EarthCaste_Pauldrons : TIOW_Tau_BeltP {
+        displayName = "[Ba'Y JK] Earth Caste Pauldrons";
+        hiddenSelections[] = {"camo"};
+        hiddenSelectionsTextures[] = {"BaY_JKaara_Armoury\Data\Textures\Vest\BJK_EarthCaste_Pauldrons_CO.paa"};
+        class ItemInfo : ItemInfo {
+            containerClass = "Supply500";
+            hiddenSelections[] = {"camo"};
+            class HitpointsProtectionInfo {
+                class Neck {
+                    hitpointName = "HitNeck";
+                    armor = 78;
+                    passThrough = 0.5;
+                };
+                class Arms {
+                    hitpointName = "HitArms";
+                    armor = 78;
+                    passThrough = 0.5;
+                };
+                class Chest {
+                    hitpointName = "HitChest";
+                    armor = 78;
+                    passThrough = 0.7;
+                };
+                class Diaphragm {
+                    hitpointName = "HitDiaphragm";
+                    armor = 78;
+                    passThrough = 0.7;
+                };
+                class Abdomen {
+                    hitpointName = "HitAbdomen";
+                    armor = 10;
+                    passThrough = 0.5;
+                };
+                class Pelvis {
+                    hitpointName = "HitPelvis";
+                    armor = 10;
+                    passThrough = 0.5;
+                };
+                class Body {
+                    hitpointName = "HitBody";
+                    passThrough = 0.6;
+                };
+            };
+        };
+    };
     // Gue'vesa Vests
     class Cad_KasrGear667th;
     class BJK_Guevesa_Kasrkin_Armor : Cad_KasrGear667th {
@@ -3514,6 +3574,27 @@ class CfgVehicles {
                 name = "leg_r";
             };
         };
+    };
+    class TIOW_Air_Caste_Pilot_B;
+    class BJK_EarthCaste_Crewman : TIOW_Air_Caste_Pilot_B {
+        author = "JCaleb2014";
+        scope = 2;
+        scopeCurator = 2;
+        scopeArsenal = 2;
+        identityTypes[] = {"Tau", "LanguageENGB_F"};
+        uniformClass = "BJK_EarthCaste_Crew";
+        side = 1;
+        faction = "BJK_F";
+        editorSubcategory = "BJK_M";
+        displayName = "Earth Caste Crewman";
+        weapons[] = {"BJK_pulse_pistol", "Throw", "Put"};
+        respawnWeapons[] = {"BJK_pulse_pistol", "Throw", "Put"};
+        Items[] = {"FirstAidKit"};
+        RespawnItems[] = {"FirstAidKit"};
+        magazines[] = {"BJK_pulse_pistol_mag", "BJK_pulse_pistol_mag"};
+        respawnMagazines[] = {"BJK_pulse_pistol_mag", "BJK_pulse_pistol_mag"};
+        hiddenSelections[] = {"camo", "camo1"};
+        hiddenSelectionsTextures[] = {"BaY_JKaara_Armoury\Data\Textures\Uniform\BJK_EarthCaste_Crew_Uniform_Bottom_CO.paa", "BaY_JKaara_Armoury\Data\Textures\Uniform\BJK_EarthCaste_Crew_Uniform_Top_CO.paa"};
     };
 
     // Gue'vesa Uniforms
