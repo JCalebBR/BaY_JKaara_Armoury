@@ -6,7 +6,7 @@ class CfgPatches {
         author = "JCaleb2014";
         requiredVersion = 1.6;
         requiredAddons[] = {"A3_Weapons_F", "A3_Weapons_F_Mark", "A3_Characters_F", "A3_Data_F", "A3_Sounds_F", "A3_Sounds_F_Mark", "TIOW_Tau_Gear", "DMCLS_weapons", "TIOW_40k_Tau", "IC_Cadia", "IC_Guevesa", "IC_weapons_base", "CadFoot", "WHtracked_TIOW_LR_Battlecannon", "TIOW_Admech", "TIOW_Comissar", "Dos_Cosmetics", "IC_StormTrooper"};
-        weapons[] = {"BJK_ion_rifle", "BJK_pulse_pistol", "BJK_pulse_pistol_WC", "BJK_DMCLS_pulse_rifle", "BJK_DMCLS_pulse_blaster", "BJK_DMCLS_pulse_burster", "BJK_DMCLS_pulse_carbine", "BJK_DMCLS_rail_rifle", "BJK_Guevesa_PulseRifle", "BJK_Guevesa_PulseRifle_Alt", "BJK_optics_ColiS", "BJK_optics_ColiB", "BJK_optics_ColiB_zoom", "KC_optics_Mk_zoom", "BJK_FireWarrior_Strike_Helmet", "BJK_FireWarrior_Strike_Helmet_Commander", "BJK_FireWarrior_Breacher_Helmet", "BJK_Guevesa_Helmet", "BJK_Guevesa_Helmet_Modified", "BJK_Guevesa_Helmet_Modified_Alt1", "BJK_Guevesa_Helmet_Modified_Alt2", "BJK_Guevesa_Helmet_Modified_Commander", "BJK_Guevesa_Helmet_Modified_Commander_Alt1", "BJK_Guevesa_Helmet_Modified_Commander_Alt2", "BJK_Guevesa_Kasrkin_Helmet", "BJK_Guevesa_Kasrkin_Helmet_Alt", "BJK_Guevesa_Commissar_Cap", "BJK_Admech_Alpha_Hood", "BJK_SpaceMarine_Mk7_Pauldrons", "BJK_SpaceMarine_Mk7_PowerArmor"};
+        weapons[] = {"BJK_ion_rifle", "BJK_pulse_pistol", "BJK_pulse_pistol_WC", "BJK_pulse_pistol_EC", "BJK_DMCLS_pulse_rifle", "BJK_DMCLS_pulse_blaster", "BJK_DMCLS_pulse_burster", "BJK_DMCLS_pulse_carbine", "BJK_DMCLS_rail_rifle", "BJK_Guevesa_PulseRifle", "BJK_Guevesa_PulseRifle_Alt", "BJK_optics_ColiS", "BJK_optics_ColiB", "BJK_optics_ColiB_zoom", "KC_optics_Mk_zoom", "BJK_FireWarrior_Strike_Helmet", "BJK_FireWarrior_Strike_Helmet_Commander", "BJK_FireWarrior_Strike_Helmet_Medical", "BJK_FireWarrior_Breacher_Helmet", "BJK_Tau_Headset1", "BJK_Tau_Headset2", "BJK_Tau_Headset3", "BJK_Tau_Headset4", "BJK_Tau_Headset5", "BJK_Tau_Headset_Commander1", "BJK_Tau_Headset_Commander2", "BJK_Tau_Headset_Commander3", "BJK_Tau_Headset_Commander4", "BJK_Tau_Headset_Commander5", "BJK_Tau_Headset_Medical1", "BJK_Tau_Headset_Medical2", "BJK_Tau_Headset_Medical3", "BJK_Tau_Headset_Medical4", "BJK_Tau_Headset_Medical5", "BJK_Tau_Headset_EarthCaste1", "BJK_Tau_Headset_EarthCaste2", "BJK_Tau_Headset_EarthCaste3", "BJK_Tau_Headset_EarthCaste4", "BJK_Tau_Headset_EarthCaste5", "BJK_Tau_Headset_EarthCaste_Commander1", "BJK_Tau_Headset_EarthCaste_Commander2", "BJK_Tau_Headset_EarthCaste_Commander3", "BJK_Tau_Headset_EarthCaste_Commander4", "BJK_Tau_Headset_EarthCaste_Commander5", "BJK_Tau_Headset_WaterCaste1", "BJK_Tau_Headset_WaterCaste2", "BJK_Tau_Headset_WaterCaste3", "BJK_Tau_Headset_WaterCaste4", "BJK_Tau_Headset_WaterCaste5", "BJK_Tau_Headset_WaterCaste_Commander1", "BJK_Tau_Headset_WaterCaste_Commander2", "BJK_Tau_Headset_WaterCaste_Commander3", "BJK_Tau_Headset_WaterCaste_Commander4", "BJK_Tau_Headset_WaterCaste_Commander5", "BJK_Guevesa_Helmet", "BJK_Guevesa_Helmet_Modified", "BJK_Guevesa_Helmet_Modified_Alt1", "BJK_Guevesa_Helmet_Modified_Alt2", "BJK_Guevesa_Helmet_Modified_Commander", "BJK_Guevesa_Helmet_Modified_Commander_Alt1", "BJK_Guevesa_Helmet_Modified_Commander_Alt2", "BJK_Guevesa_Kasrkin_Helmet", "BJK_Guevesa_Kasrkin_Helmet_Alt", "BJK_Guevesa_Commissar_Cap", "BJK_Admech_Alpha_Hood", "BJK_SpaceMarine_Mk7_Pauldrons", "BJK_SpaceMarine_Mk7_PowerArmor"};
         magazines[] = {"BJK_ionrifle_shot_mag", "BJK_ionrifle_overcharge_mag", "BJK_ExpSmall_Remote_Mag", "BJK_ExpBig_Remote_Mag", "BJK_DMCLS_pulse_mag_25", "BJK_DMCLS_pulse_mag_36", "BJK_DMCLS_pulse_mag_54", "BJK_DMCLS_pulse_blaster_mag_10", "BJK_DMCLS_pulse_blaster_mag_15", "BJK_DMCLS_pulse_blaster_mag_25", "BJK_DMCLS_pulse_blaster_airburst_mag_8", "BJK_DMCLS_pulse_blaster_airburst_mag_12", "BJK_DMCLS_pulse_blaster_airburst_mag_18", "BJK_DMCLS_pulse_blaster_slug_mag_10", "BJK_DMCLS_pulse_blaster_slug_mag_15", "BJK_DMCLS_pulse_blaster_slug_mag_25", "BJK_DMCLS_rail_rifle_mag", "BJK_photon_grenade_mag"};
         ammo[] = {"BJK_ionrifle_shot", "BJK_ionrifle_overcharge", "BJK_ExpSmall_Remote_Ammo", "BJK_ExpSmall_Remote_Ammo_Scripted", "BJK_ExpBig_Remote_Ammo", "BJK_DMCLS_pulse_shot", "BJK_pulse_pistol_shot", "BJK_DMCLS_pulse_blaster_shot", "BJK_DMCLS_pulse_blaster_airburst", "BJK_DMCLS_pulse_blaster_slug", "BJK_DMCLS_pulse_airburst_pellets", "BJK_DMCLS_rail_rifle_shot", "BJK_photon_grenade_ammo"};
         units[] = {"BJK_FireWarrior_Backpack", "BJK_FireWarrior_Medical", "BJK_Guevesa_Kasrkin_Backpack", "BJK_Guevesa_Kasrkin_Cables_Backpack", "BJK_Guevesa_Kasrkin_Cables_Backpack_Alt", "BJK_FireWarrior", "BJK_Guevesa_Kasrkin_Base", "BJK_Guevesa_Kasrkin", "BJK_Guevesa_Kasrkin_Alt", "BJK_Guevesa_Base", "BJK_SpaceMarine_Mk7_Tactical", "BJK_LR_Vanquisher_Modified", "BJK_Admech_Tek_Backpack", "BJK_Techpriest"};
@@ -1487,7 +1487,6 @@ class CfgMagazines {
         picture = "\DMCLS\dmcls_tau_explosives\photon_grenade\data\UI_photon.paa";
     };
 };
-
 class CfgWeapons {
     // Base Weapons
     class Rifle_Base_F;
@@ -1931,7 +1930,7 @@ class CfgWeapons {
         model = "\40k_tau\Weapons\pulse_pistol\pulse_pistol.p3d";
         picture = "\40k_tau\Weapons\Definitions\UI\Pistol.paa";
         hiddenSelections[] = {"Camo"};
-        hiddenSelectionsTextures[] = {"BaY_JKaara_Armoury\Data\Textures\Handgun\BJK_Pistol_CA.paa"};
+        hiddenSelectionsTextures[] = {"BaY_JKaara_Armoury\Data\Textures\Handgun\BJK_PulsePistol_CO.paa"};
         maxRecoilSway = 0.050000001;
         swayDecaySpeed = 1.5;
         opticsZoomMin = 0.25;
@@ -1978,7 +1977,13 @@ class CfgWeapons {
         baseWeapon = "BJK_pulse_pistol_WC";
         displayName = "[Ba'Y JK] Pulse Pistol (Water Caste)";
         hiddenSelections[] = {"Camo"};
-        hiddenSelectionsTextures[] = {"BaY_JKaara_Armoury\Data\Textures\Handgun\BJK_Pistol_WC_CA.paa"};
+        hiddenSelectionsTextures[] = {"BaY_JKaara_Armoury\Data\Textures\Handgun\BJK_PulsePistol_WC_CO.paa"};
+    };
+    class BJK_pulse_pistol_EC : BJK_pulse_pistol {
+        baseWeapon = "BJK_pulse_pistol_EC";
+        displayName = "[Ba'Y JK] Pulse Pistol (Earth Caste)";
+        hiddenSelections[] = {"Camo"};
+        hiddenSelectionsTextures[] = {"BaY_JKaara_Armoury\Data\Textures\Handgun\BJK_PulsePistol_EC_CO.paa"};
     };
     class BJK_DMCLS_pulse_rifle : Rifle_Base_F {
         scope = 2;
@@ -2467,14 +2472,14 @@ class CfgWeapons {
     class H_HelmetO_ViperSP_hex_F;
     class BJK_FireWarrior_Strike_Helmet : H_HelmetO_ViperSP_hex_F {
         author = "JCaleb2014";
-        displayName = "[Ba'Y JK] Fire Warrior Helmet (Strike)";
+        displayName = "[Ba'Y JK] Fire Warrior Strike Helmet";
         scope = 2;
         scopeArsenal = 2;
         scopeCurator = 2;
         picture = "\40k_tau\Weapons\Definitions\UI\Helmet.paa";
         model = "\40k_tau\Headgear\HelmetS.p3d";
         hiddenSelections[] = {"Camo", "Camo1"};
-        hiddenSelectionsTextures[] = {"BaY_JKaara_Armoury\Data\Textures\Headgear\BJK_FireWarrior_Strike_Helmet_CO.paa", "BaY_JKaara_Armoury\Data\Textures\Headgear\BJK_FireWarrior_Helmet_Headset_CO.paa"};
+        hiddenSelectionsTextures[] = {"BaY_JKaara_Armoury\Data\Textures\Headgear\BJK_FireWarrior_Strike_Helmet_CO.paa", "BaY_JKaara_Armoury\Data\Textures\Headgear\BJK_Tau_Headset_CO.paa"};
         subItems[] = {"BJK_InvisibleNVG"};
         class ItemInfo : HeadgearItem {
             mass = 10;
@@ -2491,19 +2496,263 @@ class CfgWeapons {
         };
     };
     class BJK_FireWarrior_Strike_Helmet_Commander : BJK_FireWarrior_Strike_Helmet {
-        displayName = "[Ba'Y JK] Fire Warrior Helmet (Strike, Shas'Ui)";
+        displayName = "[Ba'Y JK] Fire Warrior Strike Helmet (Shas'Ui)";
         hiddenSelections[] = {"Camo", "Camo1"};
-        hiddenSelectionsTextures[] = {"BaY_JKaara_Armoury\Data\Textures\Headgear\BJK_FireWarrior_Strike_Helmet_Commander_CO.paa", "BaY_JKaara_Armoury\Data\Textures\Headgear\BJK_FireWarrior_Helmet_Headset_CO.paa"};
+        hiddenSelectionsTextures[] = {"BaY_JKaara_Armoury\Data\Textures\Headgear\BJK_FireWarrior_Strike_Helmet_Commander_CO.paa", "BaY_JKaara_Armoury\Data\Textures\Headgear\BJK_Tau_Headset_Commander_CO.paa"};
     };
-
+    class BJK_FireWarrior_Strike_Helmet_Medical : BJK_FireWarrior_Strike_Helmet {
+        displayName = "[Ba'Y JK] Fire Warrior Strike Helmet (Medical)";
+        hiddenSelections[] = {"Camo", "Camo1"};
+        hiddenSelectionsTextures[] = {"BaY_JKaara_Armoury\Data\Textures\Headgear\BJK_FireWarrior_Strike_Helmet_CO.paa", "BaY_JKaara_Armoury\Data\Textures\Headgear\BJK_Tau_Headset_Medical_CO.paa"};
+    };
     class BJK_FireWarrior_Breacher_Helmet : BJK_FireWarrior_Strike_Helmet {
-        displayName = "[Ba'Y JK] Fire Warrior Helmet (Breacher)";
+        displayName = "[Ba'Y JK] Fire Warrior Breacher Helmet";
         model = "\40k_tau\Headgear\HelmetB2.p3d";
         hiddenSelections[] = {"Camo", "Camo1"};
-        hiddenSelectionsTextures[] = {"BaY_JKaara_Armoury\Data\Textures\Headgear\BJK_FireWarrior_Breacher_Helmet_CO.paa", "BaY_JKaara_Armoury\Data\Textures\Headgear\BJK_FireWarrior_Helmet_Headset_CO.paa"};
+        hiddenSelectionsTextures[] = {"BaY_JKaara_Armoury\Data\Textures\Headgear\BJK_FireWarrior_Breacher_Helmet_CO.paa", "BaY_JKaara_Armoury\Data\Textures\Headgear\BJK_Tau_Headset_CO.paa"};
         class ItemInfo : HeadgearItem {
             uniformModel = "\40k_tau\Headgear\HelmetB2.p3d";
         };
+    };
+    class TIOW_Tau_Hset1;
+    class BJK_Tau_Headset1 : TIOW_Tau_Hset1 {
+        author = "JCaleb2014";
+        displayName = "[Ba'Y JK] Tau Headset 1";
+        hiddenSelections[] = {"Camo"};
+        hiddenSelectionsTextures[] = {"BaY_JKaara_Armoury\Data\Textures\Headgear\BJK_Tau_Headset_CO.paa"};
+        subItems[] = {"BJK_InvisibleNVG"};
+        class ItemInfo : ItemInfo {
+            subItems[] = {"BJK_InvisibleNVG"};
+            class HitpointsProtectionInfo {
+                class Head {
+                    hitpointName = "HitHead";
+                    armor = 50;
+                    passThrough = 0.1;
+                };
+            };
+        };
+    };
+    class TIOW_Tau_Hset2;
+    class BJK_Tau_Headset2 : TIOW_Tau_Hset2 {
+        author = "JCaleb2014";
+        displayName = "[Ba'Y JK] Tau Headset 2";
+        hiddenSelections[] = {"Camo"};
+        hiddenSelectionsTextures[] = {"BaY_JKaara_Armoury\Data\Textures\Headgear\BJK_Tau_Headset_CO.paa"};
+        subItems[] = {"BJK_InvisibleNVG"};
+        class ItemInfo : ItemInfo {
+            subItems[] = {"BJK_InvisibleNVG"};
+            class HitpointsProtectionInfo {
+                class Head {
+                    hitpointName = "HitHead";
+                    armor = 50;
+                    passThrough = 0.1;
+                };
+            };
+        };
+    };
+    class TIOW_Tau_Hset3;
+    class BJK_Tau_Headset3 : TIOW_Tau_Hset3 {
+        author = "JCaleb2014";
+        displayName = "[Ba'Y JK] Tau Headset 3";
+        hiddenSelections[] = {"Camo"};
+        hiddenSelectionsTextures[] = {"BaY_JKaara_Armoury\Data\Textures\Headgear\BJK_Tau_Headset_CO.paa"};
+        subItems[] = {"BJK_InvisibleNVG"};
+        class ItemInfo : ItemInfo {
+            subItems[] = {"BJK_InvisibleNVG"};
+            class HitpointsProtectionInfo {
+                class Head {
+                    hitpointName = "HitHead";
+                    armor = 50;
+                    passThrough = 0.1;
+                };
+            };
+        };
+    };
+    class TIOW_Tau_Hset4;
+    class BJK_Tau_Headset4 : TIOW_Tau_Hset4 {
+        author = "JCaleb2014";
+        displayName = "[Ba'Y JK] Tau Headset 4";
+        hiddenSelections[] = {"Camo"};
+        hiddenSelectionsTextures[] = {"BaY_JKaara_Armoury\Data\Textures\Headgear\BJK_Tau_Headset_CO.paa"};
+        subItems[] = {"BJK_InvisibleNVG"};
+        class ItemInfo : ItemInfo {
+            subItems[] = {"BJK_InvisibleNVG"};
+            class HitpointsProtectionInfo {
+                class Head {
+                    hitpointName = "HitHead";
+                    armor = 50;
+                    passThrough = 0.1;
+                };
+            };
+        };
+    };
+    class TIOW_Tau_Hset5;
+    class BJK_Tau_Headset5 : TIOW_Tau_Hset5 {
+        author = "JCaleb2014";
+        displayName = "[Ba'Y JK] Tau Headset 5";
+        hiddenSelections[] = {"Camo"};
+        hiddenSelectionsTextures[] = {"BaY_JKaara_Armoury\Data\Textures\Headgear\BJK_Tau_Headset_CO.paa"};
+        subItems[] = {"BJK_InvisibleNVG"};
+        class ItemInfo : ItemInfo {
+            subItems[] = {"BJK_InvisibleNVG"};
+            class HitpointsProtectionInfo {
+                class Head {
+                    hitpointName = "HitHead";
+                    armor = 50;
+                    passThrough = 0.1;
+                };
+            };
+        };
+    };
+    class BJK_Tau_Headset_Commander1 : BJK_Tau_Headset1 {
+        displayName = "[Ba'Y JK] Tau Headset 1 (Shas'Ui)";
+        hiddenSelections[] = {"Camo"};
+        hiddenSelectionsTextures[] = {"BaY_JKaara_Armoury\Data\Textures\Headgear\BJK_Tau_Headset_Commander_CO.paa"};
+    };
+    class BJK_Tau_Headset_Commander2 : BJK_Tau_Headset2 {
+        displayName = "[Ba'Y JK] Tau Headset 2 (Shas'Ui)";
+        hiddenSelections[] = {"Camo"};
+        hiddenSelectionsTextures[] = {"BaY_JKaara_Armoury\Data\Textures\Headgear\BJK_Tau_Headset_Commander_CO.paa"};
+    };
+    class BJK_Tau_Headset_Commander3 : BJK_Tau_Headset3 {
+        displayName = "[Ba'Y JK] Tau Headset 3 (Shas'Ui)";
+        hiddenSelections[] = {"Camo"};
+        hiddenSelectionsTextures[] = {"BaY_JKaara_Armoury\Data\Textures\Headgear\BJK_Tau_Headset_Commander_CO.paa"};
+    };
+    class BJK_Tau_Headset_Commander4 : BJK_Tau_Headset4 {
+        displayName = "[Ba'Y JK] Tau Headset 4 (Shas'Ui)";
+        hiddenSelections[] = {"Camo"};
+        hiddenSelectionsTextures[] = {"BaY_JKaara_Armoury\Data\Textures\Headgear\BJK_Tau_Headset_Commander_CO.paa"};
+    };
+    class BJK_Tau_Headset_Commander5 : BJK_Tau_Headset5 {
+        displayName = "[Ba'Y JK] Tau Headset 5 (Shas'Ui)";
+        hiddenSelections[] = {"Camo"};
+        hiddenSelectionsTextures[] = {"BaY_JKaara_Armoury\Data\Textures\Headgear\BJK_Tau_Headset_Commander_CO.paa"};
+    };
+    class BJK_Tau_Headset_Medical1 : BJK_Tau_Headset1 {
+        displayName = "[Ba'Y JK] Tau Headset 1 (Medical)";
+        hiddenSelections[] = {"Camo"};
+        hiddenSelectionsTextures[] = {"BaY_JKaara_Armoury\Data\Textures\Headgear\BJK_Tau_Headset_Medical_CO.paa"};
+    };
+    class BJK_Tau_Headset_Medical2 : BJK_Tau_Headset2 {
+        displayName = "[Ba'Y JK] Tau Headset 2 (Medical)";
+        hiddenSelections[] = {"Camo"};
+        hiddenSelectionsTextures[] = {"BaY_JKaara_Armoury\Data\Textures\Headgear\BJK_Tau_Headset_Medical_CO.paa"};
+    };
+    class BJK_Tau_Headset_Medical3 : BJK_Tau_Headset3 {
+        displayName = "[Ba'Y JK] Tau Headset 3 (Medical)";
+        hiddenSelections[] = {"Camo"};
+        hiddenSelectionsTextures[] = {"BaY_JKaara_Armoury\Data\Textures\Headgear\BJK_Tau_Headset_Medical_CO.paa"};
+    };
+    class BJK_Tau_Headset_Medical4 : BJK_Tau_Headset4 {
+        displayName = "[Ba'Y JK] Tau Headset 4 (Medical)";
+        hiddenSelections[] = {"Camo"};
+        hiddenSelectionsTextures[] = {"BaY_JKaara_Armoury\Data\Textures\Headgear\BJK_Tau_Headset_Medical_CO.paa"};
+    };
+    class BJK_Tau_Headset_Medical5 : BJK_Tau_Headset5 {
+        displayName = "[Ba'Y JK] Tau Headset 5 (Medical)";
+        hiddenSelections[] = {"Camo"};
+        hiddenSelectionsTextures[] = {"BaY_JKaara_Armoury\Data\Textures\Headgear\BJK_Tau_Headset_Medical_CO.paa"};
+    };
+    class BJK_Tau_Headset_EarthCaste1 : BJK_Tau_Headset1 {
+        displayName = "[Ba'Y JK] Tau Headset 1 (Earth Caste)";
+        hiddenSelections[] = {"Camo"};
+        hiddenSelectionsTextures[] = {"BaY_JKaara_Armoury\Data\Textures\Headgear\BJK_Tau_Headset_EC_CO.paa"};
+    };
+    class BJK_Tau_Headset_EarthCaste2 : BJK_Tau_Headset2 {
+        displayName = "[Ba'Y JK] Tau Headset 2 (Earth Caste)";
+        hiddenSelections[] = {"Camo"};
+        hiddenSelectionsTextures[] = {"BaY_JKaara_Armoury\Data\Textures\Headgear\BJK_Tau_Headset_EC_CO.paa"};
+    };
+    class BJK_Tau_Headset_EarthCaste3 : BJK_Tau_Headset3 {
+        displayName = "[Ba'Y JK] Tau Headset 3 (Earth Caste)";
+        hiddenSelections[] = {"Camo"};
+        hiddenSelectionsTextures[] = {"BaY_JKaara_Armoury\Data\Textures\Headgear\BJK_Tau_Headset_EC_CO.paa"};
+    };
+    class BJK_Tau_Headset_EarthCaste4 : BJK_Tau_Headset4 {
+        displayName = "[Ba'Y JK] Tau Headset 4 (Earth Caste)";
+        hiddenSelections[] = {"Camo"};
+        hiddenSelectionsTextures[] = {"BaY_JKaara_Armoury\Data\Textures\Headgear\BJK_Tau_Headset_EC_CO.paa"};
+    };
+    class BJK_Tau_Headset_EarthCaste5 : BJK_Tau_Headset5 {
+        displayName = "[Ba'Y JK] Tau Headset 5 (Earth Caste)";
+        hiddenSelections[] = {"Camo"};
+        hiddenSelectionsTextures[] = {"BaY_JKaara_Armoury\Data\Textures\Headgear\BJK_Tau_Headset_EC_CO.paa"};
+    };
+    class BJK_Tau_Headset_EarthCaste_Commander1 : BJK_Tau_Headset1 {
+        displayName = "[Ba'Y JK] Tau Headset 1 (Earth Caste, Fio'Ui)";
+        hiddenSelections[] = {"Camo"};
+        hiddenSelectionsTextures[] = {"BaY_JKaara_Armoury\Data\Textures\Headgear\BJK_Tau_Headset_EC_Commander_CO.paa"};
+    };
+    class BJK_Tau_Headset_EarthCaste_Commander2 : BJK_Tau_Headset2 {
+        displayName = "[Ba'Y JK] Tau Headset 2 (Earth Caste, Fio'Ui)";
+        hiddenSelections[] = {"Camo"};
+        hiddenSelectionsTextures[] = {"BaY_JKaara_Armoury\Data\Textures\Headgear\BJK_Tau_Headset_EC_Commander_CO.paa"};
+    };
+    class BJK_Tau_Headset_EarthCaste_Commander3 : BJK_Tau_Headset3 {
+        displayName = "[Ba'Y JK] Tau Headset 3 (Earth Caste, Fio'Ui)";
+        hiddenSelections[] = {"Camo"};
+        hiddenSelectionsTextures[] = {"BaY_JKaara_Armoury\Data\Textures\Headgear\BJK_Tau_Headset_EC_Commander_CO.paa"};
+    };
+    class BJK_Tau_Headset_EarthCaste_Commander4 : BJK_Tau_Headset4 {
+        displayName = "[Ba'Y JK] Tau Headset 4 (Earth Caste, Fio'Ui)";
+        hiddenSelections[] = {"Camo"};
+        hiddenSelectionsTextures[] = {"BaY_JKaara_Armoury\Data\Textures\Headgear\BJK_Tau_Headset_EC_Commander_CO.paa"};
+    };
+    class BJK_Tau_Headset_EarthCaste_Commander5 : BJK_Tau_Headset5 {
+        displayName = "[Ba'Y JK] Tau Headset 5 (Earth Caste, Fio'Ui)";
+        hiddenSelections[] = {"Camo"};
+        hiddenSelectionsTextures[] = {"BaY_JKaara_Armoury\Data\Textures\Headgear\BJK_Tau_Headset_EC_Commander_CO.paa"};
+    };
+    class BJK_Tau_Headset_WaterCaste1 : BJK_Tau_Headset1 {
+        displayName = "[Ba'Y JK] Tau Headset 1 (Water Caste)";
+        hiddenSelections[] = {"Camo"};
+        hiddenSelectionsTextures[] = {"BaY_JKaara_Armoury\Data\Textures\Headgear\BJK_Tau_Headset_WC_CO.paa"};
+    };
+    class BJK_Tau_Headset_WaterCaste2 : BJK_Tau_Headset2 {
+        displayName = "[Ba'Y JK] Tau Headset 2 (Water Caste)";
+        hiddenSelections[] = {"Camo"};
+        hiddenSelectionsTextures[] = {"BaY_JKaara_Armoury\Data\Textures\Headgear\BJK_Tau_Headset_WC_CO.paa"};
+    };
+    class BJK_Tau_Headset_WaterCaste3 : BJK_Tau_Headset3 {
+        displayName = "[Ba'Y JK] Tau Headset 3 (Water Caste)";
+        hiddenSelections[] = {"Camo"};
+        hiddenSelectionsTextures[] = {"BaY_JKaara_Armoury\Data\Textures\Headgear\BJK_Tau_Headset_WC_CO.paa"};
+    };
+    class BJK_Tau_Headset_WaterCaste4 : BJK_Tau_Headset4 {
+        displayName = "[Ba'Y JK] Tau Headset 4 (Water Caste)";
+        hiddenSelections[] = {"Camo"};
+        hiddenSelectionsTextures[] = {"BaY_JKaara_Armoury\Data\Textures\Headgear\BJK_Tau_Headset_WC_CO.paa"};
+    };
+    class BJK_Tau_Headset_WaterCaste5 : BJK_Tau_Headset5 {
+        displayName = "[Ba'Y JK] Tau Headset 5 (Water Caste)";
+        hiddenSelections[] = {"Camo"};
+        hiddenSelectionsTextures[] = {"BaY_JKaara_Armoury\Data\Textures\Headgear\BJK_Tau_Headset_WC_CO.paa"};
+    };
+    class BJK_Tau_Headset_WaterCaste_Commander1 : BJK_Tau_Headset1 {
+        displayName = "[Ba'Y JK] Tau Headset 1 (Water Caste, Por'Ui)";
+        hiddenSelections[] = {"Camo"};
+        hiddenSelectionsTextures[] = {"BaY_JKaara_Armoury\Data\Textures\Headgear\BJK_Tau_Headset_WC_Commander_CO.paa"};
+    };
+    class BJK_Tau_Headset_WaterCaste_Commander2 : BJK_Tau_Headset2 {
+        displayName = "[Ba'Y JK] Tau Headset 2 (Water Caste, Por'Ui)";
+        hiddenSelections[] = {"Camo"};
+        hiddenSelectionsTextures[] = {"BaY_JKaara_Armoury\Data\Textures\Headgear\BJK_Tau_Headset_WC_Commander_CO.paa"};
+    };
+    class BJK_Tau_Headset_WaterCaste_Commander3 : BJK_Tau_Headset3 {
+        displayName = "[Ba'Y JK] Tau Headset 3 (Water Caste, Por'Ui)";
+        hiddenSelections[] = {"Camo"};
+        hiddenSelectionsTextures[] = {"BaY_JKaara_Armoury\Data\Textures\Headgear\BJK_Tau_Headset_WC_Commander_CO.paa"};
+    };
+    class BJK_Tau_Headset_WaterCaste_Commander4 : BJK_Tau_Headset4 {
+        displayName = "[Ba'Y JK] Tau Headset 4 (Water Caste, Por'Ui)";
+        hiddenSelections[] = {"Camo"};
+        hiddenSelectionsTextures[] = {"BaY_JKaara_Armoury\Data\Textures\Headgear\BJK_Tau_Headset_WC_Commander_CO.paa"};
+    };
+    class BJK_Tau_Headset_WaterCaste_Commander5 : BJK_Tau_Headset5 {
+        displayName = "[Ba'Y JK] Tau Headset 5 (Water Caste, Por'Ui)";
+        hiddenSelections[] = {"Camo"};
+        hiddenSelectionsTextures[] = {"BaY_JKaara_Armoury\Data\Textures\Headgear\BJK_Tau_Headset_WC_Commander_CO.paa"};
     };
 
     // Gue'vesa Headgear
@@ -2681,17 +2930,25 @@ class CfgWeapons {
         };
     };
     class U_TIOW_Air_Caste_Pilot;
-    class BJK_EarthCaste_Crew : U_TIOW_Air_Caste_Pilot {
+    class BJK_EarthCaste_Uniform : U_TIOW_Air_Caste_Pilot {
         author = "JCaleb2014";
         scope = 2;
         scopeArsenal = 2;
         scopeCurator = 2;
-        displayName = "[Ba'Y JK] Earth Caste Crew Uniform";
+        displayName = "[Ba'Y JK] Earth Caste Uniform";
         hiddenSelections[] = {"camo", "camo1"};
-        hiddenSelectionsTextures[] = {"BaY_JKaara_Armoury\Data\Textures\Uniform\BJK_EarthCaste_Crew_Uniform_Bottom_CO.paa", "BaY_JKaara_Armoury\Data\Textures\Uniform\BJK_EarthCaste_Crew_Uniform_Top_CO.paa"};
+        hiddenSelectionsTextures[] = {"BaY_JKaara_Armoury\Data\Textures\Uniform\BJK_EarthCaste_Uniform_Bottom_CO.paa", "BaY_JKaara_Armoury\Data\Textures\Uniform\BJK_EarthCaste_Uniform_Top_CO.paa"};
         class ItemInfo : ItemInfo {
             uniformClass = "BJK_EarthCaste_Crewman";
             containerClass = "Supply500";
+        };
+    };
+    class BJK_WaterCaste_Uniform : BJK_EarthCaste_Uniform {
+        displayName = "[Ba'Y JK] Water Caste Uniform";
+        hiddenSelections[] = {"camo", "camo1"};
+        hiddenSelectionsTextures[] = {"BaY_JKaara_Armoury\Data\Textures\Uniform\BJK_WaterCaste_Uniform_Bottom_CO.paa", "BaY_JKaara_Armoury\Data\Textures\Uniform\BJK_WaterCaste_Uniform_Top_CO.paa"};
+        class ItemInfo : ItemInfo {
+            uniformClass = "BJK_WaterCaste";
         };
     };
 
@@ -2783,7 +3040,7 @@ class CfgWeapons {
             hiddenSelectionsTextures[] = {"BaY_JKaara_Armoury\Data\Textures\Uniform\BJK_Guevesa_Stormtrooper_Uniform_Pants_CO.paa", "BaY_JKaara_Armoury\Data\Textures\Uniform\BJK_Guevesa_Stormtrooper_Uniform_Top_CO.paa", "BaY_JKaara_Armoury\Data\Textures\Uniform\BJK_Guevesa_Stormtrooper_Uniform_Extra_CO.paa"};
         };
     };
-    
+
     // Admech Uniforms
     class TIOW_AM_Alpha_UNI;
     class BJK_Admech_Alpha_Robes : TIOW_AM_Alpha_UNI {
@@ -2871,6 +3128,10 @@ class CfgWeapons {
     };
     class TIOW_Tau_BeltP;
     class BJK_EarthCaste_Pauldrons : TIOW_Tau_BeltP {
+        author = "JCaleb2014";
+        scope = 2;
+        scopeArsenal = 2;
+        scopeCurator = 2;
         displayName = "[Ba'Y JK] Earth Caste Pauldrons";
         hiddenSelections[] = {"camo"};
         hiddenSelectionsTextures[] = {"BaY_JKaara_Armoury\Data\Textures\Vest\BJK_EarthCaste_Pauldrons_CO.paa"};
@@ -2915,6 +3176,12 @@ class CfgWeapons {
             };
         };
     };
+    class BJK_WaterCaste_Pauldrons : BJK_EarthCaste_Pauldrons {
+        displayName = "[Ba'Y JK] Water Caste Pauldrons";
+        hiddenSelections[] = {"camo"};
+        hiddenSelectionsTextures[] = {"BaY_JKaara_Armoury\Data\Textures\Vest\BJK_WaterCaste_Pauldrons_CO.paa"};
+    };
+
     // Gue'vesa Vests
     class Cad_KasrGear667th;
     class BJK_Guevesa_Kasrkin_Armor : Cad_KasrGear667th {
@@ -3587,14 +3854,22 @@ class CfgVehicles {
         faction = "BJK_F";
         editorSubcategory = "BJK_M";
         displayName = "Earth Caste Crewman";
-        weapons[] = {"BJK_pulse_pistol", "Throw", "Put"};
-        respawnWeapons[] = {"BJK_pulse_pistol", "Throw", "Put"};
+        weapons[] = {"BJK_pulse_pistol_EC", "Throw", "Put"};
+        respawnWeapons[] = {"BJK_pulse_pistol_EC", "Throw", "Put"};
         Items[] = {"FirstAidKit"};
         RespawnItems[] = {"FirstAidKit"};
         magazines[] = {"BJK_pulse_pistol_mag", "BJK_pulse_pistol_mag"};
         respawnMagazines[] = {"BJK_pulse_pistol_mag", "BJK_pulse_pistol_mag"};
         hiddenSelections[] = {"camo", "camo1"};
-        hiddenSelectionsTextures[] = {"BaY_JKaara_Armoury\Data\Textures\Uniform\BJK_EarthCaste_Crew_Uniform_Bottom_CO.paa", "BaY_JKaara_Armoury\Data\Textures\Uniform\BJK_EarthCaste_Crew_Uniform_Top_CO.paa"};
+        hiddenSelectionsTextures[] = {"BaY_JKaara_Armoury\Data\Textures\Uniform\BJK_EarthCaste_Uniform_Bottom_CO.paa", "BaY_JKaara_Armoury\Data\Textures\Uniform\BJK_EarthCaste_Uniform_Top_CO.paa"};
+    };
+    class BJK_WaterCaste : BJK_EarthCaste_Crewman {
+        uniformClass = "BJK_WaterCaste_Crew";
+        displayName = "Water Caste Warrior";
+        weapons[] = {"BJK_pulse_pistol_WC", "Throw", "Put"};
+        respawnWeapons[] = {"BJK_pulse_pistol_WC", "Throw", "Put"};
+        hiddenSelections[] = {"camo", "camo1"};
+        hiddenSelectionsTextures[] = {"BaY_JKaara_Armoury\Data\Textures\Uniform\BJK_WaterCaste_Uniform_Bottom_CO.paa", "BaY_JKaara_Armoury\Data\Textures\Uniform\BJK_WaterCaste_Uniform_Top_CO.paa"};
     };
 
     // Gue'vesa Uniforms
