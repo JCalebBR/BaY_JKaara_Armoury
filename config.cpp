@@ -5,7 +5,7 @@ class CfgPatches {
         name = "Ba'Y J'Kaara Armory";
         author = "JCaleb2014";
         requiredVersion = 1.6;
-        requiredAddons[] = {"A3_Weapons_F", "A3_Weapons_F_Mark", "A3_Characters_F", "A3_Data_F", "A3_Sounds_F", "A3_Sounds_F_Mark", "TIOW_Tau_Gear", "DMCLS_weapons", "TIOW_40k_Tau", "IC_Cadia", "IC_Guevesa", "IC_weapons_base", "CadFoot", "WHtracked_TIOW_LR_Battlecannon", "TIOW_Admech", "TIOW_Comissar", "Dos_Cosmetics", "IC_StormTrooper"};
+        requiredAddons[] = {"A3_Weapons_F", "A3_Weapons_F_Mark", "A3_Characters_F", "A3_Data_F", "A3_Sounds_F", "A3_Sounds_F_Mark", "TIOW_Tau_Gear", "DMCLS_weapons", "TIOW_40k_Tau", "IC_Cadia", "IC_Guevesa", "IC_weapons_base", "CadFoot", "WHtracked_TIOW_LR_Battlecannon", "TIOW_Admech", "TIOW_Comissar", "Dos_Cosmetics", "IC_StormTrooper", "DMCLS_explosives_c", "DMCLS_weapons_c"};
         weapons[] = {"BJK_ion_rifle", "BJK_pulse_pistol", "BJK_pulse_pistol_WC", "BJK_pulse_pistol_EC", "BJK_DMCLS_pulse_rifle", "BJK_DMCLS_pulse_blaster", "BJK_DMCLS_pulse_burster", "BJK_DMCLS_pulse_carbine", "BJK_DMCLS_rail_rifle", "BJK_Guevesa_PulseRifle", "BJK_Guevesa_PulseRifle_Alt", "BJK_optics_ColiS", "BJK_optics_ColiB", "BJK_optics_ColiB_zoom", "KC_optics_Mk_zoom", "BJK_FireWarrior_Strike_Helmet", "BJK_FireWarrior_Strike_Helmet_Commander", "BJK_FireWarrior_Strike_Helmet_Medical", "BJK_FireWarrior_Breacher_Helmet", "BJK_Tau_Headset1", "BJK_Tau_Headset2", "BJK_Tau_Headset3", "BJK_Tau_Headset4", "BJK_Tau_Headset5", "BJK_Tau_Headset_Commander1", "BJK_Tau_Headset_Commander2", "BJK_Tau_Headset_Commander3", "BJK_Tau_Headset_Commander4", "BJK_Tau_Headset_Commander5", "BJK_Tau_Headset_Medical1", "BJK_Tau_Headset_Medical2", "BJK_Tau_Headset_Medical3", "BJK_Tau_Headset_Medical4", "BJK_Tau_Headset_Medical5", "BJK_Tau_Headset_EarthCaste1", "BJK_Tau_Headset_EarthCaste2", "BJK_Tau_Headset_EarthCaste3", "BJK_Tau_Headset_EarthCaste4", "BJK_Tau_Headset_EarthCaste5", "BJK_Tau_Headset_EarthCaste_Commander1", "BJK_Tau_Headset_EarthCaste_Commander2", "BJK_Tau_Headset_EarthCaste_Commander3", "BJK_Tau_Headset_EarthCaste_Commander4", "BJK_Tau_Headset_EarthCaste_Commander5", "BJK_Tau_Headset_WaterCaste1", "BJK_Tau_Headset_WaterCaste2", "BJK_Tau_Headset_WaterCaste3", "BJK_Tau_Headset_WaterCaste4", "BJK_Tau_Headset_WaterCaste5", "BJK_Tau_Headset_WaterCaste_Commander1", "BJK_Tau_Headset_WaterCaste_Commander2", "BJK_Tau_Headset_WaterCaste_Commander3", "BJK_Tau_Headset_WaterCaste_Commander4", "BJK_Tau_Headset_WaterCaste_Commander5", "BJK_Guevesa_Helmet", "BJK_Guevesa_Helmet_Modified", "BJK_Guevesa_Helmet_Modified_Alt1", "BJK_Guevesa_Helmet_Modified_Alt2", "BJK_Guevesa_Helmet_Modified_Commander", "BJK_Guevesa_Helmet_Modified_Commander_Alt1", "BJK_Guevesa_Helmet_Modified_Commander_Alt2", "BJK_Guevesa_Kasrkin_Helmet", "BJK_Guevesa_Kasrkin_Helmet_Alt", "BJK_Guevesa_Commissar_Cap", "BJK_Admech_Alpha_Hood", "BJK_SpaceMarine_Mk7_Pauldrons", "BJK_SpaceMarine_Mk7_PowerArmor"};
         magazines[] = {"BJK_ionrifle_shot_mag", "BJK_ionrifle_overcharge_mag", "BJK_ExpSmall_Remote_Mag", "BJK_ExpBig_Remote_Mag", "BJK_DMCLS_pulse_mag_25", "BJK_DMCLS_pulse_mag_36", "BJK_DMCLS_pulse_mag_54", "BJK_DMCLS_pulse_blaster_mag_10", "BJK_DMCLS_pulse_blaster_mag_15", "BJK_DMCLS_pulse_blaster_mag_25", "BJK_DMCLS_pulse_blaster_airburst_mag_8", "BJK_DMCLS_pulse_blaster_airburst_mag_12", "BJK_DMCLS_pulse_blaster_airburst_mag_18", "BJK_DMCLS_pulse_blaster_slug_mag_10", "BJK_DMCLS_pulse_blaster_slug_mag_15", "BJK_DMCLS_pulse_blaster_slug_mag_25", "BJK_DMCLS_rail_rifle_mag", "BJK_photon_grenade_mag"};
         ammo[] = {"BJK_ionrifle_shot", "BJK_ionrifle_overcharge", "BJK_ExpSmall_Remote_Ammo", "BJK_ExpSmall_Remote_Ammo_Scripted", "BJK_ExpBig_Remote_Ammo", "BJK_DMCLS_pulse_shot", "BJK_pulse_pistol_shot", "BJK_DMCLS_pulse_blaster_shot", "BJK_DMCLS_pulse_blaster_airburst", "BJK_DMCLS_pulse_blaster_slug", "BJK_DMCLS_pulse_airburst_pellets", "BJK_DMCLS_rail_rifle_shot", "BJK_photon_grenade_ammo"};
@@ -1044,123 +1044,42 @@ class cfgDistanceFilters {
 
 class CfgAmmo {
     class B_127x99_Ball;
-    class BJK_DMCLS_pulse_shot : B_127x99_Ball {
-        typicalSpeed = 1000;
-        airFriction = -1.9999999e-005;
-        model = "\40k_tau\Effects\pulse_tracer\Pulse_tracer.p3d";
-        tracerStartTime = 0.001;
-        tracerEndTime = 10;
-        hit = 50;
-        caliber = 4;
-        deflecting = 0;
-    };
     class BJK_pulse_pistol_shot : B_127x99_Ball {
         typicalSpeed = 1000;
         airFriction = -1.9999999e-005;
-        model = "\40k_tau\Effects\pulse_tracer\Pulse_tracer.p3d";
         tracerStartTime = 0.001;
         tracerEndTime = 10;
         hit = 20;
         caliber = 2;
         deflecting = 0;
     };
-    class BJK_DMCLS_pulse_blaster_shot : B_127x99_Ball {
-        typicalSpeed = 600;
-        airFriction = -1e-006;
-        model = "\40k_tau\Effects\pulse_tracer\Pulse_tracer.p3d";
-        tracerStartTime = 0.001;
-        tracerEndTime = 10;
-        hit = 60;
-        caliber = 3;
-        deflecting = 0;
-        submunitionAmmo = "DMCLS_pulse_airburst_pellets";
-        submunitionConeType[] = {"poissondisc", 14};
-        submunitionConeAngle = 2;
-        triggerTime = 9.9999997e-006;
-        deleteParentWhenTriggered = 1;
-    };
-    class BJK_DMCLS_pulse_blaster_airburst : B_127x99_Ball {
-        typicalSpeed = 400;
-        airFriction = -1e-006;
-        tracerStartTime = 0.001;
-        tracerEndTime = 10;
-        hit = 20;
-        caliber = 2;
-        deflecting = 0;
-        submunitionAmmo = "DMCLS_pulse_airburst_pellets";
-        submunitionConeType[] = {"poissondisc", 24};
-        submunitionConeAngle = 0.80000001;
-        triggerTime = 0.079999998;
-        deleteParentWhenTriggered = 1;
-    };
-    class BJK_DMCLS_pulse_blaster_slug : B_127x99_Ball {
-        typicalSpeed = 700;
-        airFriction = -1.9999999e-005;
-        tracerStartTime = 0.001;
-        tracerEndTime = 10;
-        hit = 50;
-        caliber = 3;
-        deflecting = 0;
-    };
-    class BJK_DMCLS_pulse_airburst_pellets : B_127x99_Ball {
-        typicalSpeed = 100;
-        airFriction = -1e-006;
-        tracerStartTime = 0.001;
-        tracerEndTime = 10;
-        hit = 30;
-        caliber = 2;
-        deflecting = 0;
-    };
-    class BJK_DMCLS_rail_rifle_shot : B_127x99_Ball {
-        typicalSpeed = 1500;
-        airFriction = -7.9999998e-005;
-        model = "\40k_tau\Effects\pulse_tracer\Pulse_tracer.p3d";
-        tracerStartTime = 0.001;
-        tracerEndTime = 10;
-        caliber = 5;
-        hit = 200;
-        deflecting = 0;
-    };
+
+    class DMCLS_pulse_shot;
+    class BJK_DMCLS_pulse_shot : DMCLS_pulse_shot {};
+
+    class DMCLS_pulse_blaster_shot;
+    class BJK_DMCLS_pulse_blaster_shot : DMCLS_pulse_blaster_shot {};
+
+    class DMCLS_pulse_blaster_airburst;
+    class BJK_DMCLS_pulse_blaster_airburst : DMCLS_pulse_blaster_airburst {};
+
+    class DMCLS_pulse_blaster_slug;
+    class BJK_DMCLS_pulse_blaster_slug : DMCLS_pulse_blaster_slug {};
+
+    class DMCLS_pulse_airburst_pellets;
+    class BJK_DMCLS_pulse_airburst_pellets : DMCLS_pulse_airburst_pellets {};
+
+    class DMCLS_rail_rifle_shot;
+    class BJK_DMCLS_rail_rifle_shot : DMCLS_rail_rifle_shot {};
+
     class ammo_Penetrator_Base;
-    class ShellBase;
-    class BJK_ionrifle_shot : B_127x99_Ball {
-        typicalSpeed = 1000;
-        airFriction = -1.9999999e-005;
-        tracerStartTime = 0.001;
-        tracerEndTime = 10;
-        tracersevery = 1;
-        caliber = 5;
-        deflecting = 0;
-        hit = 75;
-    };
-    class BJK_ionrifle_overcharge : ShellBase {
-        deflecting = 0;
-        hit = 600;
-        indirectHit = 20;
-        indirectHitRange = 5;
-        dangerRadiusHit = 100;
-        suppressionRadiusHit = 15;
-        typicalSpeed = 1000;
-        explosive = 0.5;
-        cost = 300;
-        airFriction = -1.9999999e-005;
-        caliber = 25;
-        whistleOnFire = 1;
-        whistleDist = 14;
-        model = "\40k_tau\Effects\Ion_tracer\Ion_tracer.p3d";
-        tracerScale = 1.4;
-        tracerStartTime = 0.0099999998;
-        tracerEndTime = 3;
-        muzzleEffect = "";
-        explosionEffects = "TIOW_Ion_ExplosionEffect";
-        soundHit1[] = {"A3\Sounds_F\arsenal\explosives\shells\Tank_shell_explosion_01", 1.77828, 1, 1800};
-        soundHit2[] = {"A3\Sounds_F\arsenal\explosives\shells\Tank_shell_explosion_02", 1.77828, 1, 1800};
-        soundHit3[] = {"A3\Sounds_F\arsenal\explosives\shells\Tank_shell_explosion_03", 1.77828, 1, 1800};
-        soundHit4[] = {"A3\Sounds_F\arsenal\explosives\shells\Tank_shell_explosion_04", 1.77828, 1, 1800};
-        multiSoundHit[] = {"soundHit1", 0.25, "soundHit2", 0.25, "soundHit3", 0.25, "soundHit4", 0.25};
-        SoundSetExplosion[] =
-            {"Shell105mm130mm_Exp_SoundSet", "Shell105mm130mm_Tail_SoundSet", "Explosion_Debris_SoundSet"};
-    };
+
+    class DMCLS_ion_rifle_shot;
+    class BJK_ionrifle_shot : DMCLS_ion_rifle_shot {};
+
+    class DMCLS_ion_rifle_shot_overcharged;
+    class BJK_ionrifle_overcharge : DMCLS_ion_rifle_shot_overcharged {};
+
     class PipeBombBase;
     class BJK_ExpSmall_Remote_Ammo : PipeBombBase {
         hit = 1500;
@@ -1180,8 +1099,7 @@ class CfgAmmo {
         mineTrigger = "RemoteTrigger";
         triggerWhenDestroyed = 1;
     };
-    class BJK__ExpSmall_Remote_Ammo_Scripted : BJK_ExpSmall_Remote_Ammo {
-    };
+    class BJK__ExpSmall_Remote_Ammo_Scripted : BJK_ExpSmall_Remote_Ammo {};
     class BJK_ExpBig_Remote_Ammo : PipeBombBase {
         hit = 5000;
         indirectHit = 5000;
@@ -1200,14 +1118,11 @@ class CfgAmmo {
         mineTrigger = "RemoteTrigger";
         triggerWhenDestroyed = 1;
     };
-    class Grenade;
-    class BJK_photon_grenade_ammo : Grenade {
+
+    class DMCLS_tau_photon_grenade_ammo;
+    class BJK_photon_grenade_ammo : DMCLS_tau_photon_grenade_ammo {
         hit = 10;
         indirectHit = 50;
-        indirectHitRange = 10;
-        model = "\DMCLS\dmcls_tau_explosives\photon_grenade\photon_grenade.p3d";
-        explosionTime = 4;
-        SoundSetExplosion[] = {"DMCLS_photon_grenade_Shot_SoundSet", "GrenadeHe_Tail_SoundSet", "Explosion_Debris_SoundSet"};
     };
 };
 class CfgMagazines {
@@ -2768,8 +2683,8 @@ class CfgWeapons {
             class HitpointsProtectionInfo {
                 class Head {
                     hitpointName = "HitHead";
-                    armor = 40;
-                    passThrough = 0.35;
+                    armor = 13;
+                    passThrough = 0.2;
                 };
             };
         };
@@ -2788,8 +2703,8 @@ class CfgWeapons {
             class HitpointsProtectionInfo {
                 class Head {
                     hitpointName = "HitHead";
-                    armor = 50;
-                    passThrough = 0.25;
+                    armor = 13;
+                    passThrough = 0.2;
                 };
             };
         };
@@ -2840,37 +2755,20 @@ class CfgWeapons {
             class HitpointsProtectionInfo {
                 class Head {
                     hitpointName = "HitHead";
-                    armor = 50;
-                    passThrough = 0.05;
+                    armor = 13;
+                    passThrough = 0.2;
                 };
             };
         };
         subItems[] = {"Integrated_NVG_TI_1_F"};
     };
-    class BJK_Guevesa_Kasrkin_Helmet_Alt : Cad_Inf_Helm2 {
-        author = "JCaleb2014";
-        scope = 2;
-        scopeArsenal = 2;
-        scopeCurator = 2;
+    class BJK_Guevesa_Kasrkin_Helmet_Alt : BJK_Guevesa_Kasrkin_Helmet {
         displayName = "[Ba'Y JK] Gue'vesa Kasrkin Helmet (Alternate)";
-        picture = "\CadFoot\Icon\CadianKasrkinHelmet_ca.paa";
-        model = "\CadFoot\Model\CadianKasrkinHelmet.p3d";
         hiddenSelections[] = {"camo", "camoB", "Camo1"};
         hiddenSelectionsTextures[] = {"BaY_JKaara_Armoury\Data\Textures\Headgear\BJK_Guevesa_Kasrkin_Helmet_CO2.paa", "BaY_JKaara_Armoury\Data\Textures\Headgear\BJK_Guevesa_Kasrkin_Rebreather_CO.paa", "BaY_JKaara_Armoury\Data\Textures\Vest\BJK_Guevesa_Kasrkin_Armor_CO2.paa"};
         class ItemInfo : HeadgearItem {
-            mass = 45;
-            uniformModel = "\CadFoot\Model\CadianKasrkinHelmet.p3d";
-            allowedSlots[] = {801, 901, 701, 605};
-            modelSides[] = {3, 1};
             hiddenSelections[] = {"camo", "camoB", "Camo1"};
             hiddenSelectionsTextures[] = {"BaY_JKaara_Armoury\Data\Textures\Headgear\BJK_Guevesa_Kasrkin_Helmet_CO2.paa", "BaY_JKaara_Armoury\Data\Textures\Headgear\BJK_Guevesa_Kasrkin_Rebreather_CO.paa", "BaY_JKaara_Armoury\Data\Textures\Vest\BJK_Guevesa_Kasrkin_Armor_CO2.paa"};
-            class HitpointsProtectionInfo {
-                class Head {
-                    hitpointName = "HitHead";
-                    armor = 50;
-                    passThrough = 0.05;
-                };
-            };
         };
         subItems[] = {"Integrated_NVG_TI_1_F"};
     };
@@ -2923,7 +2821,7 @@ class CfgWeapons {
             class HitpointsProtectionInfo {
                 class Body {
                     hitpointName = "HitBody";
-                    armor = 5;
+                    armor = 3;
                     passThrough = 0.75;
                 };
             };
@@ -2941,6 +2839,13 @@ class CfgWeapons {
         class ItemInfo : ItemInfo {
             uniformClass = "BJK_EarthCaste_Crewman";
             containerClass = "Supply500";
+            class HitpointsProtectionInfo {
+                class Body {
+                    hitpointName = "HitBody";
+                    armor = 3;
+                    passThrough = 0.75;
+                };
+            };
         };
     };
     class BJK_WaterCaste_Uniform : BJK_EarthCaste_Uniform {
@@ -2966,6 +2871,11 @@ class CfgWeapons {
             uniformClass = "BJK_Guevesa_Kasrkin_Base";
             containerClass = "Supply500";
             mass = 40;
+            class Body {
+                hitpointName = "HitBody";
+                armor = 3;
+                passThrough = 0.75;
+            };
         };
     };
     class BJK_Guevesa_Kasrkin_Uniform : BJK_Guevesa_Kasrkin_Uniform_Base {
@@ -3002,6 +2912,11 @@ class CfgWeapons {
             uniformClass = "BJK_Guevesa_Base";
             containerClass = "Supply500";
             mass = 80;
+            class Body {
+                hitpointName = "HitBody";
+                armor = 3;
+                passThrough = 0.75;
+            };
         };
     };
     class U_TIOW_Comissar;
@@ -3021,6 +2936,11 @@ class CfgWeapons {
             uniformModel = "\TIOW_IG_HQ\Comissar\Krieg_Comissar.p3d";
             containerClass = "Supply500";
             mass = 50;
+            class Body {
+                hitpointName = "HitBody";
+                armor = 3;
+                passThrough = 0.75;
+            };
         };
     };
     class IC_CadUExtraTan_U_B;
@@ -3038,6 +2958,11 @@ class CfgWeapons {
             containerClass = "Supply500";
             hiddenSelections[] = {"camo1", "camo", "camo2"};
             hiddenSelectionsTextures[] = {"BaY_JKaara_Armoury\Data\Textures\Uniform\BJK_Guevesa_Stormtrooper_Uniform_Pants_CO.paa", "BaY_JKaara_Armoury\Data\Textures\Uniform\BJK_Guevesa_Stormtrooper_Uniform_Top_CO.paa", "BaY_JKaara_Armoury\Data\Textures\Uniform\BJK_Guevesa_Stormtrooper_Uniform_Extra_CO.paa"};
+            class Body {
+                hitpointName = "HitBody";
+                armor = 3;
+                passThrough = 0.75;
+            };
         };
     };
 
@@ -3056,6 +2981,11 @@ class CfgWeapons {
             hiddenSelections[] = {"camo"};
             hiddenSelectionsTextures[] = {"BaY_JKaara_Armoury\Data\Textures\Uniform\BJK_Admech_Alpha_Robes_CO.paa"};
             containerClass = "Supply500";
+            class Body {
+                hitpointName = "HitBody";
+                armor = 3;
+                passThrough = 0.75;
+            };
         };
     };
 
@@ -3081,22 +3011,22 @@ class CfgWeapons {
             class HitpointsProtectionInfo {
                 class Neck {
                     hitpointName = "HitNeck";
-                    armor = 78;
+                    armor = 13;
                     passThrough = 0.5;
                 };
                 class Arms {
                     hitpointName = "HitArms";
-                    armor = 78;
+                    armor = 13;
                     passThrough = 0.5;
                 };
                 class Chest {
                     hitpointName = "HitChest";
-                    armor = 78;
+                    armor = 13;
                     passThrough = 0.7;
                 };
                 class Diaphragm {
                     hitpointName = "HitDiaphragm";
-                    armor = 78;
+                    armor = 13;
                     passThrough = 0.7;
                 };
                 class Abdomen {
@@ -3118,13 +3048,29 @@ class CfgWeapons {
     };
     class BJK_FireWarrior_Pauldrons_Commander : BJK_FireWarrior_Pauldrons {
         displayName = "[Ba'Y JK] Fire Warrior Pauldrons (Shas'Ui)";
+        model = "40k_tau\Gear\Belt_shasui.p3d";
         hiddenSelections[] = {"camo"};
         hiddenSelectionsTextures[] = {"BaY_JKaara_Armoury\Data\Textures\Vest\BJK_FireWarrior_Pauldrons_Commander_CO.paa"};
+        class ItemInfo : ItemInfo {
+            uniformModel = "40k_tau\Gear\Belt_shasui.p3d";
+            hiddenSelections[] = {"camo"};
+            hiddenSelectionsTextures[] = {"BaY_JKaara_Armoury\Data\Textures\Vest\BJK_FireWarrior_Pauldrons_Commander_CO.paa"};
+        };
+    };
+    class BJK_FireWarrior_Pauldrons_Commander_Alt : BJK_FireWarrior_Pauldrons {
+        displayName = "[Ba'Y JK] Fire Warrior Pauldrons (Assistant)";
+        hiddenSelections[] = {"camo"};
+        hiddenSelectionsTextures[] = {"BaY_JKaara_Armoury\Data\Textures\Vest\BJK_FireWarrior_Pauldrons_Commander_Alt_CO.paa"};
     };
     class BJK_FireWarrior_Pauldrons_Medical : BJK_FireWarrior_Pauldrons {
         displayName = "[Ba'Y JK] Fire Warrior Pauldrons (Medical)";
         hiddenSelections[] = {"camo"};
         hiddenSelectionsTextures[] = {"BaY_JKaara_Armoury\Data\Textures\Vest\BJK_FireWarrior_Pauldrons_Medical_CO.paa"};
+    };
+    class BJK_FireWarrior_Pauldrons_Medical_Alt : BJK_FireWarrior_Pauldrons_Commander {
+        displayName = "[Ba'Y JK] Fire Warrior Pauldrons (Medical, Alternate)";
+        hiddenSelections[] = {"camo"};
+        hiddenSelectionsTextures[] = {"BaY_JKaara_Armoury\Data\Textures\Vest\BJK_FireWarrior_Pauldrons_Medical_Alt_CO.paa"};
     };
     class TIOW_Tau_BeltP;
     class BJK_EarthCaste_Pauldrons : TIOW_Tau_BeltP {
@@ -3141,22 +3087,22 @@ class CfgWeapons {
             class HitpointsProtectionInfo {
                 class Neck {
                     hitpointName = "HitNeck";
-                    armor = 78;
+                    armor = 13;
                     passThrough = 0.5;
                 };
                 class Arms {
                     hitpointName = "HitArms";
-                    armor = 78;
+                    armor = 13;
                     passThrough = 0.5;
                 };
                 class Chest {
                     hitpointName = "HitChest";
-                    armor = 78;
+                    armor = 13;
                     passThrough = 0.7;
                 };
                 class Diaphragm {
                     hitpointName = "HitDiaphragm";
-                    armor = 78;
+                    armor = 13;
                     passThrough = 0.7;
                 };
                 class Abdomen {
@@ -3198,38 +3144,37 @@ class CfgWeapons {
             class HitpointsProtectionInfo {
                 class Neck {
                     hitpointName = "HitNeck";
-                    armor = 70;
-                    passThrough = 0.2;
+                    armor = 13;
+                    passThrough = 0.5;
                 };
                 class Arms {
                     hitpointName = "HitArms";
-                    armor = 70;
-                    passThrough = 0.2;
+                    armor = 13;
+                    passThrough = 0.5;
                 };
                 class Chest {
                     hitpointName = "HitChest";
-                    armor = 70;
-                    passThrough = 0.2;
+                    armor = 13;
+                    passThrough = 0.7;
                 };
                 class Diaphragm {
                     hitpointName = "HitDiaphragm";
-                    armor = 70;
-                    passThrough = 0.2;
+                    armor = 13;
+                    passThrough = 0.7;
                 };
                 class Abdomen {
                     hitpointName = "HitAbdomen";
-                    armor = 70;
-                    passThrough = 0.2;
+                    armor = 10;
+                    passThrough = 0.5;
                 };
                 class Pelvis {
                     hitpointName = "HitPelvis";
-                    armor = 70;
-                    passThrough = 0.2;
+                    armor = 10;
+                    passThrough = 0.5;
                 };
                 class Body {
                     hitpointName = "HitBody";
-                    armor = 70;
-                    passThrough = 0.2;
+                    passThrough = 0.6;
                 };
             };
         };
@@ -3260,42 +3205,42 @@ class CfgWeapons {
             class HitpointsProtectionInfo {
                 class Neck {
                     hitpointName = "HitNeck";
-                    armor = 60;
-                    passThrough = 0.15;
+                    armor = 13;
+                    passThrough = 0.5;
                 };
                 class Arms {
                     hitpointName = "HitArms";
-                    armor = 60;
-                    passThrough = 0.25;
+                    armor = 13;
+                    passThrough = 0.5;
                 };
                 class Chest {
                     hitpointName = "HitChest";
-                    armor = 70;
-                    passThrough = 0.3;
+                    armor = 13;
+                    passThrough = 0.7;
                 };
                 class Diaphragm {
                     hitpointName = "HitDiaphragm";
-                    armor = 50;
-                    passThrough = 0.3;
+                    armor = 13;
+                    passThrough = 0.7;
                 };
                 class Abdomen {
                     hitpointName = "HitAbdomen";
-                    armor = 70;
-                    passThrough = 0.2;
+                    armor = 10;
+                    passThrough = 0.5;
                 };
                 class Pelvis {
                     hitpointName = "HitPelvis";
-                    armor = 50;
-                    passThrough = 0.2;
+                    armor = 10;
+                    passThrough = 0.5;
                 };
                 class Body {
                     hitpointName = "HitBody";
-                    passThrough = 0.2;
+                    passThrough = 0.6;
                 };
                 class Legs {
                     hitpointName = "HitLegs";
-                    armor = 50;
-                    passThrough = 0.1;
+                    armor = 10;
+                    passThrough = 0.6;
                 };
             };
         };
@@ -3336,33 +3281,33 @@ class CfgWeapons {
             class HitpointsProtectionInfo {
                 class Neck {
                     hitpointName = "HitNeck";
-                    armor = 25;
+                    armor = 13;
                     passThrough = 0.5;
                 };
                 class Arms {
                     hitpointName = "HitArms";
-                    armor = 30;
+                    armor = 13;
                     passThrough = 0.5;
                 };
                 class Chest {
                     hitpointName = "HitChest";
-                    armor = 50;
-                    passThrough = 0.6;
+                    armor = 13;
+                    passThrough = 0.7;
                 };
                 class Diaphragm {
                     hitpointName = "HitDiaphragm";
-                    armor = 20;
-                    passThrough = 0.6;
+                    armor = 13;
+                    passThrough = 0.7;
                 };
                 class Abdomen {
                     hitpointName = "HitAbdomen";
-                    armor = 20;
-                    passThrough = 0.3;
+                    armor = 10;
+                    passThrough = 0.5;
                 };
                 class Pelvis {
                     hitpointName = "HitPelvis";
                     armor = 10;
-                    passThrough = 0.3;
+                    passThrough = 0.5;
                 };
                 class Body {
                     hitpointName = "HitBody";
@@ -3370,8 +3315,8 @@ class CfgWeapons {
                 };
                 class Legs {
                     hitpointName = "HitLegs";
-                    armor = 30;
-                    passThrough = 0.3;
+                    armor = 10;
+                    passThrough = 0.6;
                 };
             };
         };
@@ -3472,8 +3417,8 @@ class CfgGlasses {
         class HitpointsProtectionInfo {
             class Head {
                 hitpointName = "HitHead";
-                armor = 40;
-                passThrough = 0.2;
+                armor = 2;
+                passThrough = 0.8;
             };
         };
     };
@@ -5068,6 +5013,12 @@ class CfgVehicles {
             class RHBGunner : RHBGunner {
                 weapons[] = {"TIOW_Tau_BurstCannon"};
                 magazines[] = {"TIOW_Tau_BurstCannon_mag", "TIOW_Tau_BurstCannon_mag", "TIOW_Tau_BurstCannon_mag", "TIOW_Tau_BurstCannon_mag", "TIOW_Tau_BurstCannon_mag", "TIOW_Tau_BurstCannon_mag"};
+                gunnerOpticsModel = "\40k_tau\Vehicles\Hammerhead\reticle\Hammerhead_optic_railgun";
+                gunnerOutOpticsModel = "";
+                gunnerOutOpticsColor[] = {0, 0, 0, 1};
+                gunnerOutForceOptics = 0;
+                gunnerFireAlsoInInternalCamera = 0;
+                gunnerOutOpticsShowCursor = 0;
             };
         };
         class AnimationSources {
