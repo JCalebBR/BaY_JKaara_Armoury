@@ -12,3 +12,15 @@ class CfgPatches {
         name = "BJK_DMCLS_attachments";
     };
 };
+
+class SlotInfo;
+class CowsSlot_BJK_dmcls_tau : SlotInfo {
+    linkProxy = "\A3\data_f\proxies\weapon_slots\TOP";
+    displayName = "$STR_A3_CowsSlot0";
+    compatibleItems[] = {"BJK_DMCLS_Tau_Optics_1", "BJK_DMCLS_Tau_Optics_2", "BJK_DMCLS_Tau_Optics_3", "BJK_DMCLS_Tau_Coli_1", "BJK_DMCLS_Tau_Coli_2"};
+};
+
+class UnderBarrelSlot;
+class UnderBarrelSlot_BJK_dmcls_tau : UnderBarrelSlot {
+    compatibleItems[] = {"BJK_DMCLS_Tau_Bipod_1"};
+};
