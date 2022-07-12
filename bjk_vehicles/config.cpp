@@ -5,8 +5,8 @@ class CfgPatches {
         name = "Ba'Y J'Kaara Armory (Vehicles)";
         author = "JCaleb2014";
         requiredVersion = 1.6;
-        requiredAddons[] = {"A3_Weapons_F", "A3_Weapons_F_Mark", "A3_Characters_F", "A3_Data_F", "A3_Sounds_F", "A3_Sounds_F_Mark", "DMCLS_weapons", "TIOW_40k_Tau", "IC_Cadia", "IC_Guevesa", "IC_weapons_base", "CadFoot", "WHtracked_TIOW_LR_Battlecannon"};
-        units[] = {"BJK_LR_Vanquisher_Modified"};
+        requiredAddons[] = {"A3_Weapons_F", "A3_Weapons_F_Mark", "A3_Characters_F", "A3_Data_F", "A3_Sounds_F", "A3_Sounds_F_Mark", "TIOW_40k_Tau", "WHtracked_TIOW_LR_Battlecannon"};
+        units[] = {"BJK_LR_Vanquisher_Modified", "BJK_HammerHead_Railgun", "BJK_Tau_Drone_UAV", "BJK_ServoSkull_UAV", "BJK_PP_UAV_1", "BJK_PP_UAV_2"};
     };
 };
 
@@ -14,6 +14,222 @@ class ItemInfo;
 class EventHandlers;
 class CBA_Extended_EventHandlers_base;
 class CfgVehicles {
+    class Man;
+    class CAManBase : Man {
+        class ACE_SelfActions {
+            class ACE_Equipment {
+                class BJK_Deploy {
+                    displayName = "Deploy";
+                    statement = "";
+                    exceptions[] = {"isNotDragging", "notOnMap", "isNotInside", "isNotSitting"};
+                    showDisabled = 0;
+                    priority = 0;
+                    class BJK_Deploy_Tau_Drone_UAV {
+                        displayName = "Recon Drone";
+                        condition = "'BJK_Tau_Drone_UAV_Packed' in (items _player)";
+                        statement = "['BJK_Tau_Drone_UAV_Packed',_player] call itc_land_packable_fnc_unPack";
+                        priority = 1;
+                        showDisabled = 1;
+                        exceptions[] = {"isNotInside", "isNotSitting"};
+                        enableInside = 0;
+                    };
+                    class BJK_Deploy_ServoSkull_UAV {
+                        displayName = "Servo Skull";
+                        condition = "'BJK_ServoSkull_UAV_Packed' in (items _player)";
+                        statement = "['BJK_ServoSkull_UAV_Packed',_player] call itc_land_packable_fnc_unPack";
+                        priority = 1;
+                        showDisabled = 1;
+                        exceptions[] = {"isNotInside", "isNotSitting"};
+                        enableInside = 0;
+                    };
+                };
+            };
+        };
+    };
+
+    // UAV Item
+    class ITC_Land_UAV_Packed_base;
+    class CBA_MiscItem_ItemInfo;
+    class BJK_Tau_Drone_UAV_Packed : ITC_Land_UAV_Packed_base {
+        author = "JCaleb2014";
+        scope = 2;
+        scopeArsenal = 2;
+        scopeCurator = 2;
+        weaponPoolAvailable = 1;
+        displayName = "[Ba'Y J'Kaara] Recon Drone";
+        picture = "";
+        descriptionShort = "Remote Tau Drone";
+        mass = 10;
+        weight = 0;
+        itc_land_unPacksTo = "BJK_Tau_Drone_UAV";
+        class ItemInfo : CBA_MiscItem_ItemInfo {
+            mass = 10;
+            weight = 100;
+            displayName = "[Ba'Y J'Kaara] Recon Drone";
+        };
+    };
+    class BJK_ServoSkull_UAV_Packed : BJK_Tau_Drone_UAV_Packed {
+        displayName = "[Ba'Y J'Kaara] Servo Skull";
+        descriptionShort = "Remote Servo Skull";
+        itc_land_unPacksTo = "BJK_ServoSkull_UAV";
+        class ItemInfo : CBA_MiscItem_ItemInfo {
+            mass = 10;
+            weight = 100;
+            displayName = "[Ba'Y J'Kaara] Servo Skull";
+        };
+    };
+    class Dos_PP_UAV_1;
+    class BJK_PP_UAV_1 : Dos_PP_UAV_1 {
+        author = "JCaleb2014";
+        scope = 2;
+        displayName = "[Ba'Y JK] Recon Drone Deploy";
+        model = "\A3\weapons_f\empty";
+        class assembleInfo {
+            primary = 1;
+            base = "";
+            displayName = "Recon Drone Unarmed UAV";
+            assembleTo = "BJK_Tau_Drone_UAV";
+        };
+    };
+    class BJK_PP_UAV_2 : BJK_PP_UAV_1 {
+        scope = 2;
+        displayName = "[Ba'Y JK] Servo Skull Deploy";
+        model = "TIOW_Admech\models\Mech_Back_1.p3d";
+        class assembleInfo {
+            primary = 1;
+            base = "";
+            displayName = "Servo Skull Unarmed UAV";
+            assembleTo = "BJK_ServoSkull_UAV";
+        };
+    };
+
+    // UAV
+    class TIOW_Tau_Marker_Drone_TA;
+    class ACE_Actions;
+    class BJK_Tau_Drone_UAV : TIOW_Tau_Marker_Drone_TA {
+        scope = 2;
+        scopeCurator = 2;
+        scopeArsenal = 2;
+        faction = "BJK_F";
+        editorSubcategory = "BJK_DR";
+        displayName = "Recon Drone (UAV)";
+        itc_land_PacksTo = "BJK_Tau_Drone_UAV_Packed";
+        _generalMacro = "BJK_Tau_Drone_UAV";
+        fuelCapacity = 9999;
+        camouflage = 1;
+        liftForceCoef = 4;
+        maxSpeed = 350;
+        rotorSpeed = 2;
+        envelope[] = {0, 0.5, 2.0, 3.0, 4, 4.5, 5, 5.5, 5.7, 6, 6, 5.6, 5, 4.3, 3.0};
+        model = "\40k_tau\Drones\Marker_Drone.p3d";
+        hiddenSelections[] = {"Camo", "Camo1"};
+        hiddenSelectionsTextures[] = {"\40k_tau\Drones\data\Drone_base_CA.paa", "\40k_tau\Drones\data\Marker_Drone_CA.paa"};
+        class assembleInfo {
+            primary = 1;
+            base = "";
+            assembleTo = "";
+            displayName = "";
+            dissasembleTo[] = {"BJK_PP_UAV_1"};
+        };
+        class ACE_Actions {
+            class ACE_MainActions {
+                class BJK_Pack_Servo {
+                    displayName = "Deactivate Recon Drone";
+                    condition = "((alive _target) && ( ACE_Player distance _target ) < 10) && ( count (( UAVControl _target) select 1 ) < 1 )";
+                    statement = "[_target,_player] call itc_land_packable_fnc_Pack";
+                };
+            };
+        };
+    };
+
+    class Dos_Servo_UAV_2;
+    class BJK_Servo_UAV_Base : Dos_Servo_UAV_2 {
+        scope = 0;
+        scopeCurator = 0;
+        class ACE_Actions;
+    };
+    class BJK_Servo_UAV_Base_2 : BJK_Servo_UAV_Base {
+        class ACE_Actions : ACE_Actions {
+            class ACE_MainActions;
+        };
+    };
+    class BJK_ServoSkull_UAV : BJK_Servo_UAV_Base_2 {
+        scope = 2;
+        scopeCurator = 2;
+        displayName = "Servo Skull (UAV)";
+        itc_land_PacksTo = "BJK_ServoSkull_UAV_Packed";
+        faction = "BJK_F";
+        editorSubcategory = "BJK_DR";
+        camouflage = 1;
+        liftForceCoef = 4;
+        maxSpeed = 350;
+        rotorSpeed = 2;
+        envelope[] = {0, 0.5, 2.0, 3.0, 4, 4.5, 5, 5.5, 5.7, 6, 6, 5.6, 5, 4.3, 3.0};
+        class UserActions {
+            class ThrusterGravBrakes {
+                animPeriod = 5;
+                condition = "(alive this) AND ((speed this) > 65)";
+                displayName = "<t color='#FE2E2E'>Engage Gravbrakes";
+                displayNameDefault = "<t color='#FE2E2E'>Engage Gravbrakes";
+                onlyForPlayer = 0;
+                position = "";
+                priority = 10;
+                radius = 1;
+                showWindow = 0;
+                statement = "0 = this spawn Steve_30k_Jetbike_Script_fnc_ThrustersGravBrakes";
+                textToolTip = "<t color='#FE2E2E'>Engage Gravbrakes";
+                userActionID = 57;
+            };
+            class ThrusterEngage {
+                animPeriod = 5;
+                // clang-format off
+                condition="(!(this getvariable [""Speeder_Thruster_Status"",false])) AND (alive this) AND (isEngineOn this) AND  ((getPosATL this) select 2) > 1";
+                // clang-format on
+                displayName = "<t color='#04B45F'>Engage Forward Thrusters";
+                displayNameDefault = "<t color='#04B45F'>Engage Forward Thrusters";
+                onlyForPlayer = 0;
+                position = "";
+                priority = 10;
+                radius = 1;
+                showWindow = 0;
+                statement = "0 = this spawn Steve_30k_Jetbike_Script_fnc_ThrustersEngage";
+                textToolTip = "<t color='#04B45F'>Engage Forward Thrusters";
+                userActionID = 52;
+            };
+            class ThrusterDisengage {
+                animPeriod = 5;
+                // clang-format off
+                condition = "(this getvariable [""Speeder_Thruster_Status"",false]) AND (alive this)";
+                // clang-format on
+                displayNameDefault = "<t color='#FCE205'>Disengage Forward Thrusters";
+                onlyForPlayer = 0;
+                position = "";
+                priority = 10;
+                radius = 1;
+                showWindow = 0;
+                statement = "0 = this spawn Steve_30k_Jetbike_Script_fnc_ThrustersDisengage";
+                textToolTip = "<t color='#FCE205'>Disengage Forward Thrusters";
+                userActionID = 53;
+            };
+        };
+        class assembleInfo {
+            primary = 1;
+            base = "";
+            assembleTo = "";
+            displayName = "";
+            dissasembleTo[] = {"BJK_PP_UAV_2"};
+        };
+        class ACE_Actions : ACE_Actions {
+            class ACE_MainActions : ACE_MainActions {
+                class AV_Pack_Servo {
+                    displayName = "Deactivate Servo-Skull";
+                    condition = "((alive _target) && ( ACE_Player distance _target ) < 10) && ( count (( UAVControl _target) select 1 ) < 1 )";
+                    statement = "[_target,_player] call itc_land_packable_fnc_Pack";
+                };
+            };
+        };
+    };
+
     // Gue'vesa vehicles
     class LandVehicle;
     class Tank : LandVehicle {
@@ -1134,6 +1350,21 @@ class CfgVehicles {
                 weapon = "TIOW_Tau_BurstCannon";
             };
         };
+    };
+
+    // Tau Vehicles
+    class TIOW_Tau_Hammerhead_TA;
+    class BJK_HammerHead_Railgun : TIOW_Tau_Hammerhead_TA {
+        vehicleClass = "Armored";
+        scope = 2;
+        scopeCurator = 2;
+        scopeArsenal = 2;
+        faction = "BJK_F";
+        editorSubcategory = "BJK_V";
+        displayName = "Hammerhead (Railgun)";
+        crew = "BJK_EarthCaste_Crewman";
+        hiddenSelections[] = {"Camo", "Camo1"};
+        hiddenSelectionsTextures[] = {"BaY_JKaara_Armoury\bjk_vehicles\Textures\BJK_Devilfish_CO.paa", "BaY_JKaara_Armoury\bjk_vehicles\Textures\BJK_HammerHead_Railgun_CO.paa"};
     };
 };
 

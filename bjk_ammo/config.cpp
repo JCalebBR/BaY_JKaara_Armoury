@@ -21,22 +21,34 @@ class CfgAmmo {
     };
 
     class DMCLS_pulse_shot;
-    class BJK_DMCLS_pulse_shot : DMCLS_pulse_shot {};
+    class BJK_DMCLS_pulse_shot : DMCLS_pulse_shot {
+        cartridge = "";
+    };
 
     class DMCLS_pulse_blaster_shot;
-    class BJK_DMCLS_pulse_blaster_shot : DMCLS_pulse_blaster_shot {};
+    class BJK_DMCLS_pulse_blaster_shot : DMCLS_pulse_blaster_shot {
+        cartridge = "";
+    };
 
     class DMCLS_pulse_blaster_airburst;
-    class BJK_DMCLS_pulse_blaster_airburst : DMCLS_pulse_blaster_airburst {};
+    class BJK_DMCLS_pulse_blaster_airburst : DMCLS_pulse_blaster_airburst {
+        cartridge = "";
+    };
 
     class DMCLS_pulse_blaster_slug;
-    class BJK_DMCLS_pulse_blaster_slug : DMCLS_pulse_blaster_slug {};
+    class BJK_DMCLS_pulse_blaster_slug : DMCLS_pulse_blaster_slug {
+        cartridge = "";
+    };
 
     class DMCLS_pulse_airburst_pellets;
-    class BJK_DMCLS_pulse_airburst_pellets : DMCLS_pulse_airburst_pellets {};
+    class BJK_DMCLS_pulse_airburst_pellets : DMCLS_pulse_airburst_pellets {
+        cartridge = "";
+    };
 
     class DMCLS_rail_rifle_shot;
-    class BJK_DMCLS_rail_rifle_shot : DMCLS_rail_rifle_shot {};
+    class BJK_DMCLS_rail_rifle_shot : DMCLS_rail_rifle_shot {
+        cartridge = "";
+    };
 
     class ammo_Penetrator_Base;
 

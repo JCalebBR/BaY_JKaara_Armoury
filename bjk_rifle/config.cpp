@@ -6,7 +6,7 @@ class CfgPatches {
         author = "JCaleb2014";
         requiredVersion = 1.6;
         requiredAddons[] = {"A3_Weapons_F", "A3_Weapons_F_Mark", "A3_Characters_F", "A3_Data_F", "A3_Sounds_F", "A3_Sounds_F_Mark", "TIOW_40k_Tau", "CadFoot", "TIOW_Admech"};
-        weapons[] = {"BJK_ion_rifle", "BJK_DMCLS_pulse_rifle", "BJK_DMCLS_pulse_blaster", "BJK_DMCLS_pulse_burster", "BJK_DMCLS_pulse_carbine", "BJK_DMCLS_rail_rifle", "BJK_Guevesa_PulseRifle", "BJK_Guevesa_PulseRifle_Alt"};
+        weapons[] = {"BJK_ion_rifle", "BJK_DMCLS_pulse_rifle", "BJK_DMCLS_pulse_blaster", "BJK_DMCLS_pulse_burster", "BJK_DMCLS_pulse_carbine", "BJK_DMCLS_rail_rifle", "BJK_Guevesa_PulseRifle", "BJK_Guevesa_PulseRifle_Alt", "BJK_Guevesa_LockeBolter"};
     };
 };
 
@@ -15,88 +15,32 @@ class Mode_SemiAuto;
 class Mode_FullAuto;
 class Mode_Burst;
 class UGL_F;
-class SlotInfo;
-class CowsSlot_BJK_dmcls_tau : SlotInfo {
-    linkProxy = "\A3\data_f\proxies\weapon_slots\TOP";
-    displayName = "$STR_A3_CowsSlot0";
-    compatibleItems[] = {"BJK_DMCLS_Tau_Optics_1", "BJK_DMCLS_Tau_Optics_2", "BJK_DMCLS_Tau_Optics_3", "BJK_DMCLS_Tau_Coli_1", "BJK_DMCLS_Tau_Coli_2"};
-};
-class CowsSlot_tau : SlotInfo {
-    linkProxy = "\A3\data_f\proxies\weapon_slots\TOP";
-    displayName = "$STR_A3_CowsSlot0";
-    compatibleItems[] =
-        {"BJK_optics_ColiS", "BJK_optics_ColiB", "BJK_optics_ColiB_zoom", "BJK_optics_Mk_zoom"};
-};
-class UnderBarrelSlot;
-class UnderBarrelSlot_BJK_dmcls_tau : UnderBarrelSlot {
-    compatibleItems[] = {"BJK_DMCLS_Tau_Bipod_1"};
-};
-
+class CowsSlot_BJK_dmcls_tau;
+class UnderBarrelSlot_BJK_dmcls_tau;
 class CfgWeapons {
     // Base Weapons
     class Rifle_Base_F;
     class Pistol_Base_F;
 
     // Tau Weapons
-    class BJK_ion_rifle : Rifle_Base_F {
+    class DMCLS_ion_rifle_VL;
+    class BJK_ion_rifle : DMCLS_ion_rifle_VL {
         scope = 2;
         scopeArsenal = 2;
         scopeCurator = 2;
         baseWeapon = "BJK_ion_rifle";
         Author = "JCaleb2014";
         displayName = "[Ba'Y JK] Ion Rifle";
-        descriptionShort = "A heavy anti-material rifle";
-        model = "\40k_tau\Weapons\Ion_Rifle\Ionrifle.p3d";
-        picture = "\40k_tau\Weapons\Definitions\UI\Ion_Rifle.paa";
-        hiddenSelections[] = {"Camo"};
-        hiddenSelectionsTextures[] = {"BaY_JKaara_Armoury\bjk_rifle\Textures\BJK_Ion_Rifle_CA.paa"};
-        maxRecoilSway = 0.015;
-        swayDecaySpeed = 1.25;
-        opticsZoomMin = 0.25;
-        opticsZoomMax = 1;
-        opticsZoomInit = 0.75;
-        mass = 99.199997;
-        recoil = "recoil_BJK_ion_rifle";
-        magazines[] = {"BJK_ionrifle_shot_mag", "BJK_ionrifle_overcharge_mag"};
-        ACE_barrelLength = 605;
-        dispersion = 0.001;
-        class WeaponSlotsInfo {
-            mass = 99.199997;
-            allowedSlots[] = {901};
-            class CowsSlot : CowsSlot_tau {
-            };
-        };
+        hiddenSelections[] = {"Camo", "Camo1", "Camo2"};
+        hiddenSelectionsTextures[] = {"BaY_JKaara_Armoury\bjk_rifle\Textures\BJK_IonRifle_Front_CO.paa", "BaY_JKaara_Armoury\bjk_rifle\Textures\BJK_IonRifle_Rear_CO.paa", "BaY_JKaara_Armoury\bjk_rifle\Textures\BJK_IonRifle_Sights_CO.paa"};
         class LinkedItems {
             class LinkedItemsOptic {
                 slot = "CowsSlot";
-                item = "BJK_optics_ColiB";
+                item = "DMCLS_Tau_Optics_2_VL";
             };
         };
-        cameraDir = "eye_look";
-        memoryPointCamera = "eye";
-        discreteDistance[] = {100};
-        handanim[] = {"OFP2_ManSkeleton", "\40k_tau\Weapons\Ion_Rifle\anims\Ionrifle_handanim.rtm"};
-        selectionFireAnim = "muzzleFlash";
-        modes[] = {"Single"};
-        class Single : Mode_SemiAuto {
-            reloadTime = 0.60000002;
-            minRange = 0;
-            minRangeProbab = 0.89999998;
-            midRange = 250;
-            midRangeProbab = 0.69999999;
-            maxRange = 600;
-            maxRangeProbab = 0.30000001;
-            aiRateOfFireDistance = 600;
-            aiRateOfFire = 6;
-            sounds[] = {"StandardSound"};
-            class StandardSound {
-                soundSetShot[] = {"TIOW_ion_rifle_Shot_SoundSet",
-                                  "TIOW_ion_rifle_Tail_SoundSet"};
-            };
-        };
-        aiDispersionCoefY = 4;
-        aiDispersionCoefX = 4;
     };
+    class GunParticles;
     class BJK_DMCLS_pulse_rifle : Rifle_Base_F {
         scope = 2;
         scopeArsenal = 2;
@@ -562,6 +506,16 @@ class CfgWeapons {
         displayName = "[Ba'Y JK] Gue'vesa Pulse Rifle (Alternate)";
         hiddenSelections[] = {"camo"};
         hiddenSelectionsTextures[] = {"BaY_JKaara_Armoury\bjk_rifle\Textures\BJK_PulseRifle_Guevesa_CA2.paa"};
+    };
+    class ic_cad_bolter;
+    class BJK_Guevesa_LockeBolter : ic_cad_bolter {
+        author = "JCaleb2014";
+        displayName = "[Ba'Y JK] Locke Pattern Bolter";
+        scope = 2;
+        scopeCurator = 2;
+        scopeArsenal = 2;
+        hiddenSelections[] = {"camo"};
+        hiddenSelectionsTextures[] = {"BaY_JKaara_Armoury\bjk_rifle\Textures\BJK_Guevesa_LockeBolter_CO.paa"};
     };
 };
 

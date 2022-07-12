@@ -6,7 +6,7 @@ class CfgPatches {
         author = "JCaleb2014";
         requiredVersion = 1.6;
         requiredAddons[] = {"A3_Weapons_F", "A3_Weapons_F_Mark", "A3_Characters_F", "A3_Data_F", "A3_Sounds_F", "A3_Sounds_F_Mark", "Dos_Cosmetics", "IC_Cadia", "CadFoot"};
-        weapons[] = {"BJK_ServoSkull", "BJK_InvisibleNVG"};
+        weapons[] = {"BJK_ServoSkull", "BJK_ServoSkull_Alt", "BJK_InvisibleNVG"};
     };
 };
 

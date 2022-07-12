@@ -42,7 +42,7 @@ class CfgWeapons {
     class BJK_FireWarrior_Uniform_Ethereal : BJK_FireWarrior_Uniform {
         displayName = "[Ba'Y JK] Fire Warrior Uniform (Ethereal)";
         hiddenSelections[] = {"camo", "camo1"};
-        hiddenSelectionsTextures[] = {"BaY_JKaara_Armoury\bjk_uniform\Textures\BJK_FireWarrior_Uniform_Armour_CO_Ethereal.paa", "BaY_JKaara_Armoury\bjk_uniform\Textures\BJK_FireWarrior_Uniform_Cloth_CO.paa"};
+        hiddenSelectionsTextures[] = {"BaY_JKaara_Armoury\bjk_uniform\Textures\BJK_FireWarrior_Uniform_Armour_Ethereal_CO.paa", "BaY_JKaara_Armoury\bjk_uniform\Textures\BJK_FireWarrior_Uniform_Cloth_CO.paa"};
         hiddenSelectionsMaterials[] = {"BaY_JKaara_Armoury\bjk_uniform\Materials\BJK_FireWarrior_Uniform_Armour_Ethereal.rvmat"};
         class ItemInfo : ItemInfo {
             uniformClass = "BJK_FireWarrior_Ethereal";
@@ -411,7 +411,7 @@ class CfgVehicles {
         displayName = "Fire Warrior (Ethereal)";
         uniformClass = "BJK_FireWarrior_Uniform_Ethereal";
         hiddenSelections[] = {"camo", "camo1"};
-        hiddenSelectionsTextures[] = {"BaY_JKaara_Armoury\bjk_uniform\Textures\BJK_FireWarrior_Uniform_Armour_CO_Ethereal.paa", "BaY_JKaara_Armoury\bjk_uniform\Textures\BJK_FireWarrior_Uniform_Cloth_CO.paa"};
+        hiddenSelectionsTextures[] = {"BaY_JKaara_Armoury\bjk_uniform\Textures\BJK_FireWarrior_Uniform_Armour_Ethereal_CO.paa", "BaY_JKaara_Armoury\bjk_uniform\Textures\BJK_FireWarrior_Uniform_Cloth_CO.paa"};
         hiddenSelectionsMaterials[] = {"BaY_JKaara_Armoury\bjk_uniform\Materials\BJK_FireWarrior_Uniform_Armour_Ethereal.rvmat"};
     };
     class TIOW_Air_Caste_Pilot_B;
