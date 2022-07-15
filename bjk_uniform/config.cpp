@@ -141,19 +141,19 @@ class CfgWeapons {
         };
     };
     class U_TIOW_Comissar;
-    class BJK_Guevesa_Commissar_Uniform : U_TIOW_Comissar {
+    class BJK_Guevesa_Commandant_Uniform : U_TIOW_Comissar {
         author = "JCaleb2014";
         scope = 2;
         scopeArsenal = 2;
         scopeCurator = 2;
         model = "\TIOW_IG_HQ\Comissar\Krieg_Comissar.p3d";
-        displayName = "[Ba'Y JK] Gue'vesa Commissar Uniform";
+        displayName = "[Ba'Y JK] Gue'vesa Commandant Uniform";
         hiddenSelections[] = {"camo", "camo1"};
-        hiddenSelectionsTextures[] = {"BaY_JKaara_Armoury\bjk_uniform\Textures\BJK_Guevesa_Commissar_Uniform_CO.paa", "BaY_JKaara_Armoury\bjk_uniform\Textures\BJK_Guevesa_Commissar_Coat_CO.paa"};
+        hiddenSelectionsTextures[] = {"BaY_JKaara_Armoury\bjk_uniform\Textures\BJK_Guevesa_Commandant_Uniform_CO.paa", "BaY_JKaara_Armoury\bjk_uniform\Textures\BJK_Guevesa_Commandant_Coat_CO.paa"};
         class ItemInfo : ItemInfo {
             hiddenSelections[] = {"camo", "camo1"};
-            hiddenSelectionsTextures[] = {"BaY_JKaara_Armoury\bjk_uniform\Textures\BJK_Guevesa_Commissar_Uniform_CO.paa", "BaY_JKaara_Armoury\bjk_uniform\Textures\BJK_Guevesa_Commissar_Coat_CO.paa"};
-            uniformClass = "BJK_Guevesa_Commissar";
+            hiddenSelectionsTextures[] = {"BaY_JKaara_Armoury\bjk_uniform\Textures\BJK_Guevesa_Commandant_Uniform_CO.paa", "BaY_JKaara_Armoury\bjk_uniform\Textures\BJK_Guevesa_Commandant_Coat_CO.paa"};
+            uniformClass = "BJK_Guevesa_Commandant";
             uniformModel = "\TIOW_IG_HQ\Comissar\Krieg_Comissar.p3d";
             containerClass = "Supply500";
             mass = 50;
@@ -483,12 +483,12 @@ class CfgVehicles {
         hiddenSelectionsTextures[] = {"BaY_JKaara_Armoury\bjk_uniform\Textures\BJK_Guevesa_Uniform_Pants_CO.paa", "BaY_JKaara_Armoury\bjk_uniform\Textures\BJK_Guevesa_Uniform_Top_CO.paa"};
     };
     class TIOW_Comissar;
-    class BJK_Guevesa_Commissar : TIOW_Comissar {
-        displayName = "Gue'vesa Commissar";
+    class BJK_Guevesa_Commandant : TIOW_Comissar {
+        displayName = "Gue'vesa Commandant";
         scope = 2;
         scopeCurator = 2;
         scopeArsenal = 2;
-        uniformClass = "BJK_Guevesa_Commissar_Uniform";
+        uniformClass = "BJK_Guevesa_Commandant_Uniform";
         faction = "BJK_F";
         editorSubcategory = "BJK_M";
         model = "\TIOW_IG_HQ\Comissar\Krieg_Comissar.p3d";
@@ -501,7 +501,7 @@ class CfgVehicles {
         linkedItems[] = {"TIOW_Bionic_Eye", "TIOW_Comissar_Cap"};
         respawnLinkedItems[] = {"TIOW_Bionic_Eye", "TIOW_Comissar_Cap"};
         hiddenSelections[] = {"camo", "camo1"};
-        hiddenSelectionsTextures[] = {"BaY_JKaara_Armoury\bjk_uniform\Textures\BJK_Guevesa_Commissar_Uniform_CO.paa", "BaY_JKaara_Armoury\bjk_uniform\Textures\BJK_Guevesa_Commissar_Coat_CO.paa"};
+        hiddenSelectionsTextures[] = {"BaY_JKaara_Armoury\bjk_uniform\Textures\BJK_Guevesa_Commandant_Uniform_CO.paa", "BaY_JKaara_Armoury\bjk_uniform\Textures\BJK_Guevesa_Commandant_Coat_CO.paa"};
     };
     class IC_CadUExtraTan_B;
     class BJK_Guevesa_Stormtrooper : IC_CadUExtraTan_B {

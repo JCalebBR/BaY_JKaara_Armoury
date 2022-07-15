@@ -5,8 +5,8 @@ class CfgPatches {
         name = "Ba'Y J'Kaara Armory (Rifle)";
         author = "JCaleb2014";
         requiredVersion = 1.6;
-        requiredAddons[] = {"A3_Weapons_F", "A3_Weapons_F_Mark", "A3_Characters_F", "A3_Data_F", "A3_Sounds_F", "A3_Sounds_F_Mark", "TIOW_40k_Tau", "CadFoot", "TIOW_Admech"};
-        weapons[] = {"BJK_ion_rifle", "BJK_DMCLS_pulse_rifle", "BJK_DMCLS_pulse_blaster", "BJK_DMCLS_pulse_burster", "BJK_DMCLS_pulse_carbine", "BJK_DMCLS_rail_rifle", "BJK_Guevesa_PulseRifle", "BJK_Guevesa_PulseRifle_Alt", "BJK_Guevesa_LockeBolter"};
+        requiredAddons[] = {"A3_Weapons_F", "A3_Weapons_F_Mark", "A3_Characters_F", "A3_Data_F", "A3_Sounds_F", "A3_Sounds_F_Mark", "TIOW_40k_Tau", "CadFoot", "TIOW_Admech", "vng_tau_repeater"};
+        weapons[] = {"BJK_ion_rifle", "BJK_DMCLS_pulse_rifle", "BJK_DMCLS_pulse_blaster", "BJK_DMCLS_pulse_burster", "BJK_DMCLS_pulse_carbine", "BJK_DMCLS_rail_rifle", "BJK_PulseRepeater", "BJK_Guevesa_PulseRifle", "BJK_Guevesa_PulseRifle_Alt", "BJK_Guevesa_LockeBolter"};
     };
 };
 
@@ -17,6 +17,9 @@ class Mode_Burst;
 class UGL_F;
 class CowsSlot_BJK_dmcls_tau;
 class UnderBarrelSlot_BJK_dmcls_tau;
+class WeaponSlotsInfo;
+class Single;
+class FullAuto;
 class CfgWeapons {
     // Base Weapons
     class Rifle_Base_F;
@@ -139,10 +142,10 @@ class CfgWeapons {
             class UnderBarrelSlot : UnderBarrelSlot_BJK_dmcls_tau {};
         };
         class LinkedItems {
-            class LinkedItemsOptic {
-                slot = "CowsSlot";
-                item = "BJK_DMCLS_Tau_Coli_2";
-            };
+            // class LinkedItemsOptic {
+            //     slot = "CowsSlot";
+            //     item = "BJK_DMCLS_Tau_Coli_2";
+            // };
         };
         maxRecoilSway = 0.050000001;
         swayDecaySpeed = 4;
@@ -487,7 +490,32 @@ class CfgWeapons {
             };
         };
     };
-
+    class vng_repeater_f;
+    class BJK_PulseRepeater : vng_repeater_f {
+        author = "JCaleb2014";
+        scope = 2;
+        scopeArsenal = 2;
+        scopeCurator = 2;
+        baseweapon = "BJK_PulseRepeater";
+        displayName = "[Ba'Y JK] Pulse Repeater";
+        hiddenSelections[] = {"camo"};
+        hiddenSelectionsTextures[] = {"BaY_JKaara_Armoury\bjk_rifle\Textures\BJK_PulseRepeater_CA.paa"};
+        hiddenSelectionsMaterials[] = {"BaY_JKaara_Armoury\bjk_rifle\Materials\BJK_PulseRepeater.rvmat"};
+        class WeaponSlotsInfo : WeaponSlotsInfo {
+            allowedSlots[] = {901};
+            class CowsSlot : CowsSlot_BJK_dmcls_tau {};
+        };
+        class Single : Single {
+            class StandardSound {
+                soundSetShot[] = {"BJK_DMCLS_pulse_burster_Shot_SoundSet", "DMR01_Tail_SoundSet", "DMR01_InteriorTail_SoundSet"};
+            };
+        };
+        class FullAuto : FullAuto {
+            class StandardSound {
+                soundSetShot[] = {"BJK_DMCLS_pulse_burster_Shot_SoundSet", "DMR01_Tail_SoundSet", "DMR01_InteriorTail_SoundSet"};
+            };
+        };
+    };
     // Gue'vesa Weapons
     class ic_PulseRifle_base;
     class BJK_Guevesa_PulseRifle : ic_PulseRifle_base {

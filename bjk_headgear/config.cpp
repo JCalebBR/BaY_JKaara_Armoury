@@ -6,7 +6,7 @@ class CfgPatches {
         author = "JCaleb2014";
         requiredVersion = 1.6;
         requiredAddons[] = {"A3_Weapons_F", "A3_Weapons_F_Mark", "A3_Characters_F", "A3_Data_F", "A3_Sounds_F", "A3_Sounds_F_Mark", "TIOW_Tau_Gear", "DMCLS_weapons", "TIOW_40k_Tau", "CadFoot", "TIOW_Admech", "TIOW_Comissar", "IC_StormTrooper"};
-        weapons[] = {"BJK_FireWarrior_Strike_Helmet", "BJK_FireWarrior_Strike_Helmet_Commander", "BJK_FireWarrior_Strike_Helmet_Ethereal", "BJK_FireWarrior_Strike_Helmet_Medical", "BJK_FireWarrior_Breacher_Helmet", "BJK_Tau_Headset1", "BJK_Tau_Headset2", "BJK_Tau_Headset3", "BJK_Tau_Headset4", "BJK_Tau_Headset5", "BJK_Tau_Headset_Commander1", "BJK_Tau_Headset_Commander2", "BJK_Tau_Headset_Commander3", "BJK_Tau_Headset_Commander4", "BJK_Tau_Headset_Commander5", "BJK_Tau_Headset_Medical1", "BJK_Tau_Headset_Medical2", "BJK_Tau_Headset_Medical3", "BJK_Tau_Headset_Medical4", "BJK_Tau_Headset_Medical5", "BJK_Tau_Headset_EarthCaste1", "BJK_Tau_Headset_EarthCaste2", "BJK_Tau_Headset_EarthCaste3", "BJK_Tau_Headset_EarthCaste4", "BJK_Tau_Headset_EarthCaste5", "BJK_Tau_Headset_EarthCaste_Commander1", "BJK_Tau_Headset_EarthCaste_Commander2", "BJK_Tau_Headset_EarthCaste_Commander3", "BJK_Tau_Headset_EarthCaste_Commander4", "BJK_Tau_Headset_EarthCaste_Commander5", "BJK_Tau_Headset_WaterCaste1", "BJK_Tau_Headset_WaterCaste2", "BJK_Tau_Headset_WaterCaste3", "BJK_Tau_Headset_WaterCaste4", "BJK_Tau_Headset_WaterCaste5", "BJK_Tau_Headset_WaterCaste_Commander1", "BJK_Tau_Headset_WaterCaste_Commander2", "BJK_Tau_Headset_WaterCaste_Commander3", "BJK_Tau_Headset_WaterCaste_Commander4", "BJK_Tau_Headset_WaterCaste_Commander5", "BJK_Guevesa_Helmet", "BJK_Guevesa_Helmet_Modified", "BJK_Guevesa_Helmet_Modified_Alt1", "BJK_Guevesa_Helmet_Modified_Alt2", "BJK_Guevesa_Helmet_Modified_Commander", "BJK_Guevesa_Helmet_Modified_Commander_Alt1", "BJK_Guevesa_Helmet_Modified_Commander_Alt2", "BJK_Guevesa_Kasrkin_Helmet", "BJK_Guevesa_Kasrkin_Helmet_Alt", "BJK_Guevesa_Commissar_Cap", "BJK_Admech_Alpha_Hood"};
+        weapons[] = {"BJK_FireWarrior_Strike_Helmet", "BJK_FireWarrior_Strike_Helmet_Commander", "BJK_FireWarrior_Strike_Helmet_Ethereal", "BJK_FireWarrior_Strike_Helmet_Medical", "BJK_FireWarrior_Breacher_Helmet", "BJK_Tau_Headset1", "BJK_Tau_Headset2", "BJK_Tau_Headset3", "BJK_Tau_Headset4", "BJK_Tau_Headset5", "BJK_Tau_Headset_Commander1", "BJK_Tau_Headset_Commander2", "BJK_Tau_Headset_Commander3", "BJK_Tau_Headset_Commander4", "BJK_Tau_Headset_Commander5", "BJK_Tau_Headset_Medical1", "BJK_Tau_Headset_Medical2", "BJK_Tau_Headset_Medical3", "BJK_Tau_Headset_Medical4", "BJK_Tau_Headset_Medical5", "BJK_Tau_Headset_EarthCaste1", "BJK_Tau_Headset_EarthCaste2", "BJK_Tau_Headset_EarthCaste3", "BJK_Tau_Headset_EarthCaste4", "BJK_Tau_Headset_EarthCaste5", "BJK_Tau_Headset_EarthCaste_Commander1", "BJK_Tau_Headset_EarthCaste_Commander2", "BJK_Tau_Headset_EarthCaste_Commander3", "BJK_Tau_Headset_EarthCaste_Commander4", "BJK_Tau_Headset_EarthCaste_Commander5", "BJK_Tau_Headset_WaterCaste1", "BJK_Tau_Headset_WaterCaste2", "BJK_Tau_Headset_WaterCaste3", "BJK_Tau_Headset_WaterCaste4", "BJK_Tau_Headset_WaterCaste5", "BJK_Tau_Headset_WaterCaste_Commander1", "BJK_Tau_Headset_WaterCaste_Commander2", "BJK_Tau_Headset_WaterCaste_Commander3", "BJK_Tau_Headset_WaterCaste_Commander4", "BJK_Tau_Headset_WaterCaste_Commander5", "BJK_Guevesa_Helmet", "BJK_Guevesa_Helmet_Modified", "BJK_Guevesa_Helmet_Modified_Alt1", "BJK_Guevesa_Helmet_Modified_Alt2", "BJK_Guevesa_Helmet_Modified_Commander", "BJK_Guevesa_Helmet_Modified_Commander_Alt1", "BJK_Guevesa_Helmet_Modified_Commander_Alt2", "BJK_Guevesa_Kasrkin_Helmet", "BJK_Guevesa_Kasrkin_Helmet_Alt", "BJK_Guevesa_Commandant_Cap", "BJK_Admech_Alpha_Hood"};
     };
 };
 
@@ -409,14 +409,14 @@ class CfgWeapons {
         subItems[] = {"Integrated_NVG_TI_1_F"};
     };
     class TIOW_Comissar_Cap;
-    class BJK_Guevesa_Commissar_Cap : TIOW_Comissar_Cap {
+    class BJK_Guevesa_Commandant_Cap : TIOW_Comissar_Cap {
         author = "JCaleb2014";
-        displayName = "[Ba'Y JK] Gue'vesa Commissar Cap";
+        displayName = "[Ba'Y JK] Gue'vesa Commandant Cap";
         hiddenSelections[] = {"camo"};
-        hiddenSelectionsTextures[] = {"BaY_JKaara_Armoury\bjk_headgear\Textures\BJK_Guevesa_Commissar_Cap_CO.paa"};
+        hiddenSelectionsTextures[] = {"BaY_JKaara_Armoury\bjk_headgear\Textures\BJK_Guevesa_Commandant_Cap_CO.paa"};
         class ItemInfo : ItemInfo {
             hiddenSelections[] = {"camo"};
-            hiddenSelectionsTextures[] = {"BaY_JKaara_Armoury\bjk_headgear\Textures\BJK_Guevesa_Commissar_Cap_CO.paa"};
+            hiddenSelectionsTextures[] = {"BaY_JKaara_Armoury\bjk_headgear\Textures\BJK_Guevesa_Commandant_Cap_CO.paa"};
         };
     };
 
