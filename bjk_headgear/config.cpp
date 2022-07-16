@@ -402,7 +402,7 @@ class CfgWeapons {
         displayName = "[Ba'Y JK] Gue'vesa Kasrkin Helmet (Alternate)";
         hiddenSelections[] = {"camo", "camoB", "Camo1"};
         hiddenSelectionsTextures[] = {"BaY_JKaara_Armoury\bjk_headgear\Textures\BJK_Guevesa_Kasrkin_Helmet_CO2.paa", "BaY_JKaara_Armoury\bjk_headgear\Textures\BJK_Guevesa_Kasrkin_Rebreather_CO.paa", "BaY_JKaara_Armoury\bjk_vest\Textures\BJK_Guevesa_Kasrkin_Armor_CO2.paa"};
-        class ItemInfo : HeadgearItem {
+        class ItemInfo : ItemInfo {
             hiddenSelections[] = {"camo", "camoB", "Camo1"};
             hiddenSelectionsTextures[] = {"BaY_JKaara_Armoury\bjk_headgear\Textures\BJK_Guevesa_Kasrkin_Helmet_CO2.paa", "BaY_JKaara_Armoury\bjk_headgear\Textures\BJK_Guevesa_Kasrkin_Rebreather_CO.paa", "BaY_JKaara_Armoury\bjk_vest\Textures\BJK_Guevesa_Kasrkin_Armor_CO2.paa"};
         };

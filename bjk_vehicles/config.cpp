@@ -25,7 +25,7 @@ class CfgVehicles {
                     showDisabled = 0;
                     priority = 0;
                     class BJK_Deploy_Tau_Drone_UAV {
-                        displayName = "Recon Drone";
+                        displayName = "Marker Drone";
                         condition = "'BJK_Tau_Drone_UAV_Packed' in (items _player)";
                         statement = "['BJK_Tau_Drone_UAV_Packed',_player] call itc_land_packable_fnc_unPack";
                         priority = 1;
@@ -56,7 +56,7 @@ class CfgVehicles {
         scopeArsenal = 2;
         scopeCurator = 2;
         weaponPoolAvailable = 1;
-        displayName = "[Ba'Y J'Kaara] Recon Drone";
+        displayName = "[Ba'Y J'Kaara] Marker Drone";
         picture = "";
         descriptionShort = "Remote Tau Drone";
         mass = 10;
@@ -65,7 +65,7 @@ class CfgVehicles {
         class ItemInfo : CBA_MiscItem_ItemInfo {
             mass = 10;
             weight = 100;
-            displayName = "[Ba'Y J'Kaara] Recon Drone";
+            displayName = "[Ba'Y J'Kaara] Marker Drone";
         };
     };
     class BJK_ServoSkull_UAV_Packed : BJK_Tau_Drone_UAV_Packed {
@@ -82,12 +82,12 @@ class CfgVehicles {
     class BJK_PP_UAV_1 : Dos_PP_UAV_1 {
         author = "JCaleb2014";
         scope = 2;
-        displayName = "[Ba'Y JK] Recon Drone Deploy";
+        displayName = "[Ba'Y JK] Marker Drone Deploy";
         model = "\A3\weapons_f\empty";
         class assembleInfo {
             primary = 1;
             base = "";
-            displayName = "Recon Drone Unarmed UAV";
+            displayName = "Marker Drone Unarmed UAV";
             assembleTo = "BJK_Tau_Drone_UAV";
         };
     };
@@ -112,7 +112,7 @@ class CfgVehicles {
         scopeArsenal = 2;
         faction = "BJK_F";
         editorSubcategory = "BJK_DR";
-        displayName = "Recon Drone (UAV)";
+        displayName = "Marker Drone (UAV)";
         itc_land_PacksTo = "BJK_Tau_Drone_UAV_Packed";
         _generalMacro = "BJK_Tau_Drone_UAV";
         fuelCapacity = 9999;
@@ -134,7 +134,7 @@ class CfgVehicles {
         class ACE_Actions {
             class ACE_MainActions {
                 class BJK_Pack_Servo {
-                    displayName = "Deactivate Recon Drone";
+                    displayName = "Deactivate Marker Drone";
                     condition = "((alive _target) && ( ACE_Player distance _target ) < 10) && ( count (( UAVControl _target) select 1 ) < 1 )";
                     statement = "[_target,_player] call itc_land_packable_fnc_Pack";
                 };
@@ -230,7 +230,7 @@ class CfgVehicles {
         };
     };
 
-    // Gue'vesa vehicles
+    // Gue'vesa Modified Vehicles
     class LandVehicle;
     class Tank : LandVehicle {
         class NewTurret;
@@ -1257,7 +1257,9 @@ class CfgVehicles {
         };
         aggregateReflectors[] = {{"Left", "Left2"}};
     };
+
     class BJK_LR_Vanquisher_Modified : TIOW_LR_BattleCannon {
+        author = "JCaleb2014";
         vehicleClass = "Armored";
         faction = "BJK_F";
         editorSubcategory = "BJK_V";
@@ -1350,6 +1352,139 @@ class CfgVehicles {
                 weapon = "TIOW_Tau_BurstCannon";
             };
         };
+    };
+
+    // Gue'vesa Regular Vehicles
+    class BJK_LR_Battlecannon : TIOW_LR_Battlecannon {
+        scope = 2;
+        scopeCurator = 2;
+        scopeArsenal = 2;
+        displayName = "Leman Russ Battlecannon";
+        author = "JCaleb2014";
+        faction = "BJK_F";
+        editorSubcategory = "BJK_V";
+        crew = "TIOW_Cad_Tnk836th";
+        side = 1;
+        hiddenSelections[] = {"markings", "Camo"};
+        hiddenSelectionsTextures[] = {"BaY_JKaara_Armoury\bjk_vehicles\Textures\BJK_Executioner_Modified_Markings_CO.paa", "BaY_JKaara_Armoury\bjk_vehicles\Textures\BJK_Executioner_Modified_CO.paa"};
+    };
+    class TIOW_LR_Vanquisher;
+    class BJK_LR_Vanquisher : TIOW_LR_Vanquisher {
+        scope = 2;
+        scopeCurator = 2;
+        scopeArsenal = 2;
+        displayName = "Leman Russ Vanquisher";
+        author = "JCaleb2014";
+        faction = "BJK_F";
+        editorSubcategory = "BJK_V";
+        crew = "TIOW_Cad_Tnk836th";
+        side = 1;
+        hiddenSelections[] = {"markings", "Camo"};
+        hiddenSelectionsTextures[] = {"BaY_JKaara_Armoury\bjk_vehicles\Textures\BJK_Executioner_Modified_Markings_CO.paa", "BaY_JKaara_Armoury\bjk_vehicles\Textures\BJK_Executioner_Modified_CO.paa"};
+    };
+    class TIOW_LR_Demolisher;
+    class BJK_LR_Demolisher : TIOW_LR_Demolisher {
+        scope = 2;
+        scopeCurator = 2;
+        scopeArsenal = 2;
+        displayName = "Leman Russ Demolisher";
+        author = "JCaleb2014";
+        faction = "BJK_F";
+        editorSubcategory = "BJK_V";
+        crew = "TIOW_Cad_Tnk836th";
+        side = 1;
+        hiddenSelections[] = {"markings", "Camo"};
+        hiddenSelectionsTextures[] = {"BaY_JKaara_Armoury\bjk_vehicles\Textures\BJK_Executioner_Modified_Markings_CO.paa", "BaY_JKaara_Armoury\bjk_vehicles\Textures\BJK_Executioner_Modified_CO.paa"};
+    };
+    class TIOW_LR_Conqueror;
+    class BJK_LR_Conqueror : TIOW_LR_Conqueror {
+        scope = 2;
+        scopeCurator = 2;
+        scopeArsenal = 2;
+        displayName = "Leman Russ Conqueror";
+        author = "JCaleb2014";
+        faction = "BJK_F";
+        editorSubcategory = "BJK_V";
+        crew = "TIOW_Cad_Tnk836th";
+        side = 1;
+        hiddenSelections[] = {"markings", "Camo"};
+        hiddenSelectionsTextures[] = {"BaY_JKaara_Armoury\bjk_vehicles\Textures\BJK_Executioner_Modified_Markings_CO.paa", "BaY_JKaara_Armoury\bjk_vehicles\Textures\BJK_Executioner_Modified_CO.paa"};
+    };
+    class TIOW_LR_Exterminator;
+    class BJK_LR_Exterminator : TIOW_LR_Exterminator {
+        scope = 2;
+        scopeCurator = 2;
+        scopeArsenal = 2;
+        displayName = "Leman Russ Exterminator";
+        author = "JCaleb2014";
+        faction = "BJK_F";
+        editorSubcategory = "BJK_V";
+        crew = "TIOW_Cad_Tnk836th";
+        side = 1;
+        hiddenSelections[] = {"markings", "Camo"};
+        hiddenSelectionsTextures[] = {"BaY_JKaara_Armoury\bjk_vehicles\Textures\BJK_Executioner_Modified_Markings_CO.paa", "BaY_JKaara_Armoury\bjk_vehicles\Textures\BJK_Executioner_Modified_CO.paa"};
+    };
+    class TIOW_LR_Executioner;
+    class BJK_LR_Executioner : TIOW_LR_Executioner {
+        scope = 2;
+        scopeCurator = 2;
+        scopeArsenal = 2;
+        displayName = "Leman Russ Executioner";
+        author = "JCaleb2014";
+        faction = "BJK_F";
+        editorSubcategory = "BJK_V";
+        crew = "TIOW_Cad_Tnk836th";
+        side = 1;
+        hiddenSelections[] = {"markings", "Camo"};
+        hiddenSelectionsTextures[] = {"BaY_JKaara_Armoury\bjk_vehicles\Textures\BJK_Executioner_Modified_Markings_CO.paa", "BaY_JKaara_Armoury\bjk_vehicles\Textures\BJK_Executioner_Modified_CO.paa"};
+    };
+    class TIOW_LR_Annihilator;
+    class BJK_LR_Annihilator : TIOW_LR_Annihilator {
+        scope = 2;
+        scopeCurator = 2;
+        scopeArsenal = 2;
+        displayName = "Leman Russ Annihilator";
+        author = "JCaleb2014";
+        faction = "BJK_F";
+        editorSubcategory = "BJK_V";
+        crew = "TIOW_Cad_Tnk836th";
+        side = 1;
+        hiddenSelections[] = {"markings", "Camo"};
+        hiddenSelectionsTextures[] = {"BaY_JKaara_Armoury\bjk_vehicles\Textures\BJK_Executioner_Modified_Markings_CO.paa", "BaY_JKaara_Armoury\bjk_vehicles\Textures\BJK_Executioner_Modified_CO.paa"};
+    };
+    class TIOW_LR_Punisher;
+    class BJK_LR_Punisher : TIOW_LR_Punisher {
+        scope = 2;
+        scopeCurator = 2;
+        scopeArsenal = 2;
+        displayName = "Leman Russ Punisher";
+        author = "JCaleb2014";
+        faction = "BJK_F";
+        editorSubcategory = "BJK_V";
+        crew = "TIOW_Cad_Tnk836th";
+        side = 1;
+        hiddenSelections[] = {"markings", "Camo"};
+        hiddenSelectionsTextures[] = {"BaY_JKaara_Armoury\bjk_vehicles\Textures\BJK_Executioner_Modified_Markings_CO.paa", "BaY_JKaara_Armoury\bjk_vehicles\Textures\BJK_Executioner_Modified_CO.paa"};
+    };
+
+    class IC_Taurox_BattleCannon;
+    class BJK_TauroxPrime_BattleCannon : IC_Taurox_BattleCannon {
+        scope = 2;
+        scopeArsenal = 2;
+        scopeCurator = 2;
+        faction = "BJK_F";
+        editorSubcategory = "BJK_V";
+        hiddenSelections[] = {"camo1", "camo2", "Armor_plates"};
+        hiddenSelectionsTextures[] = {"BaY_JKaara_Armoury\bjk_vehicles\Textures\BJK_TauroxPrime_CO.paa", "BaY_JKaara_Armoury\bjk_vehicles\Textures\BJK_TauroxPrime_Turrets_CO.paa", "BaY_JKaara_Armoury\bjk_vehicles\Textures\BJK_TauroxPrime_Armor_CO.paa"};
+        hiddenSelectionsMaterials[] = {"BaY_JKaara_Armoury\bjk_vehicles\Materials\BJK_TauroxPrime.rvmat"};
+    };
+    class BJK_TauroxPrime_GatlingGun : BJK_TauroxPrime_BattleCannon {
+        displayName = "Taurox Prime (Gatling Gun)";
+        model = "\IC_Taurox\Model\IC_Taurox_GG.p3d";
+    };
+    class BJK_TauroxPrime_AutoCannon : BJK_TauroxPrime_BattleCannon {
+        displayName = "Taurox Prime (Auto Cannon)";
+        model = "\IC_Taurox\Model\IC_Taurox_AC.p3d";
     };
 
     // Tau Vehicles

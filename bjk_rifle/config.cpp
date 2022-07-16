@@ -27,20 +27,25 @@ class CfgWeapons {
 
     // Tau Weapons
     class DMCLS_ion_rifle_VL;
+    class DMCLS_ion_rifle;
     class BJK_ion_rifle : DMCLS_ion_rifle_VL {
         scope = 2;
         scopeArsenal = 2;
         scopeCurator = 2;
         baseWeapon = "BJK_ion_rifle";
-        Author = "JCaleb2014";
+        author = "JCaleb2014";
         displayName = "[Ba'Y JK] Ion Rifle";
         hiddenSelections[] = {"Camo", "Camo1", "Camo2"};
         hiddenSelectionsTextures[] = {"BaY_JKaara_Armoury\bjk_rifle\Textures\BJK_IonRifle_Front_CO.paa", "BaY_JKaara_Armoury\bjk_rifle\Textures\BJK_IonRifle_Rear_CO.paa", "BaY_JKaara_Armoury\bjk_rifle\Textures\BJK_IonRifle_Sights_CO.paa"};
+        magazines[] = {"BJK_ionrifle_shot_mag"};
         class LinkedItems {
             class LinkedItemsOptic {
                 slot = "CowsSlot";
                 item = "DMCLS_Tau_Optics_2_VL";
             };
+        };
+        class DMCLS_ion_rifle : DMCLS_ion_rifle {
+            magazines[] = {"BJK_ionrifle_overcharge_mag"};
         };
     };
     class GunParticles;
@@ -49,7 +54,7 @@ class CfgWeapons {
         scopeArsenal = 2;
         scopeCurator = 2;
         baseWeapon = "BJK_DMCLS_pulse_rifle";
-        Author = "JCaleb2014";
+        author = "JCaleb2014";
         displayName = "[Ba'Y JK] Pulse Rifle";
         descriptionShort = "A standard pulse weaponry used by Fire Warriors";
         model = "\DMCLS\dmcls_tau_weapons\pulse_rifle\dmcls_pulse_rifle.p3d";
@@ -119,7 +124,7 @@ class CfgWeapons {
         scopeArsenal = 2;
         scopeCurator = 2;
         baseWeapon = "BJK_DMCLS_pulse_blaster";
-        Author = "JCaleb2014";
+        author = "JCaleb2014";
         displayName = "[Ba'Y JK] Pulse blaster";
         descriptionShort = "Short distance weapon used by Fire Warrior Breacher Squads";
         model = "\DMCLS\dmcls_tau_weapons\pulse_blaster\dmcls_pulse_blaster.p3d";
@@ -187,7 +192,7 @@ class CfgWeapons {
         scopeArsenal = 2;
         scopeCurator = 2;
         baseWeapon = "BJK_DMCLS_pulse_burster";
-        Author = "JCaleb2014";
+        author = "JCaleb2014";
         displayName = "[Ba'Y JK] Pulse burster";
         descriptionShort = "A compact gun used by vehicle crews and special units";
         model = "\DMCLS\dmcls_tau_weapons\pulse_burster\dmcls_pulse_burster.p3d";
@@ -299,7 +304,7 @@ class CfgWeapons {
         scopeArsenal = 2;
         scopeCurator = 2;
         baseWeapon = "BJK_DMCLS_pulse_carbine";
-        Author = "JCaleb2014";
+        author = "JCaleb2014";
         displayName = "[Ba'Y JK] Pulse carbine";
         descriptionShort = "A compact gun used by vehicle crews and special units";
         model = "\DMCLS\dmcls_tau_weapons\pulse_carbine\dmcls_pulse_carbine.p3d";
@@ -425,7 +430,7 @@ class CfgWeapons {
         scopeArsenal = 2;
         scopeCurator = 2;
         baseWeapon = "BJK_DMCLS_rail_rifle";
-        Author = "JCaleb2014";
+        author = "JCaleb2014";
         displayName = "[Ba'Y JK] Rail Rifle";
         descriptionShort = "Light armour piercing weapon";
         model = "\DMCLS\dmcls_tau_weapons\rail_rifle\dmcls_rail_rifle.p3d";
@@ -501,6 +506,7 @@ class CfgWeapons {
         hiddenSelections[] = {"camo"};
         hiddenSelectionsTextures[] = {"BaY_JKaara_Armoury\bjk_rifle\Textures\BJK_PulseRepeater_CA.paa"};
         hiddenSelectionsMaterials[] = {"BaY_JKaara_Armoury\bjk_rifle\Materials\BJK_PulseRepeater.rvmat"};
+        picture = "BaY_JKaara_Armoury\bjk_rifle\Textures\BJK_PulseRepeater_UI.paa";
         class WeaponSlotsInfo : WeaponSlotsInfo {
             allowedSlots[] = {901};
             class CowsSlot : CowsSlot_BJK_dmcls_tau {};
@@ -516,6 +522,7 @@ class CfgWeapons {
             };
         };
     };
+
     // Gue'vesa Weapons
     class ic_PulseRifle_base;
     class BJK_Guevesa_PulseRifle : ic_PulseRifle_base {

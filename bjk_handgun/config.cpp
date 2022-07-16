@@ -10,63 +10,29 @@ class CfgPatches {
     };
 };
 
-class Mode_SemiAuto;
+class Single;
+class WeaponSlotsInfo;
 class CfgWeapons {
     // Base Weapons
-    class Pistol_Base_F;
-    class BJK_pulse_pistol : Pistol_Base_F {
+    class TIOW_pulse_pistol;
+    class BJK_pulse_pistol : TIOW_pulse_pistol {
+        author = "JCaleb2014";
         scope = 2;
         scopeArsenal = 2;
         scopeCurator = 2;
         baseWeapon = "BJK_pulse_pistol";
-        Author = "JCaleb2014";
         displayName = "[Ba'Y JK] Pulse Pistol";
-        descriptionShort = "Pulse Pistol";
-        model = "\40k_tau\Weapons\pulse_pistol\pulse_pistol.p3d";
-        picture = "\40k_tau\Weapons\Definitions\UI\Pistol.paa";
         hiddenSelections[] = {"Camo"};
         hiddenSelectionsTextures[] = {"BaY_JKaara_Armoury\bjk_handgun\Textures\BJK_PulsePistol_CO.paa"};
-        maxRecoilSway = 0.050000001;
-        swayDecaySpeed = 1.5;
-        opticsZoomMin = 0.25;
-        opticsZoomMax = 1;
-        opticsZoomInit = 0.75;
-        mass = 30;
-        recoil = "recoil_BJK_pulse_pistol";
         magazines[] = {"BJK_pulse_pistol_mag", "TIOW_pulse_pistol_mag"};
-        ACE_barrelLength = 605;
-        dispersion = 0.0049999999;
-        class WeaponSlotsInfo {
-            mass = 99.199997;
-            allowedSlots[] = {901};
-        };
-        cameraDir = "eye_look";
-        memoryPointCamera = "eye";
-        discreteDistance[] = {100};
-        handanim[] = {"OFP2_ManSkeleton", "\40k_tau\Weapons\Pulse_pistol\anims\pulsepistol_handanim.rtm"};
-        selectionFireAnim = "muzzleFlash";
-        drySound[] = {"\DMCLS\dmcls_tau_sounds\misc\empty.wss", "db-5", 1, 20};
-        reloadMagazineSound[] = {
-            "\DMCLS\dmcls_tau_sounds\reload\reload_rifle.wss", 1, 1, 30};
-        changeFiremodeSound[] = {"\DMCLS\dmcls_tau_sounds\misc\firemode.wss", 0.56234133, 1, 20};
-        modes[] = {"Single"};
-        class Single : Mode_SemiAuto {
-            reloadTime = 0.2;
-            minRange = 0;
-            minRangeProbab = 0.89999998;
-            midRange = 250;
-            midRangeProbab = 0.69999999;
-            maxRange = 600;
-            maxRangeProbab = 0.30000001;
-            aiRateOfFireDistance = 50;
-            aiRateOfFire = 1;
+        recoil = "DMCLS_recoil_pulse_rifle";
+        class WeaponSlotsInfo : WeaponSlotsInfo {};
+        class Single : Single {
             sounds[] = {"StandardSound"};
             class StandardSound {
                 soundSetShot[] = {"DMCLS_pulse_rifle_Shot_SoundSet", "DMR01_Tail_SoundSet", "DMR01_InteriorTail_SoundSet"};
             };
         };
-        aiDispersionCoefY = 6;
-        aiDispersionCoefX = 4;
     };
     class BJK_pulse_pistol_WC : BJK_pulse_pistol {
         baseWeapon = "BJK_pulse_pistol_WC";

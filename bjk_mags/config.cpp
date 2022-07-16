@@ -115,8 +115,9 @@ class CfgMagazines {
     class TIOW_ionrifle_overcharge_mag;
     class BJK_ionrifle_overcharge_mag : TIOW_ionrifle_overcharge_mag {
         scope = 2;
-        displayName = "[Ba'Y JK]Ion Rifle Magazine [Overcharged]";
+        displayName = "[Ba'Y JK] Ion Rifle Magazine (Overcharged)";
         ammo = "BJK_ionrifle_overcharge";
+        count = 1;
     };
 
     class TIOW_pulse_pistol_mag;
