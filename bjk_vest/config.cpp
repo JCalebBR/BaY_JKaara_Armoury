@@ -110,58 +110,6 @@ class CfgWeapons {
         };
     };
 
-    class BJK_Breacher_Pauldrons : TIOW_Tau_Belt {
-        author = "JCaleb2014";
-        scope = 2;
-        scopeArsenal = 2;
-        scopeCurator = 2;
-        displayName = "[Ba'Y JK] Fire Warrior Pauldrons (Strike)";
-        hiddenSelections[] = {"camo"};
-        hiddenSelectionsTextures[] = {"BaY_JKaara_Armoury\bjk_vest\Textures\BJK_Strike_Pauldrons_CO.paa"};
-        class ItemInfo : ItemInfo {
-            containerClass = "Supply500";
-            hiddenSelections[] = {"camo"};
-            hiddenSelectionsTextures[] = {"BaY_JKaara_Armoury\bjk_vest\Textures\BJK_Strike_Pauldrons_CO.paa"};
-            class HitpointsProtectionInfo {
-                class Neck {
-                    hitpointName = "HitNeck";
-                    armor = 13;
-                    passThrough = 0.5;
-                };
-                class Arms {
-                    hitpointName = "HitArms";
-                    armor = 13;
-                    passThrough = 0.5;
-                };
-                class Chest {
-                    hitpointName = "HitChest";
-                    armor = 13;
-                    passThrough = 0.7;
-                };
-                class Diaphragm {
-                    hitpointName = "HitDiaphragm";
-                    armor = 13;
-                    passThrough = 0.7;
-                };
-                class Abdomen {
-                    hitpointName = "HitAbdomen";
-                    armor = 10;
-                    passThrough = 0.5;
-                };
-                class Pelvis {
-                    hitpointName = "HitPelvis";
-                    armor = 10;
-                    passThrough = 0.5;
-                };
-                class Body {
-                    hitpointName = "HitBody";
-                    passThrough = 0.6;
-                };
-            };
-        };
-    };
-    class BJK_Breacher_Pauldrons : BJK_Breacher_Pauldrons {
-    };
     class TIOW_Tau_BeltP;
     class BJK_EarthCaste_Pauldrons : TIOW_Tau_BeltP {
         author = "JCaleb2014";
@@ -363,7 +311,7 @@ class CfgWeapons {
         descriptionShort = "Stormtrooper Armour";
         hiddenSelections[] = {"camo", "camo1", "camo2"};
         hiddenSelectionsTextures[] = {"BaY_JKaara_Armoury\bjk_vest\Textures\BJK_Guevesa_Stormtrooper_Armor_CO.paa", "BaY_JKaara_Armoury\bjk_vest\Textures\BJK_Guevesa_Stormtrooper_Armor_CO2.paa", "BaY_JKaara_Armoury\bjk_vest\Textures\BJK_Guevesa_Stormtrooper_Braces_CO.paa"};
-        class ItemInfo : VestItem {
+        class ItemInfo : ItemInfo {
             uniformModel = "\IC_Departmento_Munitorum\ICP_StormTrooper\ic_StormtrooperV2.p3d";
             containerClass = "Supply500";
             hiddenSelections[] = {"camo", "camo1", "camo2"};
