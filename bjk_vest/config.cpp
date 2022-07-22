@@ -13,24 +13,19 @@ class CfgPatches {
 class ItemInfo;
 class CfgWeapons {
     // Tau Vests
-    class V_PlateCarrier1_rgr;
-    class VestItem;
-    class iteminfo;
-    class BJK_FireWarrior_Pauldrons : V_PlateCarrier1_rgr {
+    class TIOW_Tau_Belt;
+    class BJK_Strike_Pauldrons : TIOW_Tau_Belt {
         author = "JCaleb2014";
         scope = 2;
         scopeArsenal = 2;
         scopeCurator = 2;
-        displayName = "[Ba'Y JK] Fire Warrior Pauldrons";
-        picture = "\40k_tau\Weapons\Definitions\UI\Gear.paa";
-        model = "\40k_tau\Gear\Belt.p3d";
+        displayName = "[Ba'Y JK] Fire Warrior Pauldrons (Strike)";
         hiddenSelections[] = {"camo"};
-        hiddenSelectionsTextures[] = {"BaY_JKaara_Armoury\bjk_vest\Textures\BJK_FireWarrior_Pauldrons_CO.paa"};
-        class ItemInfo : VestItem {
-            uniformModel = "\40k_tau\Gear\Belt.p3d";
+        hiddenSelectionsTextures[] = {"BaY_JKaara_Armoury\bjk_vest\Textures\BJK_Strike_Pauldrons_CO.paa"};
+        class ItemInfo : ItemInfo {
             containerClass = "Supply500";
             hiddenSelections[] = {"camo"};
-            mass = 80;
+            hiddenSelectionsTextures[] = {"BaY_JKaara_Armoury\bjk_vest\Textures\BJK_Strike_Pauldrons_CO.paa"};
             class HitpointsProtectionInfo {
                 class Neck {
                     hitpointName = "HitNeck";
@@ -69,42 +64,103 @@ class CfgWeapons {
             };
         };
     };
-    class BJK_FireWarrior_Pauldrons_Commander : BJK_FireWarrior_Pauldrons {
-        displayName = "[Ba'Y JK] Fire Warrior Pauldrons (Shas'Ui)";
+    class BJK_Strike_Pauldrons_Commander : BJK_Strike_Pauldrons {
+        displayName = "[Ba'Y JK] Fire Warrior Pauldrons (Strike, Shas'Ui)";
         model = "40k_tau\Gear\Belt_shasui.p3d";
         hiddenSelections[] = {"camo"};
-        hiddenSelectionsTextures[] = {"BaY_JKaara_Armoury\bjk_vest\Textures\BJK_FireWarrior_Pauldrons_Commander_CO.paa"};
+        hiddenSelectionsTextures[] = {"BaY_JKaara_Armoury\bjk_vest\Textures\BJK_Strike_Pauldrons_Commander_CO.paa"};
         class ItemInfo : ItemInfo {
             uniformModel = "40k_tau\Gear\Belt_shasui.p3d";
             hiddenSelections[] = {"camo"};
-            hiddenSelectionsTextures[] = {"BaY_JKaara_Armoury\bjk_vest\Textures\BJK_FireWarrior_Pauldrons_Commander_CO.paa"};
+            hiddenSelectionsTextures[] = {"BaY_JKaara_Armoury\bjk_vest\Textures\BJK_Strike_Pauldrons_Commander_CO.paa"};
         };
     };
-    class BJK_FireWarrior_Pauldrons_Commander_Alt : BJK_FireWarrior_Pauldrons {
-        displayName = "[Ba'Y JK] Fire Warrior Pauldrons (Assistant)";
+    class BJK_Strike_Pauldrons_Commander_Alt : BJK_Strike_Pauldrons {
+        displayName = "[Ba'Y JK] Fire Warrior Pauldrons (Strike, Assistant)";
         hiddenSelections[] = {"camo"};
-        hiddenSelectionsTextures[] = {"BaY_JKaara_Armoury\bjk_vest\Textures\BJK_FireWarrior_Pauldrons_Commander_Alt_CO.paa"};
-    };
-    class BJK_FireWarrior_Pauldrons_Medical : BJK_FireWarrior_Pauldrons {
-        displayName = "[Ba'Y JK] Fire Warrior Pauldrons (Medical)";
-        hiddenSelections[] = {"camo"};
-        hiddenSelectionsTextures[] = {"BaY_JKaara_Armoury\bjk_vest\Textures\BJK_FireWarrior_Pauldrons_Medical_CO.paa"};
-    };
-    class BJK_FireWarrior_Pauldrons_Medical_Alt : BJK_FireWarrior_Pauldrons_Commander {
-        displayName = "[Ba'Y JK] Fire Warrior Pauldrons (Medical, Alternate)";
-        hiddenSelections[] = {"camo"};
-        hiddenSelectionsTextures[] = {"BaY_JKaara_Armoury\bjk_vest\Textures\BJK_FireWarrior_Pauldrons_Medical_Alt_CO.paa"};
-    };
-    class BJK_FireWarrior_Pauldrons_Ethereal : BJK_FireWarrior_Pauldrons_Commander {
-        displayName = "[Ba'Y JK] Fire Warrior Pauldrons (Aun'La)";
-        hiddenSelections[] = {"camo"};
-        hiddenSelectionsTextures[] = {"BaY_JKaara_Armoury\bjk_vest\Textures\BJK_FireWarrior_Pauldrons_Ethereal_CO.paa"};
-        hiddenSelectionsMaterials[] = {"BaY_JKaara_Armoury\bjk_vest\Materials\BJK_FireWarrior_Pauldrons_Ethereal.rvmat"};
+        hiddenSelectionsTextures[] = {"BaY_JKaara_Armoury\bjk_vest\Textures\BJK_Strike_Pauldrons_Commander_Alt_CO.paa"};
         class ItemInfo : ItemInfo {
             hiddenSelections[] = {"camo"};
-            hiddenSelectionsTextures[] = {"BaY_JKaara_Armoury\bjk_vest\Textures\BJK_FireWarrior_Pauldrons_Ethereal_CO.paa"};
-            hiddenSelectionsMaterials[] = {"BaY_JKaara_Armoury\bjk_vest\Materials\BJK_FireWarrior_Pauldrons_Ethereal.rvmat"};
+            hiddenSelectionsTextures[] = {"BaY_JKaara_Armoury\bjk_vest\Textures\BJK_Strike_Pauldrons_Commander_Alt_CO.paa"};
         };
+    };
+    class BJK_Strike_Pauldrons_Medical : BJK_Strike_Pauldrons {
+        displayName = "[Ba'Y JK] Fire Warrior Pauldrons (Strike, Medical)";
+        hiddenSelections[] = {"camo"};
+        hiddenSelectionsTextures[] = {"BaY_JKaara_Armoury\bjk_vest\Textures\BJK_Strike_Pauldrons_Medical_CO.paa"};
+        class ItemInfo : ItemInfo {
+            hiddenSelections[] = {"camo"};
+            hiddenSelectionsTextures[] = {"BaY_JKaara_Armoury\bjk_vest\Textures\BJK_Strike_Pauldrons_Medical_CO.paa"};
+        };
+    };
+    class BJK_Strike_Pauldrons_Medical_Alt : BJK_Strike_Pauldrons_Commander {
+        displayName = "[Ba'Y JK] Fire Warrior Pauldrons (Strike, Medical, Alternate)";
+        hiddenSelections[] = {"camo"};
+        hiddenSelectionsTextures[] = {"BaY_JKaara_Armoury\bjk_vest\Textures\BJK_Strike_Pauldrons_Medical_Alt_CO.paa"};
+    };
+    class BJK_Strike_Pauldrons_Ethereal : BJK_Strike_Pauldrons_Commander {
+        displayName = "[Ba'Y JK] Fire Warrior Pauldrons (Strike, Aun'La)";
+        hiddenSelections[] = {"camo"};
+        hiddenSelectionsTextures[] = {"BaY_JKaara_Armoury\bjk_vest\Textures\BJK_Strike_Pauldrons_Ethereal_CO.paa"};
+        hiddenSelectionsMaterials[] = {"BaY_JKaara_Armoury\bjk_vest\Materials\BJK_Strike_Pauldrons_Ethereal.rvmat"};
+        class ItemInfo : ItemInfo {
+            hiddenSelections[] = {"camo"};
+            hiddenSelectionsTextures[] = {"BaY_JKaara_Armoury\bjk_vest\Textures\BJK_Strike_Pauldrons_Ethereal_CO.paa"};
+            hiddenSelectionsMaterials[] = {"BaY_JKaara_Armoury\bjk_vest\Materials\BJK_Strike_Pauldrons_Ethereal.rvmat"};
+        };
+    };
+
+    class BJK_Breacher_Pauldrons : TIOW_Tau_Belt {
+        author = "JCaleb2014";
+        scope = 2;
+        scopeArsenal = 2;
+        scopeCurator = 2;
+        displayName = "[Ba'Y JK] Fire Warrior Pauldrons (Strike)";
+        hiddenSelections[] = {"camo"};
+        hiddenSelectionsTextures[] = {"BaY_JKaara_Armoury\bjk_vest\Textures\BJK_Strike_Pauldrons_CO.paa"};
+        class ItemInfo : ItemInfo {
+            containerClass = "Supply500";
+            hiddenSelections[] = {"camo"};
+            hiddenSelectionsTextures[] = {"BaY_JKaara_Armoury\bjk_vest\Textures\BJK_Strike_Pauldrons_CO.paa"};
+            class HitpointsProtectionInfo {
+                class Neck {
+                    hitpointName = "HitNeck";
+                    armor = 13;
+                    passThrough = 0.5;
+                };
+                class Arms {
+                    hitpointName = "HitArms";
+                    armor = 13;
+                    passThrough = 0.5;
+                };
+                class Chest {
+                    hitpointName = "HitChest";
+                    armor = 13;
+                    passThrough = 0.7;
+                };
+                class Diaphragm {
+                    hitpointName = "HitDiaphragm";
+                    armor = 13;
+                    passThrough = 0.7;
+                };
+                class Abdomen {
+                    hitpointName = "HitAbdomen";
+                    armor = 10;
+                    passThrough = 0.5;
+                };
+                class Pelvis {
+                    hitpointName = "HitPelvis";
+                    armor = 10;
+                    passThrough = 0.5;
+                };
+                class Body {
+                    hitpointName = "HitBody";
+                    passThrough = 0.6;
+                };
+            };
+        };
+    };
+    class BJK_Breacher_Pauldrons : BJK_Breacher_Pauldrons {
     };
     class TIOW_Tau_BeltP;
     class BJK_EarthCaste_Pauldrons : TIOW_Tau_BeltP {

@@ -48,28 +48,14 @@ class CfgWeapons {
             magazines[] = {"BJK_ionrifle_overcharge_mag"};
         };
     };
-    class GunParticles;
-    class BJK_DMCLS_pulse_rifle : Rifle_Base_F {
+    class DMCLS_pulse_rifle;
+    class BJK_DMCLS_pulse_rifle : DMCLS_pulse_rifle {
         scope = 2;
         scopeArsenal = 2;
         scopeCurator = 2;
         baseWeapon = "BJK_DMCLS_pulse_rifle";
         author = "JCaleb2014";
         displayName = "[Ba'Y JK] Pulse Rifle";
-        descriptionShort = "A standard pulse weaponry used by Fire Warriors";
-        model = "\DMCLS\dmcls_tau_weapons\pulse_rifle\dmcls_pulse_rifle.p3d";
-        selectionFireAnim = "MuzzleFlash";
-        picture = "\DMCLS\dmcls_tau_weapons\pulse_rifle\data\UI_rifle.paa";
-        opticsZoomMin = 0.25;
-        opticsZoomMax = 1;
-        opticsZoomInit = 0.75;
-        memoryPointCamera = "eye";
-        cameraDir = "eye_look";
-        discreteDistance[] = {100, 200, 300, 400, 500, 600, 700, 800, 900, 100};
-        discreteDistanceInitIndex = 0;
-        discreteDistanceCameraPoint[] = {"eye"};
-        distanceZoomMin = 100;
-        distanceZoomMax = 1000;
         class WeaponSlotsInfo {
             mass = 100;
             allowedSlots[] = {901};
@@ -84,62 +70,18 @@ class CfgWeapons {
                 item = "BJK_DMCLS_Tau_Optics_1";
             };
         };
-        maxRecoilSway = 0.0099999998;
-        swayDecaySpeed = 3;
-        recoil = "DMCLS_recoil_pulse_rifle";
-        initSpeed = 1000;
-        dexterity = 1.2;
-        ACE_barrelLength = 605;
-        dispersion = 0.00060000003;
-        aiDispersionCoefY = 2;
-        aiDispersionCoefX = 2;
-        magazines[] = {"BJK_DMCLS_pulse_mag_25", "BJK_DMCLS_pulse_mag_36", "BJK_DMCLS_pulse_mag_54", "VNG_pulse_rifle_mag"};
-        handanim[] = {"OFP2_ManSkeleton", "\DMCLS\dmcls_tau_weapons\pulse_rifle\anims\pulse_rifle_handanim.rtm"};
-        reloadAction = "DMCLS_pulse_rifle_reload";
-        drySound[] = {"\DMCLS\dmcls_tau_sounds\misc\empty.wss", "db-5", 1, 20};
-        reloadMagazineSound[] = {"\DMCLS\dmcls_tau_sounds\reload\reload_rifle.wss", 1, 1, 30};
-        changeFiremodeSound[] = {"\DMCLS\dmcls_tau_sounds\misc\firemode.wss", 0.56234133, 1, 20};
+        magazines[] = {"BJK_DMCLS_pulse_mag_25", "BJK_DMCLS_pulse_mag_36", "BJK_DMCLS_pulse_mag_54"};
         hiddenSelections[] = {"Camo", "Camo1"};
         hiddenSelectionsTextures[] = {"BaY_JKaara_Armoury\bjk_rifle\Textures\BJK_Stock_CA.paa", "BaY_JKaara_Armoury\bjk_rifle\Textures\BJK_PulseRifle_CA.paa"};
-        modes[] = {"Single"};
-        class Single : Mode_SemiAuto {
-            reloadTime = 0.5;
-            minRange = 0;
-            minRangeProbab = 0.89999998;
-            midRange = 500;
-            midRangeProbab = 0.69999999;
-            maxRange = 1500;
-            maxRangeProbab = 0.30000001;
-            aiRateOfFireDistance = 600;
-            aiRateOfFire = 3;
-            dispersion = 0.00060000003;
-            sounds[] = {"StandardSound"};
-            class StandardSound {
-                soundSetShot[] = {"DMCLS_pulse_rifle_Shot_SoundSet", "DMR01_Tail_SoundSet", "DMR01_InteriorTail_SoundSet"};
-            };
-        };
     };
-    class BJK_DMCLS_pulse_blaster : Rifle_Base_F {
+    class DMCLS_pulse_blaster;
+    class BJK_DMCLS_pulse_blaster : DMCLS_pulse_blaster {
         scope = 2;
         scopeArsenal = 2;
         scopeCurator = 2;
         baseWeapon = "BJK_DMCLS_pulse_blaster";
         author = "JCaleb2014";
         displayName = "[Ba'Y JK] Pulse blaster";
-        descriptionShort = "Short distance weapon used by Fire Warrior Breacher Squads";
-        model = "\DMCLS\dmcls_tau_weapons\pulse_blaster\dmcls_pulse_blaster.p3d";
-        selectionFireAnim = "MuzzleFlash";
-        picture = "\DMCLS\dmcls_tau_weapons\pulse_blaster\data\UI_blaster.paa";
-        opticsZoomMin = 0.25;
-        opticsZoomMax = 1;
-        opticsZoomInit = 0.75;
-        memoryPointCamera = "eye";
-        cameraDir = "eye_look";
-        discreteDistance[] = {0};
-        discreteDistanceInitIndex = 0;
-        discreteDistanceCameraPoint[] = {"eye"};
-        distanceZoomMin = 0;
-        distanceZoomMax = 0;
         class WeaponSlotsInfo {
             mass = 100;
             allowedSlots[] = {901};
@@ -147,67 +89,23 @@ class CfgWeapons {
             class UnderBarrelSlot : UnderBarrelSlot_BJK_dmcls_tau {};
         };
         class LinkedItems {
-            // class LinkedItemsOptic {
-            //     slot = "CowsSlot";
-            //     item = "BJK_DMCLS_Tau_Coli_2";
-            // };
-        };
-        maxRecoilSway = 0.050000001;
-        swayDecaySpeed = 4;
-        recoil = "DMCLS_recoil_pulse_blaster";
-        dexterity = 1.8;
-        ACE_barrelLength = 605;
-        dispersion = 0.00019999999;
-        aiDispersionCoefY = 2;
-        aiDispersionCoefX = 2;
-        magazines[] = {"BJK_DMCLS_pulse_blaster_mag_10", "BJK_DMCLS_pulse_blaster_mag_15", "BJK_DMCLS_pulse_blaster_mag_25", "BJK_DMCLS_pulse_blaster_airburst_mag_8", "BJK_DMCLS_pulse_blaster_airburst_mag_12", "BJK_DMCLS_pulse_blaster_airburst_mag_18", "BJK_DMCLS_pulse_blaster_slug_mag_10", "BJK_DMCLS_pulse_blaster_slug_mag_15", "BJK_DMCLS_pulse_blaster_slug_mag_25", "TIOW_pulse_blaster_mag"};
-        handanim[] = {"OFP2_ManSkeleton", "\DMCLS\dmcls_tau_weapons\pulse_rifle\anims\pulse_rifle_handanim.rtm"};
-        reloadAction = "DMCLS_pulse_rifle_reload";
-        drySound[] = {"\DMCLS\dmcls_tau_sounds\misc\empty.wss", "db-5", 1, 20};
-        reloadMagazineSound[] = {"\DMCLS\dmcls_tau_sounds\reload\reload_rifle.wss", 1, 1, 30};
-        changeFiremodeSound[] = {"\DMCLS\dmcls_tau_sounds\misc\firemode.wss", 0.56234133, 1, 20};
-        hiddenSelections[] = {"Camo", "Camo1"};
-        hiddenSelectionsTextures[] = {"BaY_JKaara_Armoury\bjk_rifle\Textures\BJK_Stock_CA.paa",
-                                      "BaY_JKaara_Armoury\bjk_rifle\Textures\BJK_PulseBlaster_CA.paa"};
-        modes[] = {"Single"};
-        class Single : Mode_SemiAuto {
-            reloadTime = 0.5;
-            minRange = 0;
-            minRangeProbab = 0.94999999;
-            midRange = 100;
-            midRangeProbab = 0.69999999;
-            maxRange = 150;
-            maxRangeProbab = 0.2;
-            aiRateOfFireDistance = 50;
-            aiRateOfFire = 1;
-            dispersion = 0.00019999999;
-            sounds[] = {"StandardSound"};
-            class StandardSound {
-                soundSetShot[] = {"DMCLS_pulse_blaster_Shot_SoundSet", "DMR01_Tail_SoundSet", "DMR01_InteriorTail_SoundSet"};
+            class LinkedItemsOptic {
+                slot = "CowsSlot";
+                item = "BJK_DMCLS_Tau_Coli_2";
             };
         };
+        magazines[] = {"BJK_DMCLS_pulse_blaster_mag_10", "BJK_DMCLS_pulse_blaster_mag_15", "BJK_DMCLS_pulse_blaster_mag_25", "BJK_DMCLS_pulse_blaster_airburst_mag_8", "BJK_DMCLS_pulse_blaster_airburst_mag_12", "BJK_DMCLS_pulse_blaster_airburst_mag_18", "BJK_DMCLS_pulse_blaster_slug_mag_10", "BJK_DMCLS_pulse_blaster_slug_mag_15", "BJK_DMCLS_pulse_blaster_slug_mag_25"};
+        hiddenSelections[] = {"Camo", "Camo1"};
+        hiddenSelectionsTextures[] = {"BaY_JKaara_Armoury\bjk_rifle\Textures\BJK_Stock_CA.paa", "BaY_JKaara_Armoury\bjk_rifle\Textures\BJK_PulseBlaster_CA.paa"};
     };
-    class BJK_DMCLS_pulse_burster : Rifle_Base_F {
+    class DMCLS_pulse_burster;
+    class BJK_DMCLS_pulse_burster : DMCLS_pulse_burster {
         scope = 2;
         scopeArsenal = 2;
         scopeCurator = 2;
         baseWeapon = "BJK_DMCLS_pulse_burster";
         author = "JCaleb2014";
         displayName = "[Ba'Y JK] Pulse burster";
-        descriptionShort = "A compact gun used by vehicle crews and special units";
-        model = "\DMCLS\dmcls_tau_weapons\pulse_burster\dmcls_pulse_burster.p3d";
-        selectionFireAnim = "MuzzleFlash";
-        picture = "\DMCLS\dmcls_tau_weapons\pulse_burster\data\UI_burster.paa";
-        opticsZoomMin = 0.25;
-        opticsZoomMax = 1;
-        opticsZoomInit = 0.75;
-        memoryPointCamera = "eye";
-        cameraDir = "eye_look";
-        discreteDistance[] = {100, 200, 300};
-        discreteDistanceInitIndex = 0;
-        discreteDistanceCameraPoint[] = {"eye"};
-        distanceZoomMin = 100;
-        distanceZoomMax = 300;
         class WeaponSlotsInfo {
             mass = 60;
             allowedSlots[] = {901};
@@ -222,104 +120,18 @@ class CfgWeapons {
                 item = "BJK_DMCLS_Tau_Coli_1";
             };
         };
-        maxRecoilSway = 0.029999999;
-        swayDecaySpeed = 6;
-        recoil = "DMCLS_recoil_pulse_burster";
-        dexterity = 2.8;
-        ACE_barrelLength = 605;
-        dispersion = 0.0080000004;
-        aiDispersionCoefY = 2;
-        aiDispersionCoefX = 2;
-        magazines[] = {"BJK_DMCLS_pulse_mag_25", "BJK_DMCLS_pulse_mag_36", "BJK_DMCLS_pulse_mag_54", "TIOW_pulse_mag"};
-        handanim[] = {"OFP2_ManSkeleton", "\DMCLS\dmcls_tau_weapons\pulse_burster\anims\pulse_burster_handanim.rtm"};
-        reloadAction = "DMCLS_pulse_rifle_reload";
-        drySound[] = {"\DMCLS\dmcls_tau_sounds\misc\empty.wss", "db-5", 1, 20};
-        reloadMagazineSound[] = {"\DMCLS\dmcls_tau_sounds\reload\reload_rifle.wss", 1, 1, 30};
-        changeFiremodeSound[] = {"\DMCLS\dmcls_tau_sounds\misc\firemode.wss", 0.56234133, 1, 20};
+        magazines[] = {"BJK_DMCLS_pulse_mag_25", "BJK_DMCLS_pulse_mag_36", "BJK_DMCLS_pulse_mag_54"};
         hiddenSelections[] = {"Camo", "Camo1"};
-        hiddenSelectionsTextures[] = {"BaY_JKaara_Armoury\bjk_rifle\Textures\BJK_Stock_CA.paa",
-                                      "BaY_JKaara_Armoury\bjk_rifle\Textures\BJK_PulseBurster_CA.paa"};
-        modes[] = {"Single", "FullAuto", "FullAuto_close", "FullAuto_medium"};
-        class Single : Mode_SemiAuto {
-            reloadTime = 0.092;
-            minRange = 100;
-            minRangeProbab = 0.029999999;
-            midRange = 200;
-            midRangeProbab = 0.07;
-            maxRange = 300;
-            maxRangeProbab = 0.2;
-            aiRateOfFireDistance = 200;
-            aiRateOfFire = 2;
-            dispersion = 0.0074999998;
-            sounds[] = {"StandardSound"};
-            class StandardSound {
-                soundSetShot[] = {"DMCLS_pulse_burster_Shot_SoundSet", "DMR01_Tail_SoundSet", "DMR01_InteriorTail_SoundSet"};
-            };
-        };
-        class FullAuto : Mode_FullAuto {
-            minRange = 0;
-            minRangeProbab = 0.2;
-            midRange = 25;
-            midRangeProbab = 0.40000001;
-            maxRange = 60;
-            maxRangeProbab = 0.5;
-            aiRateOfFireDistance = 25;
-            aiRateOfFire = 1;
-            dispersion = 0.0074999998;
-            sounds[] = {"StandardSound"};
-            class StandardSound {
-                soundSetShot[] = {"DMCLS_pulse_burster_Shot_SoundSet",
-                                  "DMR01_Tail_SoundSet", "DMR01_InteriorTail_SoundSet"};
-            };
-        };
-        class FullAuto_close : FullAuto {
-            showToPlayer = 0;
-            burst = 6;
-            reloadTime = 0.079999998;
-            minRange = 0;
-            minRangeProbab = 0.89999998;
-            midRange = 25;
-            midRangeProbab = 0.80000001;
-            maxRange = 50;
-            maxRangeProbab = 0.5;
-            aiRateOfFireDistance = 20;
-            aiRateOfFire = 2;
-        };
-        class FullAuto_medium : FullAuto {
-            showToPlayer = 0;
-            burst = 3;
-            reloadTime = 0.079999998;
-            minRange = 30;
-            minRangeProbab = 0.30000001;
-            midRange = 100;
-            midRangeProbab = 0.80000001;
-            maxRange = 150;
-            maxRangeProbab = 0.5;
-            aiRateOfFireDistance = 100;
-            aiRateOfFire = 3;
-        };
+        hiddenSelectionsTextures[] = {"BaY_JKaara_Armoury\bjk_rifle\Textures\BJK_Stock_CA.paa", "BaY_JKaara_Armoury\bjk_rifle\Textures\BJK_PulseBurster_CA.paa"};
     };
-    class BJK_DMCLS_pulse_carbine : Rifle_Base_F {
+    class DMCLS_pulse_carbine;
+    class BJK_DMCLS_pulse_carbine : DMCLS_pulse_carbine {
         scope = 2;
         scopeArsenal = 2;
         scopeCurator = 2;
         baseWeapon = "BJK_DMCLS_pulse_carbine";
         author = "JCaleb2014";
         displayName = "[Ba'Y JK] Pulse carbine";
-        descriptionShort = "A compact gun used by vehicle crews and special units";
-        model = "\DMCLS\dmcls_tau_weapons\pulse_carbine\dmcls_pulse_carbine.p3d";
-        selectionFireAnim = "MuzzleFlash";
-        picture = "\DMCLS\dmcls_tau_weapons\pulse_carbine\data\UI_carbine.paa";
-        opticsZoomMin = 0.25;
-        opticsZoomMax = 1;
-        opticsZoomInit = 0.75;
-        memoryPointCamera = "eye";
-        cameraDir = "eye_look";
-        discreteDistance[] = {100, 200, 300};
-        discreteDistanceInitIndex = 0;
-        discreteDistanceCameraPoint[] = {"eye"};
-        distanceZoomMin = 100;
-        distanceZoomMax = 300;
         class WeaponSlotsInfo {
             mass = 60;
             allowedSlots[] = {901};
@@ -334,118 +146,18 @@ class CfgWeapons {
                 item = "BJK_DMCLS_Tau_Optics_3";
             };
         };
-        maxRecoilSway = 0.029999999;
-        swayDecaySpeed = 6;
-        recoil = "DMCLS_recoil_pulse_carbine";
-        dexterity = 2.8;
-        ACE_barrelLength = 605;
-        dispersion = 0.0080000004;
-        aiDispersionCoefY = 2;
-        aiDispersionCoefX = 2;
         magazines[] = {"BJK_DMCLS_pulse_mag_25", "BJK_DMCLS_pulse_mag_36", "BJK_DMCLS_pulse_mag_54", "TIOW_pulse_mag"};
-        handanim[] = {"OFP2_ManSkeleton", "\DMCLS\dmcls_tau_weapons\pulse_carbine\anims\pulse_carbine_handanim.rtm"};
-        reloadAction = "DMCLS_pulse_rifle_reload";
-        drySound[] = {"\DMCLS\dmcls_tau_sounds\misc\empty.wss", "db-5", 1, 20};
-        reloadMagazineSound[] = {
-            "\DMCLS\dmcls_tau_sounds\reload\reload_rifle.wss", 1, 1, 30};
-        changeFiremodeSound[] = {"\DMCLS\dmcls_tau_sounds\misc\firemode.wss", 0.56234133,
-                                 1,
-                                 20};
         hiddenSelections[] = {"Camo", "Camo1"};
         hiddenSelectionsTextures[] = {"BaY_JKaara_Armoury\bjk_rifle\Textures\BJK_Stock_CA.paa", "BaY_JKaara_Armoury\bjk_rifle\Textures\BJK_PulseCarbine_CA.paa"};
-        muzzles[] = {"this", "DMCLS_carbine_UGL"};
-        modes[] = {"Single", "Burst"};
-        class Single : Mode_SemiAuto {
-            reloadTime = 0.1;
-            minRange = 0;
-            minRangeProbab = 0.89999998;
-            midRange = 300;
-            midRangeProbab = 0.60000002;
-            maxRange = 1000;
-            maxRangeProbab = 0.30000001;
-            aiRateOfFireDistance = 300;
-            aiRateOfFire = 3;
-            dispersion = 0.003;
-            sounds[] = {"StandardSound"};
-            class StandardSound {
-                soundSetShot[] = {"DMCLS_pulse_carbine_Shot_SoundSet", "DMR01_Tail_SoundSet", "DMR01_InteriorTail_SoundSet"};
-            };
-        };
-        class Burst : Mode_Burst {
-            burst = 3;
-            reloadTime = 0.1;
-            minRange = 1;
-            minRangeProbab = 0.89999998;
-            midRange = 50;
-            midRangeProbab = 0.89999998;
-            maxRange = 100;
-            maxRangeProbab = 0.60000002;
-            aiRateOfFireDistance = 50;
-            aiRateOfFire = 3;
-            sounds[] = {"StandardSound"};
-            class StandardSound {
-                soundSetShot[] = {"DMCLS_pulse_carbine_Shot_SoundSet", "DMR01_Tail_SoundSet", "DMR01_InteriorTail_SoundSet"};
-            };
-        };
-        class DMCLS_carbine_UGL : UGL_F {
-            displayName = "Grenade launcher";
-            descriptionShort = "Grenade launcher";
-            useModelOptics = 0;
-            useExternalOptic = 1;
-            magazines[] = {"DMCLS_tau_photon_grenade_uglmag", "DMCLS_tau_fusion_grenade_uglmag", "DMCLS_tau_smoke_grenade_uglmag", "DMCLS_tau_smoke_grenade_red_uglmag", "DMCLS_tau_smoke_grenade_green_uglmag", "DMCLS_tau_smoke_grenade_blue_uglmag", "ACE_HuntIR_M203"};
-            magazineWell[] = {};
-            initSpeed = 300;
-            recoil = "DMCLS_recoil_ugl";
-            muzzlePos = "gl_muzzle";
-            muzzleEnd = "gl_chamber";
-            reloadAction = "DMCLS_ugl_reload";
-            drySound[] = {"\DMCLS\dmcls_tau_sounds\misc\empty.wss", "db-5", 1, 20};
-            changeFiremodeSound[] = {"\DMCLS\dmcls_tau_sounds\misc\firemode.wss", 0.56234133, 1, 20};
-            reloadMagazineSound[] = {"\DMCLS\dmcls_tau_sounds\reload\reload_grenade.wss", 1, 1, 30};
-            modes[] = {"Single"};
-            class Single : Mode_SemiAuto {
-                reloadTime = 0.2;
-                minRange = 50;
-                minRangeProbab = 0.60000002;
-                midRange = 100;
-                midRangeProbab = 0.89999998;
-                maxRange = 300;
-                maxRangeProbab = 0.60000002;
-                aiRateOfFireDistance = 300;
-                aiRateOfFire = 10;
-                dispersion = 0.0099999998;
-                sounds[] = {"StandardSound"};
-                class StandardSound {
-                    soundSetShot[] =
-                        {
-                            "DMCLS_ugl_Shot_SoundSet",
-                            "UGL_Tail_SoundSet",
-                            "UGL_InteriorTail_SoundSet"};
-                };
-            };
-        };
     };
-    class BJK_DMCLS_rail_rifle : Rifle_Base_F {
+    class DMCLS_rail_rifle;
+    class BJK_DMCLS_rail_rifle : DMCLS_rail_rifle {
         scope = 2;
         scopeArsenal = 2;
         scopeCurator = 2;
         baseWeapon = "BJK_DMCLS_rail_rifle";
         author = "JCaleb2014";
         displayName = "[Ba'Y JK] Rail Rifle";
-        descriptionShort = "Light armour piercing weapon";
-        model = "\DMCLS\dmcls_tau_weapons\rail_rifle\dmcls_rail_rifle.p3d";
-        selectionFireAnim = "MuzzleFlash";
-        picture = "\DMCLS\dmcls_tau_weapons\rail_rifle\data\UI_rail.paa";
-        opticsZoomMin = 0.25;
-        opticsZoomMax = 1;
-        opticsZoomInit = 0.75;
-        memoryPointCamera = "eye";
-        cameraDir = "eye_look";
-        discreteDistance[] = {100, 200, 300, 400, 500, 600, 700, 800, 900, 100};
-        discreteDistanceInitIndex = 0;
-        discreteDistanceCameraPoint[] = {"eye"};
-        distanceZoomMin = 100;
-        distanceZoomMax = 1000;
         class WeaponSlotsInfo {
             mass = 100;
             allowedSlots[] = {901};
@@ -460,40 +172,9 @@ class CfgWeapons {
                 item = "BJK_DMCLS_Tau_Optics_2";
             };
         };
-        maxRecoilSway = 0.016000001;
-        swayDecaySpeed = 3;
-        recoil = "DMCLS_recoil_rail_rifle";
-        initSpeed = 1000;
-        dexterity = 0.60000002;
-        ACE_barrelLength = 605;
-        dispersion = 0.00060000003;
-        aiDispersionCoefY = 2;
-        aiDispersionCoefX = 2;
         magazines[] = {"BJK_DMCLS_rail_rifle_mag", "TIOW_railrifle_mag"};
-        handanim[] = {"OFP2_ManSkeleton", "\DMCLS\dmcls_tau_weapons\rail_rifle\anims\rail_rifle_handanim.rtm"};
-        reloadAction = "DMCLS_rail_rifle_reload";
-        drySound[] = {"\DMCLS\dmcls_tau_sounds\misc\empty.wss", "db-5", 1, 20};
-        reloadMagazineSound[] = {"\DMCLS\dmcls_tau_sounds\reload\reload_rail.wss", 1, 1, 30};
-        changeFiremodeSound[] = {"\DMCLS\dmcls_tau_sounds\misc\firemode.wss", 0.56234133, 1, 20};
         hiddenSelections[] = {"Camo", "Camo1", "Camo2", "Camo3"};
-        hiddenSelectionsTextures[] = {"BaY_JKaara_Armoury\bjk_rifle\Textures\BJK_RailFront_CA.paa", "BaY_JKaara_Armoury\bjk_rifle\Textures\BJK_RailBack_CA.paa", "BaY_JKaara_Armoury\bjk_rifle\Textures\BJK_RailMag_CA.paa", "\DMCLS\dmcls_tau_weapons\rail_rifle\data\details_CA.paa"};
-        modes[] = {"Single"};
-        class Single : Mode_SemiAuto {
-            reloadTime = 0.5;
-            minRange = 0;
-            minRangeProbab = 0.89999998;
-            midRange = 500;
-            midRangeProbab = 0.69999999;
-            maxRange = 1500;
-            maxRangeProbab = 0.30000001;
-            aiRateOfFireDistance = 600;
-            aiRateOfFire = 5;
-            dispersion = 0.00060000003;
-            sounds[] = {"StandardSound"};
-            class StandardSound {
-                soundSetShot[] = {"DMCLS_rail_rifle_Shot_SoundSet", "DMR01_Tail_SoundSet", "DMR01_InteriorTail_SoundSet"};
-            };
-        };
+        hiddenSelectionsTextures[] = {"BaY_JKaara_Armoury\bjk_rifle\Textures\BJK_RailRifle_Front_CA.paa", "BaY_JKaara_Armoury\bjk_rifle\Textures\BJK_RailRifle_Back_CA.paa", "BaY_JKaara_Armoury\bjk_rifle\Textures\BJK_RailRifle_Mag_CA.paa", "BaY_JKaara_Armoury\bjk_rifle\Textures\BJK_RailRifle_Details_CA.paa"};
     };
     class vng_repeater_f;
     class BJK_PulseRepeater : vng_repeater_f {
