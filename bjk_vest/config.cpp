@@ -19,13 +19,15 @@ class CfgWeapons {
         scope = 2;
         scopeArsenal = 2;
         scopeCurator = 2;
-        displayName = "[Ba'Y JK] Fire Warrior Pauldrons (Strike)";
+        displayName = "[Ba'Y JK] Strike Pauldrons";
         hiddenSelections[] = {"camo"};
-        hiddenSelectionsTextures[] = {"BaY_JKaara_Armoury\bjk_vest\Textures\BJK_Strike_Pauldrons_CO.paa"};
+        hiddenSelectionsTextures[] = {"BaY_JKaara_Armoury\bjk_vest\Textures\BJK_Strike_Pauldrons_CA.paa"};
+        hiddenSelectionsMaterials[] = {"BaY_JKaara_Armoury\bjk_vest\Materials\BJK_Strike_Pauldrons.rvmat"};
         class ItemInfo : ItemInfo {
             containerClass = "Supply500";
             hiddenSelections[] = {"camo"};
-            hiddenSelectionsTextures[] = {"BaY_JKaara_Armoury\bjk_vest\Textures\BJK_Strike_Pauldrons_CO.paa"};
+            hiddenSelectionsTextures[] = {"BaY_JKaara_Armoury\bjk_vest\Textures\BJK_Strike_Pauldrons_CA.paa"};
+            hiddenSelectionsMaterials[] = {"BaY_JKaara_Armoury\bjk_vest\Materials\BJK_Strike_Pauldrons.rvmat"};
             class HitpointsProtectionInfo {
                 class Neck {
                     hitpointName = "HitNeck";
@@ -65,47 +67,47 @@ class CfgWeapons {
         };
     };
     class BJK_Strike_Pauldrons_Commander : BJK_Strike_Pauldrons {
-        displayName = "[Ba'Y JK] Fire Warrior Pauldrons (Strike, Shas'Ui)";
+        displayName = "[Ba'Y JK] Strike Pauldrons (Shas'Ui)";
         model = "40k_tau\Gear\Belt_shasui.p3d";
         hiddenSelections[] = {"camo"};
-        hiddenSelectionsTextures[] = {"BaY_JKaara_Armoury\bjk_vest\Textures\BJK_Strike_Pauldrons_Commander_CO.paa"};
+        hiddenSelectionsTextures[] = {"BaY_JKaara_Armoury\bjk_vest\Textures\BJK_Strike_Pauldrons_Commander_CA.paa"};
         class ItemInfo : ItemInfo {
             uniformModel = "40k_tau\Gear\Belt_shasui.p3d";
             hiddenSelections[] = {"camo"};
-            hiddenSelectionsTextures[] = {"BaY_JKaara_Armoury\bjk_vest\Textures\BJK_Strike_Pauldrons_Commander_CO.paa"};
+            hiddenSelectionsTextures[] = {"BaY_JKaara_Armoury\bjk_vest\Textures\BJK_Strike_Pauldrons_Commander_CA.paa"};
         };
     };
     class BJK_Strike_Pauldrons_Commander_Alt : BJK_Strike_Pauldrons {
-        displayName = "[Ba'Y JK] Fire Warrior Pauldrons (Strike, Assistant)";
+        displayName = "[Ba'Y JK] Strike Pauldrons (Assistant)";
         hiddenSelections[] = {"camo"};
-        hiddenSelectionsTextures[] = {"BaY_JKaara_Armoury\bjk_vest\Textures\BJK_Strike_Pauldrons_Commander_Alt_CO.paa"};
+        hiddenSelectionsTextures[] = {"BaY_JKaara_Armoury\bjk_vest\Textures\BJK_Strike_Pauldrons_Commander_Alt_CA.paa"};
         class ItemInfo : ItemInfo {
             hiddenSelections[] = {"camo"};
-            hiddenSelectionsTextures[] = {"BaY_JKaara_Armoury\bjk_vest\Textures\BJK_Strike_Pauldrons_Commander_Alt_CO.paa"};
+            hiddenSelectionsTextures[] = {"BaY_JKaara_Armoury\bjk_vest\Textures\BJK_Strike_Pauldrons_Commander_Alt_CA.paa"};
         };
     };
     class BJK_Strike_Pauldrons_Medical : BJK_Strike_Pauldrons {
-        displayName = "[Ba'Y JK] Fire Warrior Pauldrons (Strike, Medical)";
+        displayName = "[Ba'Y JK] Strike Pauldrons (Medical)";
         hiddenSelections[] = {"camo"};
-        hiddenSelectionsTextures[] = {"BaY_JKaara_Armoury\bjk_vest\Textures\BJK_Strike_Pauldrons_Medical_CO.paa"};
+        hiddenSelectionsTextures[] = {"BaY_JKaara_Armoury\bjk_vest\Textures\BJK_Strike_Pauldrons_Medical_CA.paa"};
         class ItemInfo : ItemInfo {
             hiddenSelections[] = {"camo"};
-            hiddenSelectionsTextures[] = {"BaY_JKaara_Armoury\bjk_vest\Textures\BJK_Strike_Pauldrons_Medical_CO.paa"};
+            hiddenSelectionsTextures[] = {"BaY_JKaara_Armoury\bjk_vest\Textures\BJK_Strike_Pauldrons_Medical_CA.paa"};
         };
     };
     class BJK_Strike_Pauldrons_Medical_Alt : BJK_Strike_Pauldrons_Commander {
-        displayName = "[Ba'Y JK] Fire Warrior Pauldrons (Strike, Medical, Alternate)";
+        displayName = "[Ba'Y JK] Strike Pauldrons (Medical, Alternate)";
         hiddenSelections[] = {"camo"};
-        hiddenSelectionsTextures[] = {"BaY_JKaara_Armoury\bjk_vest\Textures\BJK_Strike_Pauldrons_Medical_Alt_CO.paa"};
+        hiddenSelectionsTextures[] = {"BaY_JKaara_Armoury\bjk_vest\Textures\BJK_Strike_Pauldrons_Medical_Alt_CA.paa"};
     };
     class BJK_Strike_Pauldrons_Ethereal : BJK_Strike_Pauldrons_Commander {
-        displayName = "[Ba'Y JK] Fire Warrior Pauldrons (Strike, Aun'La)";
+        displayName = "[Ba'Y JK] Strike Pauldrons (Aun'La)";
         hiddenSelections[] = {"camo"};
-        hiddenSelectionsTextures[] = {"BaY_JKaara_Armoury\bjk_vest\Textures\BJK_Strike_Pauldrons_Ethereal_CO.paa"};
+        hiddenSelectionsTextures[] = {"BaY_JKaara_Armoury\bjk_vest\Textures\BJK_Strike_Pauldrons_Ethereal_CA.paa"};
         hiddenSelectionsMaterials[] = {"BaY_JKaara_Armoury\bjk_vest\Materials\BJK_Strike_Pauldrons_Ethereal.rvmat"};
         class ItemInfo : ItemInfo {
             hiddenSelections[] = {"camo"};
-            hiddenSelectionsTextures[] = {"BaY_JKaara_Armoury\bjk_vest\Textures\BJK_Strike_Pauldrons_Ethereal_CO.paa"};
+            hiddenSelectionsTextures[] = {"BaY_JKaara_Armoury\bjk_vest\Textures\BJK_Strike_Pauldrons_Ethereal_CA.paa"};
             hiddenSelectionsMaterials[] = {"BaY_JKaara_Armoury\bjk_vest\Materials\BJK_Strike_Pauldrons_Ethereal.rvmat"};
         };
     };
@@ -119,9 +121,12 @@ class CfgWeapons {
         displayName = "[Ba'Y JK] Earth Caste Pauldrons";
         hiddenSelections[] = {"camo"};
         hiddenSelectionsTextures[] = {"BaY_JKaara_Armoury\bjk_vest\Textures\BJK_EarthCaste_Pauldrons_CO.paa"};
+        hiddenSelectionsMaterials[] = {"BaY_JKaara_Armoury\bjk_vest\Materials\BJK_Strike_Pauldrons.rvmat"};
         class ItemInfo : ItemInfo {
             containerClass = "Supply500";
             hiddenSelections[] = {"camo"};
+            hiddenSelectionsTextures[] = {"BaY_JKaara_Armoury\bjk_vest\Textures\BJK_EarthCaste_Pauldrons_CO.paa"};
+            hiddenSelectionsMaterials[] = {"BaY_JKaara_Armoury\bjk_vest\Materials\BJK_Strike_Pauldrons.rvmat"};
             class HitpointsProtectionInfo {
                 class Neck {
                     hitpointName = "HitNeck";
@@ -164,6 +169,91 @@ class CfgWeapons {
         displayName = "[Ba'Y JK] Water Caste Pauldrons";
         hiddenSelections[] = {"camo"};
         hiddenSelectionsTextures[] = {"BaY_JKaara_Armoury\bjk_vest\Textures\BJK_WaterCaste_Pauldrons_CO.paa"};
+        class ItemInfo : ItemInfo {
+            hiddenSelections[] = {"camo"};
+            hiddenSelectionsTextures[] = {"BaY_JKaara_Armoury\bjk_vest\Textures\BJK_WaterCaste_Pauldrons_CO.paa"};
+        };
+    };
+
+    class BJK_Breacher_Pauldrons : BJK_Strike_Pauldrons {
+        displayName = "[Ba'Y JK] Breacher Pauldrons";
+        model = "40k_tau\Gear\BeltB.p3d";
+        class ItemInfo : ItemInfo {
+            uniformModel = "40k_tau\Gear\BeltB.p3d";
+        };
+    };
+    class BJK_Breacher_Pauldrons_Commander_Alt : BJK_Strike_Pauldrons_Commander_Alt {
+        model = "40k_tau\Gear\BeltB_Photon.p3d";
+        displayName = "[Ba'Y JK] Breacher Pauldrons (Assistant)";
+
+        class ItemInfo : ItemInfo {
+            uniformModel = "40k_tau\Gear\BeltB_Photon.p3d";
+        };
+    };
+    class BJK_Breacher_Pauldrons_Commander : BJK_Strike_Pauldrons_Commander {
+        model = "40k_tau\Gear\BeltB_Shasui.p3d";
+        displayName = "[Ba'Y JK] Breacher Pauldrons (Shas'Ui)";
+        class ItemInfo : ItemInfo {
+            uniformModel = "40k_tau\Gear\BeltB_Shasui.p3d";
+        };
+    };
+    class BJK_Breacher_Pauldrons_Commander_Alt1 : BJK_Breacher_Pauldrons_Commander {
+        displayName = "[Ba'Y JK] Breacher Pauldrons (Shas'Ui, Shadow 1-1)";
+        hiddenSelections[] = {"camo"};
+        hiddenSelectionsTextures[] = {"BaY_JKaara_Armoury\bjk_vest\Textures\BJK_Breacher_Pauldrons_CA1.paa"};
+        class ItemInfo : ItemInfo {
+            hiddenSelections[] = {"camo"};
+            hiddenSelectionsTextures[] = {"BaY_JKaara_Armoury\bjk_vest\Textures\BJK_Breacher_Pauldrons_CA1.paa"};
+        };
+    };
+    class BJK_Breacher_Pauldrons_Commander_Alt2 : BJK_Breacher_Pauldrons_Commander {
+        displayName = "[Ba'Y JK] Breacher Pauldrons (Shas'Ui, Shadow 1-2)";
+        hiddenSelections[] = {"camo"};
+        hiddenSelectionsTextures[] = {"BaY_JKaara_Armoury\bjk_vest\Textures\BJK_Breacher_Pauldrons_CA2.paa"};
+        class ItemInfo : ItemInfo {
+            hiddenSelections[] = {"camo"};
+            hiddenSelectionsTextures[] = {"BaY_JKaara_Armoury\bjk_vest\Textures\BJK_Breacher_Pauldrons_CA2.paa"};
+        };
+    };
+    class BJK_Breacher_Pauldrons_Commander_Alt3 : BJK_Breacher_Pauldrons_Commander {
+        displayName = "[Ba'Y JK] Breacher Pauldrons (Shas'Ui, Shadow 1-3)";
+        hiddenSelections[] = {"camo"};
+        hiddenSelectionsTextures[] = {"BaY_JKaara_Armoury\bjk_vest\Textures\BJK_Breacher_Pauldrons_CA3.paa"};
+        class ItemInfo : ItemInfo {
+            hiddenSelections[] = {"camo"};
+            hiddenSelectionsTextures[] = {"BaY_JKaara_Armoury\bjk_vest\Textures\BJK_Breacher_Pauldrons_CA3.paa"};
+        };
+    };
+
+    class BJK_Pathfinder_Pauldrons : BJK_Strike_Pauldrons {
+        model = "40k_tau\Gear\BeltP.p3d";
+        displayName = "[Ba'Y JK] Pathfinder Pauldrons";
+        class ItemInfo : ItemInfo {
+            uniformModel = "40k_tau\Gear\BeltP.p3d";
+        };
+    };
+    class BJK_Pathfinder_Pauldrons_Commander_Alt : BJK_Strike_Pauldrons_Commander_Alt {
+        model = "40k_tau\Gear\BeltP_photon.p3d";
+        displayName = "[Ba'Y JK] Pathfinder Pauldrons (Assistant)";
+        hiddenSelections[] = {"camo"};
+        hiddenSelectionsTextures[] = {"BaY_JKaara_Armoury\bjk_vest\Textures\BJK_Pathfinder_Pauldrons_Commander_Alt_CA.paa"};
+        hiddenSelectionsMaterials[] = {};
+        class ItemInfo : ItemInfo {
+            uniformModel = "40k_tau\Gear\BeltP_photon.p3d";
+            hiddenSelections[] = {"camo"};
+            hiddenSelectionsTextures[] = {"BaY_JKaara_Armoury\bjk_vest\Textures\BJK_Pathfinder_Pauldrons_Commander_Alt_CA.paa"};
+        };
+    };
+    class BJK_Pathfinder_Pauldrons_Commander : BJK_Strike_Pauldrons_Commander {
+        model = "40k_tau\Gear\BeltP_shasui.p3d";
+        displayName = "[Ba'Y JK] Pathfinder Pauldrons (Shas'Ui)";
+        hiddenSelections[] = {"camo"};
+        hiddenSelectionsTextures[] = {"BaY_JKaara_Armoury\bjk_vest\Textures\BJK_Pathfinder_Pauldrons_Commander_CA.paa"};
+        class ItemInfo : ItemInfo {
+            uniformModel = "40k_tau\Gear\BeltP_shasui.p3d";
+            hiddenSelections[] = {"camo"};
+            hiddenSelectionsTextures[] = {"BaY_JKaara_Armoury\bjk_vest\Textures\BJK_Pathfinder_Pauldrons_Commander_CA.paa"};
+        };
     };
 
     // Gue'vesa Vests
@@ -290,6 +380,15 @@ class CfgWeapons {
         class ItemInfo : ItemInfo {
             hiddenSelections[] = {"camo", "camo1", "camo3"};
             hiddenSelectionsTextures[] = {"BaY_JKaara_Armoury\bjk_vest\Textures\BJK_Guevesa_Armor_CO1.paa", "BaY_JKaara_Armoury\bjk_vest\Textures\BJK_Guevesa_Armor_Medical_CO2.paa", "BaY_JKaara_Armoury\bjk_vest\Textures\BJK_Guevesa_Armor_Medical_CO3.paa"};
+        };
+    };
+    class BJK_Guevesa_Alt_Vest : BJK_Guevesa_Vest {
+        displayName = "[Ba'Y JK] Gue'vesa Armor (Assistant)";
+        hiddenSelections[] = {"camo", "camo1", "camo3"};
+        hiddenSelectionsTextures[] = {"BaY_JKaara_Armoury\bjk_vest\Textures\BJK_Guevesa_Armor_CO1.paa", "BaY_JKaara_Armoury\bjk_vest\Textures\BJK_Guevesa_Armor_CO2.paa", "BaY_JKaara_Armoury\bjk_vest\Textures\BJK_Guevesa_Armor_CO3_Alt.paa"};
+        class ItemInfo : ItemInfo {
+            hiddenSelections[] = {"camo", "camo1", "camo3"};
+            hiddenSelectionsTextures[] = {"BaY_JKaara_Armoury\bjk_vest\Textures\BJK_Guevesa_Armor_CO1.paa", "BaY_JKaara_Armoury\bjk_vest\Textures\BJK_Guevesa_Armor_CO2.paa", "BaY_JKaara_Armoury\bjk_vest\Textures\BJK_Guevesa_Armor_CO3_Alt.paa"};
         };
     };
     class BJK_Guevesa_Commander_Vest : BJK_Guevesa_Vest {

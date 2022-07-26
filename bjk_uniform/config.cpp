@@ -6,7 +6,7 @@ class CfgPatches {
         author = "JCaleb2014";
         requiredVersion = 1.6;
         requiredAddons[] = {"A3_Weapons_F", "A3_Weapons_F_Mark", "A3_Characters_F", "A3_Data_F", "A3_Sounds_F", "A3_Sounds_F_Mark", "TIOW_Tau_Gear", "TIOW_40k_Tau", "IC_Cadia", "IC_Guevesa", "CadFoot", "TIOW_Admech"};
-        units[] = {"BJK_FireWarrior", "BJK_Guevesa_Kasrkin_Base", "BJK_Guevesa_Kasrkin", "BJK_Guevesa_Kasrkin_Alt", "BJK_Guevesa_Base", "BJK_SpaceMarine_Mk7_Tactical", "BJK_Techpriest"};
+        units[] = {"BJK_Strike", "BJK_Strike_Ethereal", "BJK_EarthCaste_Crewman", "BJK_WaterCaste", "BJK_Pathfinder", "BJK_Guevesa_Kasrkin_Base", "BJK_Guevesa_Kasrkin", "BJK_Guevesa_Kasrkin_Alt", "BJK_Guevesa_Base", "BJK_SpaceMarine_Mk7_Tactical", "BJK_Techpriest"};
     };
 };
 
@@ -15,19 +15,19 @@ class CfgWeapons {
     // Tau Uniforms
     class U_I_CombatUniform;
     class UniformItem;
-    class BJK_FireWarrior_Uniform : U_I_CombatUniform {
+    class BJK_Strike_Uniform : U_I_CombatUniform {
         author = "JCaleb2014";
         scope = 2;
         scopeArsenal = 2;
         scopeCurator = 2;
-        displayName = "[Ba'Y JK] Fire Warrior Uniform";
+        displayName = "[Ba'Y JK] Strike Uniform";
         model = "\A3\Characters_F\Common\Suitpacks\suitpack_original_F.p3d";
         picture = "\40k_tau\Weapons\Definitions\UI\Uniform.paa";
         hiddenSelections[] = {"camo", "camo1"};
-        hiddenSelectionsTextures[] = {"BaY_JKaara_Armoury\bjk_uniform\Textures\BJK_FireWarrior_Uniform_Armour_CO.paa", "BaY_JKaara_Armoury\bjk_uniform\Textures\BJK_FireWarrior_Uniform_Cloth_CO.paa"};
+        hiddenSelectionsTextures[] = {"BaY_JKaara_Armoury\bjk_uniform\Textures\BJK_Strike_Uniform_Armour_CO.paa", "BaY_JKaara_Armoury\bjk_uniform\Textures\BJK_Strike_Uniform_Cloth_CO.paa"};
         class ItemInfo : UniformItem {
             uniformModel = "\A3\Characters_F\Common\Suitpacks\suitpack_original_F.p3d";
-            uniformClass = "BJK_FireWarrior";
+            uniformClass = "BJK_Strike";
             containerClass = "Supply500";
             mass = 40;
             class HitpointsProtectionInfo {
@@ -39,13 +39,26 @@ class CfgWeapons {
             };
         };
     };
-    class BJK_FireWarrior_Uniform_Ethereal : BJK_FireWarrior_Uniform {
-        displayName = "[Ba'Y JK] Fire Warrior Uniform (Ethereal)";
+    class BJK_Strike_Uniform_Ethereal : BJK_Strike_Uniform {
+        displayName = "[Ba'Y JK] Fire Warrior Uniform (Aun'La)";
         hiddenSelections[] = {"camo", "camo1"};
-        hiddenSelectionsTextures[] = {"BaY_JKaara_Armoury\bjk_uniform\Textures\BJK_FireWarrior_Uniform_Armour_Ethereal_CO.paa", "BaY_JKaara_Armoury\bjk_uniform\Textures\BJK_FireWarrior_Uniform_Cloth_CO.paa"};
-        hiddenSelectionsMaterials[] = {"BaY_JKaara_Armoury\bjk_uniform\Materials\BJK_FireWarrior_Uniform_Armour_Ethereal.rvmat"};
+        hiddenSelectionsTextures[] = {"BaY_JKaara_Armoury\bjk_uniform\Textures\BJK_Strike_Uniform_Armour_Ethereal_CO.paa", "BaY_JKaara_Armoury\bjk_uniform\Textures\BJK_Strike_Uniform_Cloth_CO.paa"};
+        hiddenSelectionsMaterials[] = {"BaY_JKaara_Armoury\bjk_uniform\Materials\BJK_Strike_Uniform_Armour_Ethereal.rvmat"};
         class ItemInfo : ItemInfo {
-            uniformClass = "BJK_FireWarrior_Ethereal";
+            uniformClass = "BJK_Strike_Ethereal";
+        };
+    };
+    class U_TIOW_Pathfinder;
+    class BJK_Pathfinder_Uniform : U_TIOW_Pathfinder {
+        author = "JCaleb2014";
+        scope = 2;
+        scopeArsenal = 2;
+        scopeCurator = 2;
+        displayName = "[Ba'Y JK] Pathfinder Uniform";
+        hiddenSelections[] = {"camo", "camo1"};
+        hiddenSelectionsTextures[] = {"BaY_JKaara_Armoury\bjk_uniform\Textures\BJK_Pathfinder_Uniform_Armour_CO.paa", "BaY_JKaara_Armoury\bjk_uniform\Textures\BJK_Pathfinder_Uniform_CO.paa"};
+        class ItemInfo : ItemInfo {
+            uniformClass = "BJK_Pathfinder";
         };
     };
     class U_TIOW_Air_Caste_Pilot;
@@ -235,21 +248,21 @@ class CfgVehicles {
     class I_Soldier_F : I_soldier_base_F {
         class HitPoints;
     };
-    class BJK_FireWarrior : I_Soldier_F {
+    class BJK_Strike : I_Soldier_F {
         author = "JCaleb2014";
         scope = 2;
-        displayName = "Fire Warrior";
+        displayName = "Fire Warrior (Strike)";
         faction = "BJK_F";
         editorSubcategory = "BJK_M";
         identityTypes[] = {"Tau", "LanguageENGB_F"};
-        uniformClass = "BJK_FireWarrior_Uniform";
+        uniformClass = "BJK_Strike_Uniform";
         backpack = "BA_Fire_Warrior_BCK";
         model = "\40k_tau\Fire_Warrior\Fire_Warrior.p3d";
         hiddenSelections[] = {"camo", "camo1"};
-        hiddenSelectionsTextures[] = {"BaY_JKaara_Armoury\bjk_uniform\Textures\BJK_FireWarrior_Uniform_Armour_CO.paa", "BaY_JKaara_Armoury\bjk_uniform\Textures\BJK_FireWarrior_Uniform_Cloth_CO.paa"};
+        hiddenSelectionsTextures[] = {"BaY_JKaara_Armoury\bjk_uniform\Textures\BJK_Strike_Uniform_Armour_CO.paa", "BaY_JKaara_Armoury\bjk_uniform\Textures\BJK_Strike_Uniform_Cloth_CO.paa"};
 
-        linkedItems[] = {"ItemMap", "ItemRadio", "ItemCompass", "ItemWatch", "BJK_FireWarrior_Strike_Helmet", "BA_Fire_Warrior_Vest"};
-        respawnLinkedItems[] = {"ItemMap", "ItemRadio", "ItemCompass", "ItemWatch", "BJK_FireWarrior_Strike_Helmet", "BA_Fire_Warrior_Vest"};
+        linkedItems[] = {"ItemMap", "ItemRadio", "ItemCompass", "ItemWatch", "BJK_Strike_Helmet", "BJK_Strike_Pauldrons"};
+        respawnLinkedItems[] = {"ItemMap", "ItemRadio", "ItemCompass", "ItemWatch", "BJK_Strike_Helmet", "BJK_Strike_Pauldrons"};
         weapons[] = {"Put", "Throw"};
         respawnWeapons[] = {"Put", "Throw"};
         magazines[] = {};
@@ -407,12 +420,12 @@ class CfgVehicles {
             };
         };
     };
-    class BJK_FireWarrior_Ethereal : BJK_FireWarrior {
-        displayName = "Fire Warrior (Ethereal)";
-        uniformClass = "BJK_FireWarrior_Uniform_Ethereal";
+    class BJK_Strike_Ethereal : BJK_Strike {
+        displayName = "Fire Warrior (Aun'La)";
+        uniformClass = "BJK_Strike_Uniform_Ethereal";
         hiddenSelections[] = {"camo", "camo1"};
-        hiddenSelectionsTextures[] = {"BaY_JKaara_Armoury\bjk_uniform\Textures\BJK_FireWarrior_Uniform_Armour_Ethereal_CO.paa", "BaY_JKaara_Armoury\bjk_uniform\Textures\BJK_FireWarrior_Uniform_Cloth_CO.paa"};
-        hiddenSelectionsMaterials[] = {"BaY_JKaara_Armoury\bjk_uniform\Materials\BJK_FireWarrior_Uniform_Armour_Ethereal.rvmat"};
+        hiddenSelectionsTextures[] = {"BaY_JKaara_Armoury\bjk_uniform\Textures\BJK_Strike_Uniform_Armour_Ethereal_CO.paa", "BaY_JKaara_Armoury\bjk_uniform\Textures\BJK_Strike_Uniform_Cloth_CO.paa"};
+        hiddenSelectionsMaterials[] = {"BaY_JKaara_Armoury\bjk_uniform\Materials\BJK_Strike_Uniform_Armour_Ethereal.rvmat"};
     };
     class TIOW_Air_Caste_Pilot_B;
     class BJK_EarthCaste_Crewman : TIOW_Air_Caste_Pilot_B {
@@ -443,7 +456,176 @@ class CfgVehicles {
         hiddenSelections[] = {"camo", "camo1"};
         hiddenSelectionsTextures[] = {"BaY_JKaara_Armoury\bjk_uniform\Textures\BJK_WaterCaste_Uniform_Bottom_CO.paa", "BaY_JKaara_Armoury\bjk_uniform\Textures\BJK_WaterCaste_Uniform_Top_CO.paa"};
     };
-
+    class TIOW_Pathfinder;
+    class BJK_Pathfinder : TIOW_Pathfinder {
+        author = "JCaleb2014";
+        scope = 2;
+        displayName = "Fire Warrior (Pathfinder)";
+        faction = "BJK_F";
+        editorSubcategory = "BJK_M";
+        uniformClass = "BJK_Pathfinder_Uniform";
+        backpack = "BJK_Pathfinder_Backpack";
+        linkedItems[] = {"ItemMap", "ItemRadio", "ItemCompass", "ItemWatch", "BJK_Pathfinder_Helmet", "BJK_Pathfinder_Pauldrons"};
+        respawnLinkedItems[] = {"ItemMap", "ItemRadio", "ItemCompass", "ItemWatch", "BJK_Pathfinder_Helmet", "BJK_Pathfinder_Pauldrons"};
+        weapons[] = {"Put", "Throw"};
+        respawnWeapons[] = {"Put", "Throw"};
+        magazines[] = {};
+        respawnmagazines[] = {};
+        hiddenSelections[] = {"camo", "camo1"};
+        hiddenSelectionsTextures[] = {"BaY_JKaara_Armoury\bjk_uniform\Textures\BJK_Pathfinder_Uniform_Armour_CO.paa", "BaY_JKaara_Armoury\bjk_uniform\Textures\BJK_Pathfinder_Uniform_CO.paa"};
+        class HitPoints {
+            class HitFace {
+                armor = 1;
+                material = -1;
+                name = "face_hub";
+                passThrough = 0.80000001;
+                radius = 0.079999998;
+                explosionShielding = 0.1;
+                minimalHit = 0.0099999998;
+            };
+            class HitNeck : HitFace {
+                armor = 1;
+                material = -1;
+                name = "neck";
+                passThrough = 0.80000001;
+                radius = 0.1;
+                explosionShielding = 0.5;
+                minimalHit = 0.0099999998;
+            };
+            class HitHead : HitNeck {
+                armor = 1;
+                material = -1;
+                name = "head";
+                passThrough = 0.80000001;
+                radius = 0.2;
+                explosionShielding = 0.5;
+                minimalHit = 0.0099999998;
+                depends = "HitFace max HitNeck";
+            };
+            class HitPelvis : HitHead {
+                armor = 8;
+                material = -1;
+                name = "pelvis";
+                passThrough = 0.80000001;
+                radius = 0.23999999;
+                explosionShielding = 3;
+                visual = "injury_body";
+                minimalHit = 0.0099999998;
+                depends = "";
+            };
+            class HitAbdomen : HitPelvis {
+                armor = 6;
+                material = -1;
+                name = "spine1";
+                passThrough = 0.80000001;
+                radius = 0.16;
+                explosionShielding = 3;
+                visual = "injury_body";
+                minimalHit = 0.0099999998;
+            };
+            class HitDiaphragm : HitAbdomen {
+                armor = 6;
+                material = -1;
+                name = "spine2";
+                passThrough = 0.33000001;
+                radius = 0.18000001;
+                explosionShielding = 6;
+                visual = "injury_body";
+                minimalHit = 0.0099999998;
+            };
+            class HitChest : HitDiaphragm {
+                armor = 8;
+                material = -1;
+                name = "spine3";
+                passThrough = 0.33000001;
+                radius = 0.18000001;
+                explosionShielding = 6;
+                visual = "injury_body";
+                minimalHit = 0.0099999998;
+            };
+            class HitBody : HitChest {
+                armor = 1000;
+                material = -1;
+                name = "body";
+                passThrough = 1;
+                radius = 0;
+                explosionShielding = 6;
+                visual = "injury_body";
+                minimalHit = 0.0099999998;
+                depends = "HitPelvis max HitAbdomen max HitDiaphragm max HitChest";
+            };
+            class HitArms : HitBody {
+                armor = 6;
+                material = -1;
+                name = "arms";
+                passThrough = 1;
+                radius = 0.1;
+                explosionShielding = 3;
+                visual = "injury_hands";
+                minimalHit = 0.0099999998;
+                depends = "0";
+            };
+            class HitHands : HitArms {
+                armor = 6;
+                material = -1;
+                name = "hands";
+                passThrough = 1;
+                radius = 0.1;
+                explosionShielding = 1;
+                visual = "injury_hands";
+                minimalHit = 0.0099999998;
+                depends = "HitArms";
+            };
+            class HitLegs : HitHands {
+                armor = 6;
+                material = -1;
+                name = "legs";
+                passThrough = 1;
+                radius = 0.14;
+                explosionShielding = 3;
+                visual = "injury_legs";
+                minimalHit = 0.0099999998;
+                depends = "0";
+            };
+            class Incapacitated : HitLegs {
+                armor = 1000;
+                material = -1;
+                name = "body";
+                passThrough = 1;
+                radius = 0;
+                explosionShielding = 3;
+                visual = "";
+                minimalHit = 0;
+                depends = "(((Total - 0.25) max 0) + ((HitHead - 0.25) max 0) + ((HitBody - 0.25) max 0)) * 2";
+            };
+            class HitLeftArm {
+                armor = 6;
+                material = -1;
+                name = "hand_l";
+                passThrough = 1;
+                radius = 0.079999998;
+                explosionShielding = 3;
+                visual = "injury_hands";
+                minimalHit = 0.0099999998;
+            };
+            class HitRightArm : HitLeftArm {
+                name = "hand_r";
+            };
+            class HitLeftLeg {
+                armor = 6;
+                material = -1;
+                name = "leg_l";
+                passThrough = 1;
+                radius = 0.1;
+                explosionShielding = 3;
+                visual = "injury_legs";
+                minimalHit = 0.0099999998;
+            };
+            class HitRightLeg : HitLeftLeg {
+                name = "leg_r";
+            };
+        };
+    };
     // Gue'vesa Uniforms
     class TIOW_Cad_Kasr836th;
     class BJK_Guevesa_Kasrkin_Base : TIOW_Cad_Kasr836th {
