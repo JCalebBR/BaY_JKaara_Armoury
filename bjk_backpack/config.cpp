@@ -97,6 +97,7 @@ class CfgVehicles {
         scopeArsenal = 2;
         scope = 2;
         model = "40k_tau\Backpack\Pathfinder_backpack.p3d";
+        maximumLoad = 750;
         hiddenSelections[] = {"Camo"};
         hiddenSelectionsTextures[] = {"BaY_JKaara_Armoury\bjk_backpack\Textures\BJK_Pathfinder_Backpack_CA.paa"};
     };
@@ -107,6 +108,7 @@ class CfgVehicles {
         scopeArsenal = 2;
         scope = 2;
         model = "40k_tau\Backpack\Ion_Rifle_Backpack.p3d";
+        maximumLoad = 750;
         hiddenSelections[] = {"Camo"};
         hiddenSelectionsTextures[] = {"BaY_JKaara_Armoury\bjk_backpack\Textures\BJK_Pathfinder_Backpack_CA2.paa"};
     };
@@ -117,6 +119,7 @@ class CfgVehicles {
         scopeArsenal = 2;
         scope = 2;
         model = "40k_tau\Backpack\Explosives_backpack.p3d";
+        maximumLoad = 750;
         hiddenSelections[] = {"Camo"};
         hiddenSelectionsTextures[] = {"BaY_JKaara_Armoury\bjk_backpack\Textures\BJK_Pathfinder_Backpack_CA2.paa"};
     };
@@ -127,6 +130,7 @@ class CfgVehicles {
         scopeArsenal = 2;
         scope = 2;
         model = "40k_tau\Backpack\Rail_Rifle_Backpack.p3d";
+        maximumLoad = 750;
         hiddenSelections[] = {"Camo"};
         hiddenSelectionsTextures[] = {"BaY_JKaara_Armoury\bjk_backpack\Textures\BJK_Pathfinder_Backpack_CA.paa"};
     };
@@ -137,6 +141,7 @@ class CfgVehicles {
         scopeArsenal = 2;
         scope = 2;
         model = "40k_tau\Backpack\Pathfinder_Shasui_backpack.p3d";
+        maximumLoad = 750;
         hiddenSelections[] = {"Camo"};
         hiddenSelectionsTextures[] = {"BaY_JKaara_Armoury\bjk_backpack\Textures\BJK_Pathfinder_Backpack_CA2.paa"};
         _generalMacro = "BJK_Pathfinder_Backpack_Shasui";

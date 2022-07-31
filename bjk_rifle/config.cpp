@@ -6,25 +6,19 @@ class CfgPatches {
         author = "JCaleb2014";
         requiredVersion = 1.6;
         requiredAddons[] = {"A3_Weapons_F", "A3_Weapons_F_Mark", "A3_Characters_F", "A3_Data_F", "A3_Sounds_F", "A3_Sounds_F_Mark", "TIOW_40k_Tau", "CadFoot", "TIOW_Admech", "vng_tau_repeater"};
-        weapons[] = {"BJK_ion_rifle", "BJK_DMCLS_pulse_rifle", "BJK_DMCLS_pulse_blaster", "BJK_DMCLS_pulse_burster", "BJK_DMCLS_pulse_carbine", "BJK_DMCLS_rail_rifle", "BJK_PulseRepeater", "BJK_Guevesa_PulseRifle", "BJK_Guevesa_PulseRifle_Alt", "BJK_Guevesa_LockeBolter"};
+        weapons[] = {"BJK_ion_rifle", "BJK_DMCLS_pulse_rifle", "BJK_DMCLS_pulse_blaster", "BJK_DMCLS_pulse_burster", "BJK_DMCLS_pulse_carbine", "BJK_DMCLS_rail_rifle", "BJK_PulseRepeater", "BJK_Guevesa_PulseRifle", "BJK_Guevesa_PulseRifle_Alt", "BJK_Guevesa_LockeBolter", "BJK_Guevesa_M36_Lasgun"};
     };
 };
 
 class ItemInfo;
-class Mode_SemiAuto;
-class Mode_FullAuto;
-class Mode_Burst;
 class UGL_F;
 class CowsSlot_BJK_dmcls_tau;
 class UnderBarrelSlot_BJK_dmcls_tau;
 class WeaponSlotsInfo;
 class Single;
+class Burst;
 class FullAuto;
 class CfgWeapons {
-    // Base Weapons
-    class Rifle_Base_F;
-    class Pistol_Base_F;
-
     // Tau Weapons
     class DMCLS_ion_rifle_VL;
     class DMCLS_ion_rifle;
@@ -59,10 +53,8 @@ class CfgWeapons {
         class WeaponSlotsInfo {
             mass = 100;
             allowedSlots[] = {901};
-            class CowsSlot : CowsSlot_BJK_dmcls_tau {
-            };
-            class UnderBarrelSlot : UnderBarrelSlot_BJK_dmcls_tau {
-            };
+            class CowsSlot : CowsSlot_BJK_dmcls_tau {};
+            class UnderBarrelSlot : UnderBarrelSlot_BJK_dmcls_tau {};
         };
         class LinkedItems {
             class LinkedItemsOptic {
@@ -109,16 +101,20 @@ class CfgWeapons {
         class WeaponSlotsInfo {
             mass = 60;
             allowedSlots[] = {901};
-            class CowsSlot : CowsSlot_BJK_dmcls_tau {
-            };
-            class UnderBarrelSlot : UnderBarrelSlot_BJK_dmcls_tau {
-            };
+            class CowsSlot : CowsSlot_BJK_dmcls_tau {};
+            class UnderBarrelSlot : UnderBarrelSlot_BJK_dmcls_tau {};
         };
         class LinkedItems {
             class LinkedItemsOptic {
                 slot = "CowsSlot";
                 item = "BJK_DMCLS_Tau_Coli_1";
             };
+        };
+        class Single : Single {
+            dispersion = 0.002;
+        };
+        class FullAuto : FullAuto {
+            dispersion = 0.005;
         };
         magazines[] = {"BJK_DMCLS_pulse_mag_25", "BJK_DMCLS_pulse_mag_36", "BJK_DMCLS_pulse_mag_54"};
         hiddenSelections[] = {"Camo", "Camo1"};
@@ -135,16 +131,20 @@ class CfgWeapons {
         class WeaponSlotsInfo {
             mass = 60;
             allowedSlots[] = {901};
-            class CowsSlot : CowsSlot_BJK_dmcls_tau {
-            };
-            class UnderBarrelSlot : UnderBarrelSlot_BJK_dmcls_tau {
-            };
+            class CowsSlot : CowsSlot_BJK_dmcls_tau {};
+            class UnderBarrelSlot : UnderBarrelSlot_BJK_dmcls_tau {};
         };
         class LinkedItems {
             class LinkedItemsOptic {
                 slot = "CowsSlot";
                 item = "BJK_DMCLS_Tau_Optics_3";
             };
+        };
+        class Single : Single {
+            dispersion = 0.0015;
+        };
+        class Burst : Burst {
+            dispersion = 0.004;
         };
         magazines[] = {"BJK_DMCLS_pulse_mag_25", "BJK_DMCLS_pulse_mag_36", "BJK_DMCLS_pulse_mag_54", "TIOW_pulse_mag"};
         hiddenSelections[] = {"Camo", "Camo1"};
@@ -161,10 +161,8 @@ class CfgWeapons {
         class WeaponSlotsInfo {
             mass = 100;
             allowedSlots[] = {901};
-            class CowsSlot : CowsSlot_BJK_dmcls_tau {
-            };
-            class UnderBarrelSlot : UnderBarrelSlot_BJK_dmcls_tau {
-            };
+            class CowsSlot : CowsSlot_BJK_dmcls_tau {};
+            class UnderBarrelSlot : UnderBarrelSlot_BJK_dmcls_tau {};
         };
         class LinkedItems {
             class LinkedItemsOptic {
@@ -232,6 +230,23 @@ class CfgWeapons {
         scopeArsenal = 2;
         hiddenSelections[] = {"camo"};
         hiddenSelectionsTextures[] = {"BaY_JKaara_Armoury\bjk_rifle\Textures\BJK_Guevesa_LockeBolter_CO.paa"};
+    };
+    class ic_cad_m36_lasgunRenegade;
+    class BJK_Guevesa_M36_Lasgun : ic_cad_m36_lasgunRenegade {
+        baseWeapon = "BJK_Guevesa_M36_Lasgun";
+        author = "JCaleb2014";
+        displayName = "[Ba'Y JK] Gue'vesa Light Pulse Rifle";
+        scope = 2;
+        scopeCurator = 2;
+        scopeArsenal = 2;
+        selectionFireAnim = "zasleh";
+        hiddenSelections[] = {"camo_1"};
+        hiddenSelectionsTextures[] = {"BaY_JKaara_Armoury\bjk_rifle\Textures\BJK_Guevesa_M36_Lasgun_CO.paa"};
+        magazines[] = {"BJK_Laspowerpack_Blue"};
+        fireLightDuration = 0.05;
+        fireLightIntensity = 0.5;
+        fireLightDiffuse[] = {0, 0.08, 0.1};
+        fireLightAmbient[] = {0, 0.81, 1};
     };
 };
 

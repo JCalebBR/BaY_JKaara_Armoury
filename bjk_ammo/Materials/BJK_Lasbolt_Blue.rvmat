@@ -1,0 +1,13 @@
+#define _ARMA_
+
+class StageTI {
+    texture = "BaY_JKaara_Armoury\bjk_ammo\Textures\BJK_Lasbolt_Blue_CA.paa";
+};
+ambient[] = {5, 5, 5, 1};
+diffuse[] = {0.19607843, 0.9254902, 0.1764706, 1};
+forcedDiffuse[] = {0, 0, 0, 0};
+emmisive[] = {160, 155, 155, 1};
+specular[] = {0, 0, 0, 1};
+specularPower = 10;
+PixelShaderID = "Normal";
+VertexShaderID = "Basic";

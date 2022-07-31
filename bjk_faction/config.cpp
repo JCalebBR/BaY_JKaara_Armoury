@@ -10,13 +10,21 @@ class CfgFactionClasses {
     class BJK_F {
         displayName = "Ba'Y J'Kaara Cadre";
         priority = 1;
-        side = 2;
+        side = 1;
+    };
+    class BJK_IR {
+        displayName = "Imperial Renegades";
+        priority = 1;
+        side = 0;
     };
 };
 
 class CfgEditorCategories {
     class BJK_Tau {
         displayName = "Ba'Y Cadre";
+    };
+    class BJK_ImpRenegades {
+        displayName = "Renegade";
     };
 };
 

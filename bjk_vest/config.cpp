@@ -63,6 +63,11 @@ class CfgWeapons {
                     hitpointName = "HitBody";
                     passThrough = 0.6;
                 };
+                class Legs {
+                    hitpointName = "HitLegs";
+                    armor = 13;
+                    passThrough = 0.5;
+                };
             };
         };
     };
@@ -161,6 +166,11 @@ class CfgWeapons {
                 class Body {
                     hitpointName = "HitBody";
                     passThrough = 0.6;
+                };
+                class Legs {
+                    hitpointName = "HitLegs";
+                    armor = 13;
+                    passThrough = 0.5;
                 };
             };
         };
@@ -304,6 +314,11 @@ class CfgWeapons {
                     hitpointName = "HitBody";
                     passThrough = 0.6;
                 };
+                class Legs {
+                    hitpointName = "HitLegs";
+                    armor = 13;
+                    passThrough = 0.5;
+                };
             };
         };
     };
@@ -367,8 +382,8 @@ class CfgWeapons {
                 };
                 class Legs {
                     hitpointName = "HitLegs";
-                    armor = 10;
-                    passThrough = 0.6;
+                    armor = 13;
+                    passThrough = 0.5;
                 };
             };
         };
@@ -452,57 +467,187 @@ class CfgWeapons {
                 };
                 class Legs {
                     hitpointName = "HitLegs";
-                    armor = 10;
-                    passThrough = 0.6;
+                    armor = 13;
+                    passThrough = 0.5;
                 };
             };
         };
     };
 
-    // NVGs
-    class Binocular;
-    class NVGoggles : Binocular {
-        class ItemInfo;
-    };
-    class BJK_ServoSkull : NVGoggles {
+    class ic_ThracianRanger_Vest1;
+    class BJK_Guevesa_Breacher_Armor : ic_ThracianRanger_Vest1 {
         author = "JCaleb2014";
         scope = 2;
         scopeCurator = 2;
         scopeArsenal = 2;
-        nameSound = "nvgoggles";
-        simulation = "NVGoggles";
-        showEmpty = 0;
-        value = 5;
-        opticsZoomMin = 1;
-        opticsZoomMax = 1;
-        muzzlePos = "usti hlavne";
-        muzzleEnd = "konec hlavne";
-        modelOptics = "\A3\weapons_f\empty.p3d";
-        model = "Dos_Cosmetics\models\Mr_Servo_Human.p3d";
-        picture = "\CadFoot\Icon\Goggles_ca.paa";
-        displayName = "[Ba'Y JK] Mr. Servo (Human)";
-        visionMode[] = {"Normal", "NVG", "TI"};
-        hiddenSelections[] = {"camo"};
-        descriptionUse = "<t color='#9cf953'>Use: </t>Toggle Night Vision";
+        displayName = "[Ba'Y JK] Gue'vesa Breacher Armor";
+        hiddenSelections[] = {"camo", "camo1"};
+        hiddenSelectionsTextures[] = {"BaY_JKaara_Armoury\bjk_vest\Textures\BJK_Guevesa_Breacher_Armor_CO1.paa", "BaY_JKaara_Armoury\bjk_vest\Textures\BJK_Guevesa_Breacher_Armor_CO2.paa"};
+        hiddenSelectionsMaterials[] = {"", "BaY_JKaara_Armoury\bjk_vest\Materials\BJK_Guevesa_Breacher_Armor.rvmat"};
         class ItemInfo : ItemInfo {
-            type = 616;
-            hmdType = 0;
-            uniformModel = "Dos_Cosmetics\models\Mr_Servo_Human.p3d";
-            modelOff = "Dos_Cosmetics\models\Mr_Servo_Human.p3d";
-            hiddenSelections[] = {"camo"};
-            mass = 10;
+            containerClass = "Supply500";
+            hiddenSelections[] = {"camo", "camo1"};
+            hiddenSelectionsTextures[] = {"BaY_JKaara_Armoury\bjk_vest\Textures\BJK_Guevesa_Breacher_Armor_CO1.paa", "BaY_JKaara_Armoury\bjk_vest\Textures\BJK_Guevesa_Breacher_Armor_CO2.paa"};
+            hiddenSelectionsMaterials[] = {"", "BaY_JKaara_Armoury\bjk_vest\Materials\BJK_Guevesa_Breacher_Armor.rvmat"};
+            class HitpointsProtectionInfo {
+                class Neck {
+                    hitpointName = "HitNeck";
+                    armor = 13;
+                    passThrough = 0.5;
+                };
+                class Arms {
+                    hitpointName = "HitArms";
+                    armor = 13;
+                    passThrough = 0.5;
+                };
+                class Chest {
+                    hitpointName = "HitChest";
+                    armor = 13;
+                    passThrough = 0.7;
+                };
+                class Diaphragm {
+                    hitpointName = "HitDiaphragm";
+                    armor = 13;
+                    passThrough = 0.7;
+                };
+                class Abdomen {
+                    hitpointName = "HitAbdomen";
+                    armor = 10;
+                    passThrough = 0.5;
+                };
+                class Pelvis {
+                    hitpointName = "HitPelvis";
+                    armor = 10;
+                    passThrough = 0.5;
+                };
+                class Body {
+                    hitpointName = "HitBody";
+                    passThrough = 0.6;
+                };
+                class Legs {
+                    hitpointName = "HitLegs";
+                    armor = 13;
+                    passThrough = 0.5;
+                };
+            };
         };
     };
-    class BJK_InvisibleNVG : BJK_ServoSkull {
-        displayName = "[Ba'Y JK] Invisible NVG";
-        model = "IC_cad_inf\Headgear\empty.p3d";
-        hiddenSelections[] = {""};
-        hiddenSelectionsTextures[] = {""};
+    class BJK_Guevesa_Breacher_Armor_Anarchy : BJK_Guevesa_Breacher_Armor {
+        displayName = "[Ba'Y JK] Gue'vesa Breacher Armor (Anarchy)";
+        hiddenSelections[] = {"camo", "camo1"};
+        hiddenSelectionsTextures[] = {"BaY_JKaara_Armoury\bjk_vest\Textures\BJK_Guevesa_Breacher_Armor_CO1.paa", "BaY_JKaara_Armoury\bjk_vest\Textures\BJK_Guevesa_Breacher_Armor_Anarchy_CO2.paa"};
+        hiddenSelectionsMaterials[] = {"", "BaY_JKaara_Armoury\bjk_vest\Materials\BJK_Guevesa_Breacher_Armor_Anarchy.rvmat"};
         class ItemInfo : ItemInfo {
-            uniformModel = "IC_cad_inf\Headgear\empty.p3d";
-            modelOff = "IC_cad_inf\Headgear\empty.p3d";
-            hiddenSelections[] = {""};
-            hiddenSelectionsTextures[] = {""};
+            hiddenSelections[] = {"camo", "camo1"};
+            hiddenSelectionsTextures[] = {"BaY_JKaara_Armoury\bjk_vest\Textures\BJK_Guevesa_Breacher_Armor_CO1.paa", "BaY_JKaara_Armoury\bjk_vest\Textures\BJK_Guevesa_Breacher_Armor_Anarchy_CO2.paa"};
+            hiddenSelectionsMaterials[] = {"", "BaY_JKaara_Armoury\bjk_vest\Materials\BJK_Guevesa_Breacher_Armor_Anarchy.rvmat"};
+        };
+    };
+    class BJK_Guevesa_Breacher_Armor_Alt : BJK_Guevesa_Breacher_Armor {
+        displayName = "[Ba'Y JK] Gue'vesa Breacher Armor (Alternate)";
+        hiddenSelections[] = {"camo", "camo1"};
+        hiddenSelectionsTextures[] = {"BaY_JKaara_Armoury\bjk_vest\Textures\BJK_Guevesa_Breacher_Armor_CO1.paa", "BaY_JKaara_Armoury\bjk_vest\Textures\BJK_Guevesa_Breacher_Armor_CO2.paa"};
+        model = "\IC_Departmento_Munitorum\IC_ThracianRangers\ic_thracianArmourV5.p3d";
+        class ItemInfo : ItemInfo {
+            uniformModel = "\IC_Departmento_Munitorum\IC_ThracianRangers\ic_thracianArmourV5.p3d";
+            hiddenSelections[] = {"camo", "camo1"};
+            hiddenSelectionsTextures[] = {"BaY_JKaara_Armoury\bjk_vest\Textures\BJK_Guevesa_Breacher_Armor_CO1.paa", "BaY_JKaara_Armoury\bjk_vest\Textures\BJK_Guevesa_Breacher_Armor_CO2.paa"};
+        };
+    };
+    class BJK_Guevesa_Breacher_Armor_Alt2 : BJK_Guevesa_Breacher_Armor {
+        displayName = "[Ba'Y JK] Gue'vesa Breacher Armor (Alternate 2)";
+        hiddenSelections[] = {"camo", "camo1"};
+        hiddenSelectionsTextures[] = {"BaY_JKaara_Armoury\bjk_vest\Textures\BJK_Guevesa_Breacher_Armor_CO1.paa", "BaY_JKaara_Armoury\bjk_vest\Textures\BJK_Guevesa_Breacher_Armor_CO2.paa"};
+        model = "\IC_Departmento_Munitorum\IC_ThracianRangers\ic_thracianArmourV3.p3d";
+        class ItemInfo : ItemInfo {
+            uniformModel = "\IC_Departmento_Munitorum\IC_ThracianRangers\ic_thracianArmourV3.p3d";
+            hiddenSelections[] = {"camo", "camo1"};
+            hiddenSelectionsTextures[] = {"BaY_JKaara_Armoury\bjk_vest\Textures\BJK_Guevesa_Breacher_Armor_CO1.paa", "BaY_JKaara_Armoury\bjk_vest\Textures\BJK_Guevesa_Breacher_Armor_CO2.paa"};
+        };
+    };
+    class BJK_Guevesa_Breacher_Armor_Light : BJK_Guevesa_Breacher_Armor {
+        displayName = "[Ba'Y JK] Gue'vesa Breacher Armor (Light)";
+        hiddenSelections[] = {"camo", "camo1"};
+        hiddenSelectionsTextures[] = {"BaY_JKaara_Armoury\bjk_vest\Textures\BJK_Guevesa_Breacher_Armor_CO1.paa", "BaY_JKaara_Armoury\bjk_vest\Textures\BJK_Guevesa_Breacher_Armor_CO2.paa"};
+        model = "\IC_Departmento_Munitorum\IC_ThracianRangers\ic_thracianArmourV2.p3d";
+        class ItemInfo : ItemInfo {
+            uniformModel = "\IC_Departmento_Munitorum\IC_ThracianRangers\ic_thracianArmourV2.p3d";
+            hiddenSelections[] = {"camo", "camo1"};
+            hiddenSelectionsTextures[] = {"BaY_JKaara_Armoury\bjk_vest\Textures\BJK_Guevesa_Breacher_Armor_CO1.paa", "BaY_JKaara_Armoury\bjk_vest\Textures\BJK_Guevesa_Breacher_Armor_CO2.paa"};
+        };
+    };
+    class BJK_Guevesa_Breacher_Armor_Light_Alt : BJK_Guevesa_Breacher_Armor {
+        displayName = "[Ba'Y JK] Gue'vesa Breacher Armor (Light, Alternate)";
+        hiddenSelections[] = {"camo", "camo1"};
+        hiddenSelectionsTextures[] = {"BaY_JKaara_Armoury\bjk_vest\Textures\BJK_Guevesa_Breacher_Armor_CO1.paa", "BaY_JKaara_Armoury\bjk_vest\Textures\BJK_Guevesa_Breacher_Armor_CO2.paa"};
+        model = "\IC_Departmento_Munitorum\IC_ThracianRangers\ic_thracianArmourV4.p3d";
+        class ItemInfo : ItemInfo {
+            uniformModel = "\IC_Departmento_Munitorum\IC_ThracianRangers\ic_thracianArmourV4.p3d";
+            hiddenSelections[] = {"camo", "camo1"};
+            hiddenSelectionsTextures[] = {"BaY_JKaara_Armoury\bjk_vest\Textures\BJK_Guevesa_Breacher_Armor_CO1.paa", "BaY_JKaara_Armoury\bjk_vest\Textures\BJK_Guevesa_Breacher_Armor_CO2.paa"};
+        };
+    };
+    class BJK_Guevesa_Breacher_Armor_Light_Alt2 : BJK_Guevesa_Breacher_Armor {
+        displayName = "[Ba'Y JK] Gue'vesa Breacher Armor (Light, Alternate 2)";
+        hiddenSelections[] = {"camo", "camo1"};
+        hiddenSelectionsTextures[] = {"BaY_JKaara_Armoury\bjk_vest\Textures\BJK_Guevesa_Breacher_Armor_CO1.paa", "BaY_JKaara_Armoury\bjk_vest\Textures\BJK_Guevesa_Breacher_Armor_CO2.paa"};
+        model = "\IC_Departmento_Munitorum\IC_ThracianRangers\ic_thracianArmourV6.p3d";
+        class ItemInfo : ItemInfo {
+            uniformModel = "\IC_Departmento_Munitorum\IC_ThracianRangers\ic_thracianArmourV6.p3d";
+            hiddenSelections[] = {"camo", "camo1"};
+            hiddenSelectionsTextures[] = {"BaY_JKaara_Armoury\bjk_vest\Textures\BJK_Guevesa_Breacher_Armor_CO1.paa", "BaY_JKaara_Armoury\bjk_vest\Textures\BJK_Guevesa_Breacher_Armor_CO2.paa"};
+        };
+    };
+
+    // Renegade Vests
+    class ic_Bloodpact_Vest1;
+    class BJK_Renegade_Vest_Flak : ic_Bloodpact_Vest1 {
+        author = "JCaleb2014";
+        scope = 2;
+        scopeArsenal = 2;
+        scopeCurator = 2;
+        displayName = "[Ba'Y JK] Renegade Flak Armor";
+        descriptionShort = "Renegade Armour";
+        hiddenSelections[] = {"camo"};
+        hiddenSelectionsTextures[] = {"BaY_JKaara_Armoury\bjk_vest\Textures\BJK_Renegade_Vest_Flak_CO.paa"};
+        class ItemInfo : ItemInfo {
+            containerClass = "Supply500";
+            mass = 25;
+            hiddenSelections[] = {"camo"};
+            hiddenSelectionsTextures[] = {"BaY_JKaara_Armoury\bjk_vest\Textures\BJK_Renegade_Vest_Flak_CO.paa"};
+        };
+    };
+    class BJK_Renegade_Vest_Grenadier : BJK_Renegade_Vest_Flak {
+        displayName = "[Ba'Y JK] Renegade Grenadier Vest";
+        model = "\IC_Departmento_Munitorum\IC_BloodPact\Bloodpact_vest_02.p3d";
+        hiddenSelections[] = {"camo"};
+        hiddenSelectionsTextures[] = {"BaY_JKaara_Armoury\bjk_vest\Textures\BJK_Renegade_Vest_Grenadier_CO.paa"};
+        class ItemInfo : ItemInfo {
+            uniformModel = "\IC_Departmento_Munitorum\IC_BloodPact\Bloodpact_vest_02.p3d";
+            hiddenSelections[] = {"camo"};
+            hiddenSelectionsTextures[] = {"BaY_JKaara_Armoury\bjk_vest\Textures\BJK_Renegade_Vest_Grenadier_CO.paa"};
+        };
+    };
+    class BJK_Renegade_Vest_Chainmail : BJK_Renegade_Vest_Flak {
+        displayName = "[Ba'Y JK] Renegade Chainmail";
+        model = "\IC_Departmento_Munitorum\IC_Chaos\ic_ChaosArmourV1.p3d";
+        hiddenSelections[] = {"camo", "camo1"};
+        hiddenSelectionsTextures[] = {"BaY_JKaara_Armoury\bjk_vest\Textures\BJK_Renegade_Vest_Chainmail_CO.paa", ""};
+        class ItemInfo : ItemInfo {
+            uniformModel = "\IC_Departmento_Munitorum\IC_Chaos\ic_ChaosArmourV1.p3d";
+            hiddenSelections[] = {"camo", "camo1"};
+            hiddenSelectionsTextures[] = {"BaY_JKaara_Armoury\bjk_vest\Textures\BJK_Renegade_Vest_Chainmail_CO.paa", ""};
+        };
+    };
+    class BJK_Renegade_Vest_Chainmail_Armor : BJK_Renegade_Vest_Flak {
+        displayName = "[Ba'Y JK] Renegade Chainmail Armor";
+        model = "\IC_Departmento_Munitorum\IC_Chaos\ic_ChaosArmourV2.p3d";
+        hiddenSelections[] = {"camo", "camo1"};
+        hiddenSelectionsTextures[] = {"BaY_JKaara_Armoury\bjk_vest\Textures\BJK_Renegade_Vest_Chainmail_CO.paa", "BaY_JKaara_Armoury\bjk_vest\Textures\BJK_Renegade_Vest_Chainmail_Armor_CO.paa"};
+        class ItemInfo : ItemInfo {
+            uniformModel = "\IC_Departmento_Munitorum\IC_Chaos\ic_ChaosArmourV2.p3d";
+            hiddenSelections[] = {"camo", "camo1"};
+            hiddenSelectionsTextures[] = {"BaY_JKaara_Armoury\bjk_vest\Textures\BJK_Renegade_Vest_Chainmail_CO.paa", "BaY_JKaara_Armoury\bjk_vest\Textures\BJK_Renegade_Vest_Chainmail_Armor_CO.paa"};
         };
     };
 

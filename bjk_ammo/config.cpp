@@ -4,11 +4,37 @@ class CfgPatches {
         author = "JCaleb2014";
         requiredVersion = 1.6;
         requiredAddons[] = {"A3_Weapons_F", "A3_Weapons_F_Mark", "A3_Characters_F", "A3_Data_F", "A3_Sounds_F", "A3_Sounds_F_Mark", "TIOW_40k_Tau"};
-        ammo[] = {"BJK_ionrifle_shot", "BJK_ionrifle_overcharge", "BJK_ExpSmall_Remote_Ammo", "BJK_ExpSmall_Remote_Ammo_Scripted", "BJK_ExpBig_Remote_Ammo", "BJK_DMCLS_pulse_shot", "BJK_pulse_pistol_shot", "BJK_DMCLS_pulse_blaster_shot", "BJK_DMCLS_pulse_blaster_airburst", "BJK_DMCLS_pulse_blaster_slug", "BJK_DMCLS_pulse_airburst_pellets", "BJK_DMCLS_rail_rifle_shot", "BJK_photon_grenade_ammo"};
+        ammo[] = {"BJK_ionrifle_shot", "BJK_ionrifle_overcharge", "BJK_ExpSmall_Remote_Ammo", "BJK_ExpSmall_Remote_Ammo_Scripted", "BJK_ExpBig_Remote_Ammo", "BJK_DMCLS_pulse_shot", "BJK_pulse_pistol_shot", "BJK_DMCLS_pulse_blaster_shot", "BJK_DMCLS_pulse_blaster_airburst", "BJK_DMCLS_pulse_blaster_slug", "BJK_DMCLS_pulse_airburst_pellets", "BJK_DMCLS_rail_rifle_shot", "BJK_photon_grenade_ammo", "BJK_Lasbolt_Blue"};
     };
 };
 
+class CfgLights {
+    class Laslight_Blue {
+        ambient[] = {0, 0, 0, 0};
+        brightness = 30;
+        intensity = 10000;
+        drawLight = 0;
+        size = 0.1;
+        class Attenuation {
+            start = 0;
+            constant = 0;
+            linear = 0;
+            quadratic = 0.4;
+            hardLimitStart = 400;
+            hardLimitEnd = 800;
+        };
+        color[] = {0, 0.81, 1, 1};
+        diffuse[] = {0, 0.08, 0.1};
+    };
+};
+class LasLightTrailsBlue {
+    class Trail1 {
+        simulation = "light";
+        type = "Laslight_Blue";
+    };
+};
 class CfgAmmo {
+    // Tau Ammo
     class B_127x99_Ball;
     class BJK_pulse_pistol_shot : B_127x99_Ball {
         typicalSpeed = 1000;
@@ -18,6 +44,7 @@ class CfgAmmo {
         hit = 20;
         caliber = 2;
         deflecting = 0;
+        cartridge = "";
     };
 
     class DMCLS_pulse_shot;
@@ -101,5 +128,48 @@ class CfgAmmo {
     class BJK_photon_grenade_ammo : DMCLS_tau_photon_grenade_ammo {
         hit = 10;
         indirectHit = 50;
+    };
+
+    // Gue'vesa Ammo
+    class B_556x45_Ball;
+    class BJK_Lasbolt_Blue : B_556x45_Ball {
+        airLock = 1;
+        cartridge = "";
+        triggerTime = 0;
+        EffectFly = "LasLightTrailsBlue";
+        hit = 20;
+        indirectHit = 0;
+        indirectHitRange = 0;
+        cost = 1;
+        effectsFire = "ChemlightLight_Blue";
+        coefGravity = 0.01;
+        typicalSpeed = 600;
+        airFriction = -0.00012;
+        waterFriction = -0.3;
+        model = "BaY_JKaara_Armoury\bjk_ammo\Models\BJK_Lasbolt_Blue.p3d";
+        caliber = 1;
+        timeToLive = 10;
+        tracersEvery = 1;
+        tracerScale = 0.02;
+        tracerStartTime = 0.02;
+        tracerEndTime = 10;
+        audibleFire = 35;
+        dangerRadiusBulletClose = 8;
+        dangerRadiusHit = 12;
+        suppressionRadiusBulletClose = 6;
+        suppressionRadiusHit = 8;
+        aiAmmoUsageFlags = "64+256";
+        class CamShakeExplode {
+            power = 2.23607;
+            duration = 0.4;
+            frequency = 20;
+            distance = 6.7082;
+        };
+        class CamShakeHit {
+            power = 5;
+            duration = 0.2;
+            frequency = 20;
+            distance = 1;
+        };
     };
 };

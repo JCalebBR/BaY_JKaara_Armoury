@@ -6,7 +6,7 @@ class CfgPatches {
         author = "JCaleb2014";
         requiredVersion = 1.6;
         requiredAddons[] = {"A3_Weapons_F", "A3_Weapons_F_Mark", "A3_Characters_F", "A3_Data_F", "A3_Sounds_F", "A3_Sounds_F_Mark", "TIOW_Tau_Gear", "TIOW_40k_Tau", "IC_Cadia", "IC_Guevesa", "CadFoot", "TIOW_Admech"};
-        units[] = {"BJK_Strike", "BJK_Strike_Ethereal", "BJK_EarthCaste_Crewman", "BJK_WaterCaste", "BJK_Pathfinder", "BJK_Guevesa_Kasrkin_Base", "BJK_Guevesa_Kasrkin", "BJK_Guevesa_Kasrkin_Alt", "BJK_Guevesa_Base", "BJK_SpaceMarine_Mk7_Tactical", "BJK_Techpriest"};
+        units[] = {"BJK_Strike", "BJK_Strike_Ethereal", "BJK_EarthCaste_Crewman", "BJK_WaterCaste", "BJK_Pathfinder", "BJK_WC_BodyGuard", "BJK_Guevesa_Kasrkin_Base", "BJK_Guevesa_Kasrkin", "BJK_Guevesa_Kasrkin_Alt", "BJK_Guevesa_Base", "BJK_SpaceMarine_Mk7_Tactical", "BJK_Techpriest"};
     };
 };
 
@@ -40,7 +40,7 @@ class CfgWeapons {
         };
     };
     class BJK_Strike_Uniform_Ethereal : BJK_Strike_Uniform {
-        displayName = "[Ba'Y JK] Fire Warrior Uniform (Aun'La)";
+        displayName = "[Ba'Y JK] Ethereal Uniform";
         hiddenSelections[] = {"camo", "camo1"};
         hiddenSelectionsTextures[] = {"BaY_JKaara_Armoury\bjk_uniform\Textures\BJK_Strike_Uniform_Armour_Ethereal_CO.paa", "BaY_JKaara_Armoury\bjk_uniform\Textures\BJK_Strike_Uniform_Cloth_CO.paa"};
         hiddenSelectionsMaterials[] = {"BaY_JKaara_Armoury\bjk_uniform\Materials\BJK_Strike_Uniform_Armour_Ethereal.rvmat"};
@@ -56,9 +56,25 @@ class CfgWeapons {
         scopeCurator = 2;
         displayName = "[Ba'Y JK] Pathfinder Uniform";
         hiddenSelections[] = {"camo", "camo1"};
-        hiddenSelectionsTextures[] = {"BaY_JKaara_Armoury\bjk_uniform\Textures\BJK_Pathfinder_Uniform_Armour_CO.paa", "BaY_JKaara_Armoury\bjk_uniform\Textures\BJK_Pathfinder_Uniform_CO.paa"};
+        hiddenSelectionsTextures[] = {"BaY_JKaara_Armoury\bjk_uniform\Textures\BJK_Strike_Uniform_Armour_CO", "BaY_JKaara_Armoury\bjk_uniform\Textures\BJK_Pathfinder_Uniform_CO.paa"};
         class ItemInfo : ItemInfo {
             uniformClass = "BJK_Pathfinder";
+            containerClass = "Supply500";
+            class HitpointsProtectionInfo {
+                class Body {
+                    hitpointName = "HitBody";
+                    armor = 3;
+                    passThrough = 0.75;
+                };
+            };
+        };
+    };
+    class BJK_WC_BodyGuard_Uniform : BJK_Pathfinder_Uniform {
+        displayName = "[Ba'Y JK] Water Caste Body Guard Uniform";
+        hiddenSelections[] = {"camo", "camo1"};
+        hiddenSelectionsTextures[] = {"BaY_JKaara_Armoury\bjk_uniform\Textures\BJK_WC_BodyGuard_Uniform_Armour_CO.paa", "BaY_JKaara_Armoury\bjk_uniform\Textures\BJK_Pathfinder_Uniform_CO.paa"};
+        class ItemInfo : ItemInfo {
+            uniformClass = "BJK_WC_BodyGuard";
         };
     };
     class U_TIOW_Air_Caste_Pilot;
@@ -223,6 +239,31 @@ class CfgWeapons {
         };
     };
 
+    // Renegade Uniforms
+    class IC_ChaosRenegade_U_V2Red_B;
+    class BJK_Renegade_Uniform : IC_ChaosRenegade_U_V2Red_B {
+        author = "JCaleb2014";
+        scope = 2;
+        scopeCurator = 2;
+        scopeArsenal = 2;
+        displayName = "[Ba'Y JK] Renegade Fatigues";
+        hiddenSelections[] = {"camo1", "camo"};
+        hiddenSelectionsTextures[] = {"BaY_JKaara_Armoury\bjk_uniform\Textures\BJK_Renegade_Uniform_Pants_CO.paa", "BaY_JKaara_Armoury\bjk_uniform\Textures\BJK_Renegade_Uniform_Top_CO.paa"};
+        class ItemInfo : ItemInfo {
+            uniformClass = "BJK_Renegade";
+            hiddenSelections[] = {"camo1", "camo"};
+            hiddenSelectionsTextures[] = {"BaY_JKaara_Armoury\bjk_uniform\Textures\BJK_Renegade_Uniform_Pants_CO.paa", "BaY_JKaara_Armoury\bjk_uniform\Textures\BJK_Renegade_Uniform_Top_CO.paa"};
+            containerClass = "Supply500";
+            class HitpointsProtectionInfo {
+                class Body {
+                    hitpointName = "HitBody";
+                    armor = 3;
+                    passThrough = 0.75;
+                };
+            };
+        };
+    };
+
     // Space Marine Power Armor
     class TIOW_Mk7PowerArmor_1_DA;
     class BJK_SpaceMarine_Mk7_PowerArmor : TIOW_Mk7PowerArmor_1_DA {
@@ -251,6 +292,8 @@ class CfgVehicles {
     class BJK_Strike : I_Soldier_F {
         author = "JCaleb2014";
         scope = 2;
+        scopeCurator = 2;
+        scopeArsenal = 2;
         displayName = "Fire Warrior (Strike)";
         faction = "BJK_F";
         editorSubcategory = "BJK_M";
@@ -260,7 +303,6 @@ class CfgVehicles {
         model = "\40k_tau\Fire_Warrior\Fire_Warrior.p3d";
         hiddenSelections[] = {"camo", "camo1"};
         hiddenSelectionsTextures[] = {"BaY_JKaara_Armoury\bjk_uniform\Textures\BJK_Strike_Uniform_Armour_CO.paa", "BaY_JKaara_Armoury\bjk_uniform\Textures\BJK_Strike_Uniform_Cloth_CO.paa"};
-
         linkedItems[] = {"ItemMap", "ItemRadio", "ItemCompass", "ItemWatch", "BJK_Strike_Helmet", "BJK_Strike_Pauldrons"};
         respawnLinkedItems[] = {"ItemMap", "ItemRadio", "ItemCompass", "ItemWatch", "BJK_Strike_Helmet", "BJK_Strike_Pauldrons"};
         weapons[] = {"Put", "Throw"};
@@ -460,6 +502,8 @@ class CfgVehicles {
     class BJK_Pathfinder : TIOW_Pathfinder {
         author = "JCaleb2014";
         scope = 2;
+        scopeCurator = 2;
+        scopeArsenal = 2;
         displayName = "Fire Warrior (Pathfinder)";
         faction = "BJK_F";
         editorSubcategory = "BJK_M";
@@ -472,7 +516,7 @@ class CfgVehicles {
         magazines[] = {};
         respawnmagazines[] = {};
         hiddenSelections[] = {"camo", "camo1"};
-        hiddenSelectionsTextures[] = {"BaY_JKaara_Armoury\bjk_uniform\Textures\BJK_Pathfinder_Uniform_Armour_CO.paa", "BaY_JKaara_Armoury\bjk_uniform\Textures\BJK_Pathfinder_Uniform_CO.paa"};
+        hiddenSelectionsTextures[] = {"BaY_JKaara_Armoury\bjk_uniform\Textures\BJK_Strike_Uniform_Armour_CO.paa", "BaY_JKaara_Armoury\bjk_uniform\Textures\BJK_Pathfinder_Uniform_CO.paa"};
         class HitPoints {
             class HitFace {
                 armor = 1;
@@ -626,6 +670,13 @@ class CfgVehicles {
             };
         };
     };
+    class BJK_WC_BodyGuard : BJK_Pathfinder {
+        displayName = "Water Caste Body Guard";
+        uniformClass = "BJK_WC_BodyGuard_Uniform";
+        hiddenSelections[] = {"camo", "camo1"};
+        hiddenSelectionsTextures[] = {"BaY_JKaara_Armoury\bjk_uniform\Textures\BJK_WC_BodyGuard_Uniform_Armour_CO.paa", "BaY_JKaara_Armoury\bjk_uniform\Textures\BJK_Pathfinder_Uniform_CO.paa"};
+    };
+
     // Gue'vesa Uniforms
     class TIOW_Cad_Kasr836th;
     class BJK_Guevesa_Kasrkin_Base : TIOW_Cad_Kasr836th {
@@ -722,6 +773,24 @@ class CfgVehicles {
         respawnWeapons[] = {"Throw", "Put", "TIOW_ARC_PISTOL_1"};
         magazines[] = {"TIOW_Arc_Pistol_Mag", "TIOW_Arc_Pistol_Mag", "TIOW_Arc_Pistol_Mag", "TIOW_Arc_Pistol_Mag"};
         respawnMagazines[] = {"TIOW_Arc_Pistol_Mag", "TIOW_Arc_Pistol_Mag", "TIOW_Arc_Pistol_Mag", "TIOW_Arc_Pistol_Mag"};
+    };
+
+    // Renegade Uniforms
+    class IC_chaosRenegade_V2_B;
+    class BJK_Renegade : IC_chaosRenegade_V2_B {
+        author = "JCaleb2014";
+        scope = 2;
+        scopecurator = 2;
+        scopearsenal = 2;
+        linkedItems[] = {"ic_ChaosHelmV2", "", "ItemMap", "ItemCompass", "ItemWatch", "ItemRadio"};
+        side = 0;
+        faction = "BJK_IR";
+        editorSubcategory = "BJK_M";
+        displayName = "Imperial Renegade";
+        uniformClass = "BJK_Renegade_Uniform";
+        backpack = "";
+        hiddenSelections[] = {"camo1", "camo"};
+        hiddenSelectionsTextures[] = {"BaY_JKaara_Armoury\bjk_uniform\Textures\BJK_Renegade_Uniform_Pants_CO.paa", "BaY_JKaara_Armoury\bjk_uniform\Textures\BJK_Renegade_Uniform_Top_CO.paa"};
     };
 
     // Space Marines
