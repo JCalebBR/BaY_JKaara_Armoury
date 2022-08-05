@@ -136,6 +136,8 @@ class CfgAmmo {
         airLock = 1;
         cartridge = "";
         triggerTime = 0;
+        deflecting = 10;
+        deflectionDirDistribution=0.5;
         EffectFly = "LasLightTrailsBlue";
         hit = 20;
         indirectHit = 0;
@@ -147,7 +149,7 @@ class CfgAmmo {
         airFriction = -0.00012;
         waterFriction = -0.3;
         model = "BaY_JKaara_Armoury\bjk_ammo\Models\BJK_Lasbolt_Blue.p3d";
-        caliber = 1;
+        caliber = 1.5;
         timeToLive = 10;
         tracersEvery = 1;
         tracerScale = 0.02;
@@ -159,6 +161,7 @@ class CfgAmmo {
         suppressionRadiusBulletClose = 6;
         suppressionRadiusHit = 8;
         aiAmmoUsageFlags = "64+256";
+        ACE_bulletMass=10;
         class CamShakeExplode {
             power = 2.23607;
             duration = 0.4;

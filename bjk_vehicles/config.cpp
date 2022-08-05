@@ -1644,6 +1644,9 @@ class CfgVehicles {
         scope = 2;
         displayName = "[Ba'Y JK] Servo Skull Deploy";
         model = "TIOW_Admech\models\Mech_Back_1.p3d";
+        class ItemInfo : ItemInfo {
+            uniformModel = "TIOW_Admech\models\Mech_Back_1.p3d";
+        };
         class assembleInfo {
             primary = 1;
             base = "";
@@ -1702,6 +1705,9 @@ class CfgVehicles {
             class ACE_MainActions;
         };
     };
+    class Turrets;
+    class MainTurret;
+    class OpticsIn;
     class BJK_ServoSkull_UAV : BJK_Servo_UAV_Base_2 {
         scope = 2;
         scopeCurator = 2;
@@ -1714,6 +1720,50 @@ class CfgVehicles {
         maxSpeed = 350;
         rotorSpeed = 2;
         envelope[] = {0, 0.5, 2.0, 3.0, 4, 4.5, 5, 5.5, 5.7, 6, 6, 5.6, 5, 4.3, 3.0};
+        class Turrets : Turrets {
+            class MainTurret : MainTurret {
+                laserScanner = 1;
+				isCopilot = 0;
+				minElev = -100;
+				maxElev = 10;
+				initElev = -3;
+				minTurn = -360;
+				maxTurn = 360;
+				initTurn = 0;
+                weapons[] = {"Laserdesignator_vehicle"};
+                magazines[] = {"Laserbatteries"};
+                class OpticsIn : OpticsIn {
+                    class Wide {
+                        opticsDisplayName = "W";
+                        initAngleX = 0;
+                        minAngleX = -360;
+                        maxAngleX = 360;
+                        initAngleY = 0;
+                        minAngleY = -100;
+                        maxAngleY = 100;
+                        initFov = 0.5;
+                        minFov = 0.5;
+                        maxFov = 0.5;
+                        directionStabilized = 1;
+                        visionMode[] = {"Normal", "NVG", "Ti"};
+                        thermalMode[] = {0, 1};
+                        gunnerOpticsModel = "\40k_tau\Drones\reticle\Tau_optic_gunner_2";
+                    };
+                    class Medium : Wide {
+                        opticsDisplayName = "M";
+                        initFov = 0.1;
+                        minFov = 0.1;
+                        maxFov = 0.1;
+                    };
+                    class Narrow : Wide {
+                        opticsDisplayName = "N";
+                        initFov = 0.0286;
+                        minFov = 0.0286;
+                        maxFov = 0.0286;
+                    };
+                };
+            };
+        };
         class UserActions {
             class ThrusterGravBrakes {
                 animPeriod = 5;
@@ -1768,9 +1818,10 @@ class CfgVehicles {
             displayName = "";
             dissasembleTo[] = {"BJK_PP_UAV_2"};
         };
+
         class ACE_Actions : ACE_Actions {
             class ACE_MainActions : ACE_MainActions {
-                class AV_Pack_Servo {
+                class BJK_Pack_Servo {
                     displayName = "Deactivate Servo-Skull";
                     condition = "((alive _target) && ( ACE_Player distance _target ) < 10) && ( count (( UAVControl _target) select 1 ) < 1 )";
                     statement = "[_target,_player] call itc_land_packable_fnc_Pack";

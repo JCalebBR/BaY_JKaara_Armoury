@@ -220,5 +220,7 @@ class CfgMagazines {
     class BJK_Laspowerpack_Blue : ic_las_powerpackGreen {
         displayName = "Light Pulse Power Pack (Blue)";
         ammo = "BJK_Lasbolt_Blue";
+        count = 32;
+        mass = 20;
     };
 };
