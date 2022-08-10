@@ -145,11 +145,11 @@ class CfgAmmo {
         cost = 1;
         effectsFire = "ChemlightLight_Blue";
         coefGravity = 0.01;
-        typicalSpeed = 600;
+        typicalSpeed = 820;
         airFriction = -0.00012;
         waterFriction = -0.3;
         model = "BaY_JKaara_Armoury\bjk_ammo\Models\BJK_Lasbolt_Blue.p3d";
-        caliber = 1.5;
+        caliber = 1.8;
         timeToLive = 10;
         tracersEvery = 1;
         tracerScale = 0.02;

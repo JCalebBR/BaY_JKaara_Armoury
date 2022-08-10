@@ -1,3 +1,5 @@
 /.vscode
 /tau mod.code-workspace
 *.png
+*.blend
+*.blend*

@@ -291,6 +291,7 @@ class CfgVehicles {
     };
     class BJK_Strike : I_Soldier_F {
         author = "JCaleb2014";
+        side = 1;
         scope = 2;
         scopeCurator = 2;
         scopeArsenal = 2;

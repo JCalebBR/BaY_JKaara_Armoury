@@ -1333,6 +1333,84 @@ class CfgVehicles {
         model = "\IC_Taurox\Model\IC_Taurox_AC.p3d";
     };
 
+    class Sentinel_AC_1491th_1;
+    class BJK_Sentinel_AC : Sentinel_AC_1491th_1 {
+        author = "JCaleb2014";
+        displayName = "Sentinel (Assault Cannon)";
+        crew = "TIOW_Cad_Tnk836th";
+        faction = "BJK_F";
+        editorCategory = "BJK_F";
+        editorSubcategory = "BJK_V";
+        hiddenSelections[] = {"target_monitor","body_upper_part","body_lower_part","whole_body_section","weapons_part","weapons2_part","plasmacannon_part"};
+        hiddenSelectionsTextures[] = {"#(argb,256,512,1)r2t(Sight_HDR_x0,1.0)","BaY_JKaara_Armoury\bjk_vehicles\Textures\BJK_Sentinel_UpperBody_CA.paa", "BaY_JKaara_Armoury\bjk_vehicles\Textures\BJK_Sentinel_LowerBody_CA.paa", "BaY_JKaara_Armoury\bjk_vehicles\Textures\BJK_Sentinel_LowRes_CA.paa", "WHwalkers\sentinel\data\weapons_dkok1491th_ca.paa","WHwalkers\sentinel\data\weapons2_dkok1491th_ca.paa","WHwalkers\sentinel\data\plasmacannon_dkok1491th_ca.paa"};
+    };
+    class Sentinel_CS_1491th_1;
+    class BJK_Sentinel_CS : Sentinel_CS_1491th_1 {
+        author = "JCaleb2014";
+        displayName = "Sentinel (Chainsaw)";
+        crew = "TIOW_Cad_Tnk836th";
+        faction = "BJK_F";
+        editorCategory = "BJK_F";
+        editorSubcategory = "BJK_V";
+        hiddenSelections[] = {"target_monitor","body_upper_part","body_lower_part","whole_body_section","weapons_part","weapons2_part","plasmacannon_part"};
+        hiddenSelectionsTextures[] = {"#(argb,256,512,1)r2t(Sight_HDR_x0,1.0)","BaY_JKaara_Armoury\bjk_vehicles\Textures\BJK_Sentinel_UpperBody_CA.paa", "BaY_JKaara_Armoury\bjk_vehicles\Textures\BJK_Sentinel_LowerBody_CA.paa", "BaY_JKaara_Armoury\bjk_vehicles\Textures\BJK_Sentinel_LowRes_CA.paa", "WHwalkers\sentinel\data\weapons_dkok1491th_ca.paa","WHwalkers\sentinel\data\weapons2_dkok1491th_ca.paa","WHwalkers\sentinel\data\plasmacannon_dkok1491th_ca.paa"};
+    };
+    class Sentinel_HB_1491th_1;
+    class BJK_Sentinel_HB : Sentinel_HB_1491th_1 {
+        author = "JCaleb2014";
+        displayName = "Sentinel (Heavy Bolter)";
+        crew = "TIOW_Cad_Tnk836th";
+        faction = "BJK_F";
+        editorCategory = "BJK_F";
+        editorSubcategory = "BJK_V";
+        hiddenSelections[] = {"target_monitor","body_upper_part","body_lower_part","whole_body_section","weapons_part","weapons2_part","plasmacannon_part"};
+        hiddenSelectionsTextures[] = {"#(argb,256,512,1)r2t(Sight_HDR_x0,1.0)","BaY_JKaara_Armoury\bjk_vehicles\Textures\BJK_Sentinel_UpperBody_CA.paa", "BaY_JKaara_Armoury\bjk_vehicles\Textures\BJK_Sentinel_LowerBody_CA.paa", "BaY_JKaara_Armoury\bjk_vehicles\Textures\BJK_Sentinel_LowRes_CA.paa", "WHwalkers\sentinel\data\weapons_dkok1491th_ca.paa","WHwalkers\sentinel\data\weapons2_dkok1491th_ca.paa","WHwalkers\sentinel\data\plasmacannon_dkok1491th_ca.paa"};
+    };
+    class Sentinel_LC_1491th_1;
+    class BJK_Sentinel_LC : Sentinel_LC_1491th_1 {
+        author = "JCaleb2014";
+        displayName = "Sentinel (Lascannon)";
+        crew = "TIOW_Cad_Tnk836th";
+        faction = "BJK_F";
+        editorCategory = "BJK_F";
+        editorSubcategory = "BJK_V";
+        hiddenSelections[] = {"target_monitor","body_upper_part","body_lower_part","whole_body_section","weapons_part","weapons2_part","plasmacannon_part"};
+        hiddenSelectionsTextures[] = {"#(argb,256,512,1)r2t(Sight_HDR_x0,1.0)","BaY_JKaara_Armoury\bjk_vehicles\Textures\BJK_Sentinel_UpperBody_CA.paa", "BaY_JKaara_Armoury\bjk_vehicles\Textures\BJK_Sentinel_LowerBody_CA.paa", "BaY_JKaara_Armoury\bjk_vehicles\Textures\BJK_Sentinel_LowRes_CA.paa", "WHwalkers\sentinel\data\weapons_dkok1491th_ca.paa","WHwalkers\sentinel\data\weapons2_dkok1491th_ca.paa","WHwalkers\sentinel\data\plasmacannon_dkok1491th_ca.paa"};
+    };
+    class Sentinel_MLA_1491th_1;
+    class BJK_Sentinel_MLA : Sentinel_MLA_1491th_1 {
+        author = "JCaleb2014";
+        displayName = "Sentinel (Missile Launcher)";
+        crew = "TIOW_Cad_Tnk836th";
+        faction = "BJK_F";
+        editorCategory = "BJK_F";
+        editorSubcategory = "BJK_V";
+        hiddenSelections[] = {"target_monitor","body_upper_part","body_lower_part","whole_body_section","weapons_part","weapons2_part","plasmacannon_part"};
+        hiddenSelectionsTextures[] = {"#(argb,256,512,1)r2t(Sight_HDR_x0,1.0)","BaY_JKaara_Armoury\bjk_vehicles\Textures\BJK_Sentinel_UpperBody_CA.paa", "BaY_JKaara_Armoury\bjk_vehicles\Textures\BJK_Sentinel_LowerBody_CA.paa", "BaY_JKaara_Armoury\bjk_vehicles\Textures\BJK_Sentinel_LowRes_CA.paa", "WHwalkers\sentinel\data\weapons_dkok1491th_ca.paa","WHwalkers\sentinel\data\weapons2_dkok1491th_ca.paa","WHwalkers\sentinel\data\plasmacannon_dkok1491th_ca.paa"};
+    };
+    class Sentinel_ML_1491th_1;
+    class BJK_Sentinel_ML : Sentinel_ML_1491th_1 {
+        author = "JCaleb2014";
+        displayName = "Sentinel (Multilaser)";
+        crew = "TIOW_Cad_Tnk836th";
+        faction = "BJK_F";
+        editorCategory = "BJK_F";
+        editorSubcategory = "BJK_V";
+        hiddenSelections[] = {"target_monitor","body_upper_part","body_lower_part","whole_body_section","weapons_part","weapons2_part","plasmacannon_part"};
+        hiddenSelectionsTextures[] = {"#(argb,256,512,1)r2t(Sight_HDR_x0,1.0)","BaY_JKaara_Armoury\bjk_vehicles\Textures\BJK_Sentinel_UpperBody_CA.paa", "BaY_JKaara_Armoury\bjk_vehicles\Textures\BJK_Sentinel_LowerBody_CA.paa", "BaY_JKaara_Armoury\bjk_vehicles\Textures\BJK_Sentinel_LowRes_CA.paa", "WHwalkers\sentinel\data\weapons_dkok1491th_ca.paa","WHwalkers\sentinel\data\weapons2_dkok1491th_ca.paa","WHwalkers\sentinel\data\plasmacannon_dkok1491th_ca.paa"};
+    };
+    class Sentinel_PC_1491th_1;
+    class BJK_Sentinel_PC : Sentinel_PC_1491th_1 {
+        author = "JCaleb2014";
+        displayName = "Sentinel (Plasma Cannon)";
+        crew = "TIOW_Cad_Tnk836th";
+        faction = "BJK_F";
+        editorCategory = "";
+        editorSubcategory = "BJK_V";
+        hiddenSelections[] = {"target_monitor","body_upper_part","body_lower_part","whole_body_section","weapons_part","weapons2_part","plasmacannon_part"};
+        hiddenSelectionsTextures[] = {"#(argb,256,512,1)r2t(Sight_HDR_x0,1.0)","BaY_JKaara_Armoury\bjk_vehicles\Textures\BJK_Sentinel_UpperBody_CA.paa", "BaY_JKaara_Armoury\bjk_vehicles\Textures\BJK_Sentinel_LowerBody_CA.paa", "BaY_JKaara_Armoury\bjk_vehicles\Textures\BJK_Sentinel_LowRes_CA.paa", "WHwalkers\sentinel\data\weapons_dkok1491th_ca.paa","WHwalkers\sentinel\data\weapons2_dkok1491th_ca.paa","WHwalkers\sentinel\data\plasmacannon_dkok1491th_ca.paa"};
+    };
+    
     // Tau Vehicles
     class TIOW_Tau_Hammerhead_TA;
     class BJK_HammerHead_Railgun_VD : TIOW_Tau_Hammerhead_TA {
@@ -1723,13 +1801,13 @@ class CfgVehicles {
         class Turrets : Turrets {
             class MainTurret : MainTurret {
                 laserScanner = 1;
-				isCopilot = 0;
-				minElev = -100;
-				maxElev = 10;
-				initElev = -3;
-				minTurn = -360;
-				maxTurn = 360;
-				initTurn = 0;
+                isCopilot = 0;
+                minElev = -100;
+                maxElev = 10;
+                initElev = -3;
+                minTurn = -360;
+                maxTurn = 360;
+                initTurn = 0;
                 weapons[] = {"Laserdesignator_vehicle"};
                 magazines[] = {"Laserbatteries"};
                 class OpticsIn : OpticsIn {
