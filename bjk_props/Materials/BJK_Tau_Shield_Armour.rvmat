@@ -1,0 +1,11 @@
+#define _ARMA_
+
+surfaceInfo = "BaY_JKaara_Armoury\bjk_props\Materials\BJK_Tau_Shield_Armour.bisurf";
+ambient[] = {"0.55*(5.5/sqrt(750))","0.55*(5.5/sqrt(750))","0.55*(5.5/sqrt(750))",1};
+diffuse[] = {"0.55*(5.5/sqrt(750))","0.55*(5.5/sqrt(750))","0.55*(5.5/sqrt(750))",1};
+forcedDiffuse[] = {0,0,0,0};
+emmisive[] = {0,0,0,1};
+specular[] = {0,0,0,1};
+specularPower = 1;
+PixelShaderID = "Normal";
+VertexShaderID = "Basic";

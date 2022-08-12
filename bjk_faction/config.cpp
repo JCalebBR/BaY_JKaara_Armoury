@@ -21,7 +21,7 @@ class CfgFactionClasses {
 
 class CfgEditorCategories {
     class BJK_Tau {
-        displayName = "Ba'Y Cadre";
+        displayName = "Ba'Y J'Kaara Cadre";
         priority = 1;
         side = 1;
     };
@@ -44,8 +44,5 @@ class CfgEditorSubcategories {
     };
     class BJK_DR {
         displayName = "Drones";
-    };
-    class BJK_P {
-        displayName = "Tau Props";
     };
 };

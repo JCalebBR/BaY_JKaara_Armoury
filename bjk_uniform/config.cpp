@@ -492,10 +492,14 @@ class CfgVehicles {
         hiddenSelectionsTextures[] = {"BaY_JKaara_Armoury\bjk_uniform\Textures\BJK_EarthCaste_Uniform_Bottom_CO.paa", "BaY_JKaara_Armoury\bjk_uniform\Textures\BJK_EarthCaste_Uniform_Top_CO.paa"};
     };
     class BJK_WaterCaste : BJK_EarthCaste_Crewman {
-        uniformClass = "BJK_WaterCaste_Crew";
+        uniformClass = "BJK_WaterCaste_Uniform";
         displayName = "Water Caste Warrior";
         weapons[] = {"BJK_pulse_pistol_WC", "Throw", "Put"};
         respawnWeapons[] = {"BJK_pulse_pistol_WC", "Throw", "Put"};
+        Items[] = {"FirstAidKit"};
+        RespawnItems[] = {"FirstAidKit"};
+        magazines[] = {"BJK_pulse_pistol_mag", "BJK_pulse_pistol_mag"};
+        respawnMagazines[] = {"BJK_pulse_pistol_mag", "BJK_pulse_pistol_mag"};
         hiddenSelections[] = {"camo", "camo1"};
         hiddenSelectionsTextures[] = {"BaY_JKaara_Armoury\bjk_uniform\Textures\BJK_WaterCaste_Uniform_Bottom_CO.paa", "BaY_JKaara_Armoury\bjk_uniform\Textures\BJK_WaterCaste_Uniform_Top_CO.paa"};
     };

@@ -1624,7 +1624,7 @@ class CfgVehicles {
             class Attach_drones {
                 displayName = "Attach Drones";
                 position = "useraction";
-                radius = 50;
+                radius = 25;
                 onlyForPlayer = 1;
                 condition = "(player == driver this) and count(attachedObjects this) < 2";
                 // clang-format off
