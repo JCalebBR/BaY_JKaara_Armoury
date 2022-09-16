@@ -5,10 +5,16 @@ class CfgPatches {
         author = "JCaleb2014";
         requiredVersion = 1.6;
         requiredAddons[] = {"A3_Weapons_F", "A3_Weapons_F_Mark", "A3_Characters_F", "A3_Data_F", "A3_Sounds_F", "A3_Sounds_F_Mark", "IC_Cadia"};
+        units[] = {};
     };
 };
 
 class ItemInfo;
+
+class ACE_SelfActions;
+class ACE_Actions;
+class ACE_MainActions;
+
 class CfgGlasses {
     // Gue'vesa Facewear
     class IC_cad_rebreather_base;

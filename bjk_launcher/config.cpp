@@ -5,15 +5,33 @@ class CfgPatches {
         name = "Ba'Y J'Kaara Armory (Launcher)";
         author = "JCaleb2014";
         requiredVersion = 1.6;
-        requiredAddons[] = {"A3_Weapons_F", "A3_Weapons_F_Mark", "A3_Characters_F", "A3_Data_F", "A3_Sounds_F", "A3_Sounds_F_Mark"};
+        requiredAddons[] = {"ace_interaction", "ace_csw"};
+        weapons[] = {"BJK_Tau_ShieldGenerator_Case"};
     };
 };
 
 class ItemInfo;
 class EventHandlers;
 class CBA_Extended_EventHandlers_base;
+class WeaponSlotsInfo;
 
-class CfgMods {
-    author = "JCaleb2014";
-    timepacked = "1650387927";
+class CfgWeapons {
+    class ace_csw_m3CarryTripod;
+    class BJK_Tau_ShieldGenerator_Case : ace_csw_m3CarryTripod {
+        author = "JCaleb2014";
+        scope = 2;
+        scopeArsenal = 2;
+        scopeCurator = 2;
+        displayName = "[Ba'Y JK] Portable Shield Generator";
+        modes[] = {};
+        class ace_csw {
+            type = "mount";
+            deployTime = 20;
+            pickupTime = 20;
+            deploy = "BJK_Tau_ShieldGenerator";
+        };
+        class WeaponSlotsInfo : WeaponSlotsInfo {
+            mass = 440;
+        };
+    };
 };
