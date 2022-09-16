@@ -6,7 +6,7 @@ class CfgPatches {
         author = "JCaleb2014";
         requiredVersion = 1.6;
         requiredAddons[] = {"A3_Weapons_F", "A3_Weapons_F_Mark", "A3_Characters_F", "A3_Data_F", "A3_Sounds_F", "A3_Sounds_F_Mark", "TIOW_Tau_Backpacks", "IC_Cadia", "IC_Guevesa", "CadFoot", "TIOW_Admech", "IC_StormTrooper"};
-        units[] = {"BJK_Strike_Backpack", "BJK_Strike_Backpack_Shasui", "BJK_Strike_Backpack_Medical", "BJK_Breacher_Backpack", "BJK_Breacher_Backpack_Shasui", "BJK_Pathfinder_Backpack", "BJK_Pathfinder_Backpack_Ion", "BJK_Pathfinder_Backpack_Expl", "BJK_Pathfinder_Backpack_Rail", "BJK_Pathfinder_Backpack_Shasui", "BJK_Guevesa_Kasrkin_Backpack", "BJK_Guevesa_Kasrkin_Cables_Backpack", "BJK_Guevesa_Kasrkin_Cables_Backpack_Alt", "BJK_Admech_Tek_Backpack"};
+        units[] = {"BJK_Strike_Backpack", "BJK_Strike_Backpack_Shasui", "BJK_Strike_Backpack_Medical", "BJK_Breacher_Backpack", "BJK_Breacher_Backpack_Shasui", "BJK_Pathfinder_Backpack", "BJK_Pathfinder_Backpack_Ion", "BJK_Pathfinder_Backpack_Expl", "BJK_Pathfinder_Backpack_Rail", "BJK_Pathfinder_Backpack_Shasui", "BJK_Guevesa_Kasrkin_Backpack", "BJK_Guevesa_Kasrkin_Cables_Backpack", "BJK_Guevesa_Kasrkin_Cables_Backpack_Alt", "BJK_Guevesa_Backpack2", "BJK_Guevesa_Backpack2_Alt", "BJK_Guevesa_Backpack2_Medical", "BJK_Guevesa_Backpack2_Engineer", "BJK_Admech_Tek_Backpack"};
     };
 };
 
@@ -211,24 +211,6 @@ class CfgVehicles {
         _generalMacro = "BJK_Guevesa_Kasrkin_Cables_Backpack_Alt";
     };
 
-    // Admech Backpack
-    class TIOW_ADMECH_TEK_BACK;
-    class BJK_Admech_Tek_Backpack : TIOW_ADMECH_TEK_BACK {
-        author = "JCaleb2014";
-        scope = 2;
-        scopearsenal = 2;
-        displayName = "[Ba'Y JK] Tech-Priest Backpack";
-        maximumLoad = 750;
-        _generalMacro = "BJK_Admech_Tek_Backpack";
-        tf_dialog = "rt1523g_radio_dialog";
-        // clang-format off
-        tf_dialogUpdate = "[""CH%1""] call TFAR_fnc_updateLRDialogToChannel;";
-        // clang-format on
-        tf_encryptionCode = "tf_west_radio_code";
-        tf_hasLRradio = 1;
-        tf_range = 40000;
-        tf_subtype = "digital_lr";
-    };
     class IC_CAD_assaultpack_beige_03;
     class BJK_Guevesa_Backpack : IC_CAD_assaultpack_beige_03 {
         author = "JCaleb2014";
@@ -246,6 +228,69 @@ class CfgVehicles {
         displayName = "[Ba'Y JK] Gue'vesa Backpack (Medical)";
         model = "\IC_CAD_inf\Backpacks\Assault_pack_03";
         hiddenSelectionsTextures[] = {"BaY_JKaara_Armoury\bjk_backpack\Textures\BJK_Guevesa_Backpack_Medical_CO.paa"};
+    };
+
+    class ic_CadianBackpackV2;
+    class BJK_Guevesa_Backpack2 : ic_CadianBackpackV2 {
+        author = "JCaleb2014";
+        scope = 2;
+        scopecurator = 2;
+        scopearsenal = 2;
+        displayName = "[Ba'Y JK] Gue'vesa Backpack 2";
+        maximumLoad = 750;
+        hiddenSelections[] = {"camo"};
+        hiddenSelectionsTextures[] = {"BaY_JKaara_Armoury\bjk_backpack\Textures\BJK_Guevesa_Backpack2_CO.paa"};
+    };
+    class ic_CadianBackpackV4;
+    class BJK_Guevesa_Backpack2_Alt : ic_CadianBackpackV4 {
+        author = "JCaleb2014";
+        scope = 2;
+        scopecurator = 2;
+        scopearsenal = 2;
+        displayName = "[Ba'Y JK] Gue'vesa Backpack 2 (Alternate)";
+        maximumload = 750;
+        hiddenSelections[] = {"camo"};
+        hiddenSelectionsTextures[] = {"BaY_JKaara_Armoury\bjk_backpack\Textures\BJK_Guevesa_Backpack2_CO.paa"};
+    };
+    class ic_CadianBackpackV6;
+    class BJK_Guevesa_Backpack2_Medical : ic_CadianBackpackV6 {
+        author = "JCaleb2014";
+        scope = 2;
+        scopecurator = 2;
+        scopearsenal = 2;
+        displayName = "[Ba'Y JK] Gue'vesa Backpack 2 (Medicae)";
+        maximumload = 750;
+        hiddenSelections[] = {"camo"};
+        hiddenSelectionsTextures[] = {"BaY_JKaara_Armoury\bjk_backpack\Textures\BJK_Guevesa_Backpack2_CO.paa"};
+    };
+    class ic_CadianBackpackV8;
+    class BJK_Guevesa_Backpack2_Engineer : ic_CadianBackpackV8 {
+        author = "JCaleb2014";
+        scope = 2;
+        scopecurator = 2;
+        scopearsenal = 2;
+        displayName = "[Ba'Y JK] Gue'vesa Backpack 2 (Engineer)";
+        maximumLoad = 750;
+        hiddenSelections[] = {"camo"};
+    };
+
+    // Admech Backpack
+    class TIOW_ADMECH_TEK_BACK;
+    class BJK_Admech_Tek_Backpack : TIOW_ADMECH_TEK_BACK {
+        author = "JCaleb2014";
+        scope = 2;
+        scopearsenal = 2;
+        displayName = "[Ba'Y JK] Tech-Priest Backpack";
+        maximumLoad = 750;
+        _generalMacro = "BJK_Admech_Tek_Backpack";
+        tf_dialog = "rt1523g_radio_dialog";
+        // clang-format off
+        tf_dialogUpdate = "[""CH%1""] call TFAR_fnc_updateLRDialogToChannel;";
+        // clang-format on
+        tf_encryptionCode = "tf_west_radio_code";
+        tf_hasLRradio = 1;
+        tf_range = 40000;
+        tf_subtype = "digital_lr";
     };
 };
 

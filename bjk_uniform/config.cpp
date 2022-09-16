@@ -765,6 +765,7 @@ class CfgVehicles {
         scope = 2;
         scopeCurator = 2;
         scopeArsenal = 2;
+        side = 1;
         displayName = "[Ba'Y JK] Tech-Priest";
         faction = "BJK_F";
         editorSubcategory = "BJK_M";

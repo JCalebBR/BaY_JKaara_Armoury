@@ -5,8 +5,8 @@ class CfgPatches {
         name = "Ba'Y J'Kaara Armory (Rifle)";
         author = "JCaleb2014";
         requiredVersion = 1.6;
-        requiredAddons[] = {"A3_Weapons_F", "A3_Weapons_F_Mark", "A3_Characters_F", "A3_Data_F", "A3_Sounds_F", "A3_Sounds_F_Mark", "TIOW_40k_Tau", "CadFoot", "TIOW_Admech", "vng_tau_repeater"};
-        weapons[] = {"BJK_ion_rifle", "BJK_DMCLS_pulse_rifle", "BJK_DMCLS_pulse_blaster", "BJK_DMCLS_pulse_burster", "BJK_DMCLS_pulse_carbine", "BJK_DMCLS_rail_rifle", "BJK_PulseRepeater", "BJK_Guevesa_PulseRifle", "BJK_Guevesa_PulseRifle_Alt", "BJK_Guevesa_LockeBolter", "BJK_Guevesa_M36_Lasgun"};
+        requiredAddons[] = {"A3_Weapons_F", "A3_Weapons_F_Mark", "A3_Characters_F", "A3_Data_F", "A3_Sounds_F", "A3_Sounds_F_Mark", "TIOW_40k_Tau", "CadFoot", "TIOW_Admech", "vng_tau_repeater", "IC_Departmento_Weapons"};
+        weapons[] = {"BJK_ion_rifle", "BJK_DMCLS_pulse_rifle", "BJK_DMCLS_pulse_blaster", "BJK_DMCLS_pulse_burster", "BJK_DMCLS_pulse_carbine", "BJK_DMCLS_rail_rifle", "BJK_PulseRepeater", "BJK_Guevesa_PulseRifle", "BJK_Guevesa_PulseRifle_Alt", "BJK_Guevesa_LockeBolter", "BJK_Guevesa_M36_Lasgun", "BJK_Thracian_Autorifle", "BJK_Thracian_Autorifle_Para"};
     };
 };
 
@@ -111,10 +111,10 @@ class CfgWeapons {
             };
         };
         class Single : Single {
-            dispersion = 0.002;
+            dispersion = 0.0015;
         };
         class FullAuto : FullAuto {
-            dispersion = 0.005;
+            dispersion = 0.0035;
         };
         magazines[] = {"BJK_DMCLS_pulse_mag_25", "BJK_DMCLS_pulse_mag_36", "BJK_DMCLS_pulse_mag_54"};
         hiddenSelections[] = {"Camo", "Camo1"};
@@ -144,7 +144,7 @@ class CfgWeapons {
             dispersion = 0.0015;
         };
         class Burst : Burst {
-            dispersion = 0.004;
+            dispersion = 0.0025;
         };
         magazines[] = {"BJK_DMCLS_pulse_mag_25", "BJK_DMCLS_pulse_mag_36", "BJK_DMCLS_pulse_mag_54", "TIOW_pulse_mag"};
         hiddenSelections[] = {"Camo", "Camo1"};
@@ -194,11 +194,13 @@ class CfgWeapons {
             class StandardSound {
                 soundSetShot[] = {"BJK_DMCLS_pulse_burster_Shot_SoundSet", "DMR01_Tail_SoundSet", "DMR01_InteriorTail_SoundSet"};
             };
+            dispersion = 0.002;
         };
         class FullAuto : FullAuto {
             class StandardSound {
                 soundSetShot[] = {"BJK_DMCLS_pulse_burster_Shot_SoundSet", "DMR01_Tail_SoundSet", "DMR01_InteriorTail_SoundSet"};
             };
+            dispersion = 0.003;
         };
     };
 
@@ -248,10 +250,34 @@ class CfgWeapons {
         fireLightDiffuse[] = {0, 0.08, 0.1};
         fireLightAmbient[] = {0, 0.81, 1};
     };
-};
+    class dm_cad_autogun;
+    class BJK_Thracian_Autorifle : dm_cad_autogun {
+        author = "JCaleb2014";
+        scope = 2;
+        scopeCurator = 2;
+        scopeArsenal = 2;
+        displayName = "[Ba'Y JK] Thracian Pattern Autorifle";
+        hiddenSelections[] = {"camo", "camo1"};
+        hiddenSelectionsTextures[] = {"BaY_JKaara_Armoury\bjk_rifle\Textures\BJK_Thracian_Autorifle2_CO.paa", "BaY_JKaara_Armoury\bjk_rifle\Textures\BJK_Thracian_Autorifle_CO.paa"};
 
-class EventHandlers;
-class CBA_Extended_EventHandlers_base;
+        class Single : Single {
+            dispersion = 0.002;
+        };
+        class FullAuto : FullAuto {
+            dispersion = 0.004;
+        };
+    };
+    class dm_cad_autogunPara;
+    class BJK_Thracian_Autorifle_Para : dm_cad_autogunPara {
+        author = "JCaleb2014";
+        scope = 2;
+        scopeCurator = 2;
+        scopeArsenal = 2;
+        displayName = "[Ba'Y JK] Thracian Pattern Autorifle (Para)";
+        hiddenSelections[] = {"camo", "camo1"};
+        hiddenSelectionsTextures[] = {"BaY_JKaara_Armoury\bjk_rifle\Textures\BJK_Thracian_Autorifle_Para2_CO.paa", "BaY_JKaara_Armoury\bjk_rifle\Textures\BJK_Thracian_Autorifle_Para_CO.paa"};
+    };
+};
 
 class CfgMods {
     author = "JCaleb2014";
