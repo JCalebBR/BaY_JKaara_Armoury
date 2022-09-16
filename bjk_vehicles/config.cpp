@@ -1343,7 +1343,7 @@ class CfgVehicles {
         displayName = "Sentinel (Assault Cannon)";
         vehicleClass = "Armored";
         faction = "BJK_F";
-        editorCategory = "";
+        editorCategory = "BJK_Tau";
         editorSubcategory = "BJK_V";
         side = 1;
         hiddenSelections[] = {"target_monitor","body_upper_part","body_lower_part","whole_body_section","weapons_part","weapons2_part","plasmacannon_part"};
@@ -1358,7 +1358,7 @@ class CfgVehicles {
         displayName = "Sentinel (Chainsaw)";
         vehicleClass = "Armored";
         faction = "BJK_F";
-        editorCategory = "";
+        editorCategory = "BJK_Tau";
         editorSubcategory = "BJK_V";
         side = 1;
         hiddenSelections[] = {"target_monitor","body_upper_part","body_lower_part","whole_body_section","weapons_part","weapons2_part","plasmacannon_part"};
@@ -1373,7 +1373,7 @@ class CfgVehicles {
         displayName = "Sentinel (Heavy Bolter)";
         vehicleClass = "Armored";
         faction = "BJK_F";
-        editorCategory = "";
+        editorCategory = "BJK_Tau";
         editorSubcategory = "BJK_V";
         side = 1;
         hiddenSelections[] = {"target_monitor","body_upper_part","body_lower_part","whole_body_section","weapons_part","weapons2_part","plasmacannon_part"};
@@ -1389,7 +1389,7 @@ class CfgVehicles {
         crew = "TIOW_Cad_Tnk836th";
         vehicleClass = "Armored";
         faction = "BJK_F";
-        editorCategory = "";
+        editorCategory = "BJK_Tau";
         editorSubcategory = "BJK_V";
         side = 1;
         hiddenSelections[] = {"target_monitor","body_upper_part","body_lower_part","whole_body_section","weapons_part","weapons2_part","plasmacannon_part"};
@@ -1405,7 +1405,7 @@ class CfgVehicles {
         crew = "TIOW_Cad_Tnk836th";
         vehicleClass = "Armored";
         faction = "BJK_F";
-        editorCategory = "";
+        editorCategory = "BJK_Tau";
         editorSubcategory = "BJK_V";
         side = 1;
         hiddenSelections[] = {"target_monitor","body_upper_part","body_lower_part","whole_body_section","weapons_part","weapons2_part","plasmacannon_part"};
@@ -1421,7 +1421,7 @@ class CfgVehicles {
         crew = "TIOW_Cad_Tnk836th";
         vehicleClass = "Armored";
         faction = "BJK_F";
-        editorCategory = "";
+        editorCategory = "BJK_Tau";
         editorSubcategory = "BJK_V";
         side = 1;
         hiddenSelections[] = {"target_monitor","body_upper_part","body_lower_part","whole_body_section","weapons_part","weapons2_part","plasmacannon_part"};
@@ -1437,7 +1437,7 @@ class CfgVehicles {
         crew = "TIOW_Cad_Tnk836th";
         vehicleClass = "Armored";
         faction = "BJK_F";
-        editorCategory = "";
+        editorCategory = "BJK_Tau";
         editorSubcategory = "BJK_V";
         side = 1;
         hiddenSelections[] = {"target_monitor","body_upper_part","body_lower_part","whole_body_section","weapons_part","weapons2_part","plasmacannon_part"};
